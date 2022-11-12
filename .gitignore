@@ -4,14 +4,6 @@
 /[Ee]xcel/
 /[Aa]ssetBundles/
 /[Ee]xportBundles/
-!/Assets/StreamingAssets/burlcfg.txt
-!/Assets/StreamingAssets/burlcfg.txt.meta
-!/Assets/StreamingAssets/murlcfg.txt
-!/Assets/StreamingAssets/murlcfg.txt.meta
-/Assets/StreamingAssets/
-/Assets/StreamingAssets.meta
-/Assets/ArtWorkspace/
-/Assets/ArtWorkspace.meta
 [Bb]uild.log
 [Bb]uild.sh
 /node_modules/
