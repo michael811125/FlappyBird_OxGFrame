@@ -105,9 +105,6 @@ public class BirdController : MonoBehaviour
             // 銷毀分數觸發物件
             Destroy(collider.gameObject);
 
-            // 播放增加分數音效
-            AudioManager.GetInstance().Play(AudioPath.ScoreSfx).Forget();
-
             // 增加分數
             CoreManager.AddScore();
         }

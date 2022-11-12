@@ -1,5 +1,7 @@
-﻿using OxGFrame.CoreFrame.GSFrame;
+﻿using Cysharp.Threading.Tasks;
+using OxGFrame.CoreFrame.GSFrame;
 using OxGFrame.CoreFrame.UIFrame;
+using OxGFrame.MediaFrame.AudioFrame;
 using UnityEngine;
 
 public class CoreManager : MonoBehaviour
@@ -40,6 +42,7 @@ public class CoreManager : MonoBehaviour
     /// </summary>
     public static void ResetScore()
     {
+        // 歸零
         _currentScore = 0;
     }
 
@@ -48,7 +51,11 @@ public class CoreManager : MonoBehaviour
     /// </summary>
     public static void AddScore()
     {
+        // 分數 + 1
         _currentScore++;
+
+        // 播放增加分數音效
+        AudioManager.GetInstance().Play(AudioPath.ScoreSfx).Forget();
     }
 
     /// <summary>
