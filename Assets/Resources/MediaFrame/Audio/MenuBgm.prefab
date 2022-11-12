@@ -147,7 +147,7 @@ MonoBehaviour:
   onDestroyAndUnload: 1
   _autoEndToStop: 0
   audioType:
-    soundType: 1
+    soundType: 0
     priority: 128
   audioFileType: 13
   sourceType: 0

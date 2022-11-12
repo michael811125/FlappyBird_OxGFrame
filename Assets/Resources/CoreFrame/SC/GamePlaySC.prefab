@@ -53,7 +53,7 @@ MonoBehaviour:
   allowInstantiate: 0
   onCloseAndDestroy: 1
   gsSetting:
-    nodeType: 0
+    nodeType: 1
     whenCloseAllToSkip: 0
     whenHideAllToSkip: 0
   scrollSpeed: 0.5
