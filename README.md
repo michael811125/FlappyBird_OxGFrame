@@ -8,6 +8,14 @@
 
 [OxGFrame](https://github.com/michael811125/OxGFrame)
 
+---
+
+### Unity 版本
+
+建議使用 Unity 2021.3.13f1(LTS) or higher 版本 - [Unity Download](https://unity3d.com/get-unity/download/archive)
+
+---
+
 ### 參考
 
 [LordZed400/Flappy-Bird-Unity](https://github.com/LordZed400/Flappy-Bird-Unity)
