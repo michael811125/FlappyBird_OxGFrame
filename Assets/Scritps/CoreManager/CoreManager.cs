@@ -1,6 +1,4 @@
 ﻿using Cysharp.Threading.Tasks;
-using OxGFrame.CoreFrame.GSFrame;
-using OxGFrame.CoreFrame.UIFrame;
 using OxGFrame.MediaFrame.AudioFrame;
 using UnityEngine;
 
@@ -95,6 +93,9 @@ public class CoreManager : MonoBehaviour
         return GSM.GetInstance().GetGameStage<GamePlayStage>(GSM.GAME_PLAY_STAGE_ID).IsGameStart();
     }
 
+    /// <summary>
+    /// 前往主選單階段
+    /// </summary>
     public static void GoToMenu()
     {
         // 切換至 MainMenuStage
@@ -129,7 +130,7 @@ public class CoreManager : MonoBehaviour
     }
 
     /// <summary>
-    /// 重新遊玩
+    /// 重新遊玩 (實際上就是強制重新切換一次 GamePlayStage)
     /// </summary>
     public static void Replay()
     {

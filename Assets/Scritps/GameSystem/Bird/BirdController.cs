@@ -63,15 +63,19 @@ public class BirdController : MonoBehaviour
 
                 // This code checks the first tap. After first tap the tutorial image is removed and game starts
                 this._rigid.velocity = Vector2.zero;
+                // 初始重力比率
                 this._rigid.gravityScale = 1f;
             }
 
             // 點擊滑鼠左鍵
             if (Input.GetMouseButtonDown(0))
             {
+                // 恢復重力比率
                 this._rigid.gravityScale = 1f;
                 this._tiltSmooth = this.minTiltSmooth;
+                // 往上俯衝角度
                 this.transform.rotation = this._upRotation;
+                // 速率歸零
                 this._rigid.velocity = Vector2.zero;
                 // Push the player upwards
                 this._rigid.AddForce(Vector2.up * thrust);
@@ -81,15 +85,20 @@ public class BirdController : MonoBehaviour
             }
         }
 
+        // 重力下降
         if (this._rigid.velocity.y < -1f)
         {
             // Increase gravity so that downward motion is faster than upward motion
             this._tiltSmooth = this.maxTiltSmooth;
+            // 加重重力比率
             this._rigid.gravityScale = 2f;
         }
     }
 
-
+    /// <summary>
+    /// 小鳥盤旋
+    /// </summary>
+    /// <param name="dt"></param>
     private void _UpdateHoverState(float dt)
     {
         this._elapsedDt += dt;
@@ -114,10 +123,11 @@ public class BirdController : MonoBehaviour
             // Destroy the Obstacles after they reach a certain area on the screen
             foreach (Transform child in collider.transform.parent.transform)
             {
+                // 關閉 Pipe 碰撞 (主要是讓 Bird 可以穿越掉落至 Ground)
                 child.gameObject.GetComponent<BoxCollider2D>().enabled = false;
             }
 
-            // 鳥撞擊後即死亡
+            // 小鳥撞擊後即死亡
             this.BirdHitAndDead();
         }
     }
@@ -129,11 +139,14 @@ public class BirdController : MonoBehaviour
             this._rigid.simulated = false;
             transform.rotation = this._downRotation;
 
-            // 鳥撞擊後即死亡
+            // 小鳥撞擊後即死亡
             this.BirdHitAndDead();
         }
     }
 
+    /// <summary>
+    /// 小鳥撞擊跟死亡
+    /// </summary>
     public void BirdHitAndDead()
     {
         // 播放撞擊音效
@@ -145,8 +158,7 @@ public class BirdController : MonoBehaviour
         // 歸零速率
         this._rigid.velocity = Vector2.zero;
 
-        // Stop the flapping animation
+        // 動畫停止 (也可以使用 Animator 製作序列動畫)
         if (this._textureAnimation.enabled) this._textureAnimation.enabled = false;
     }
-
 }
