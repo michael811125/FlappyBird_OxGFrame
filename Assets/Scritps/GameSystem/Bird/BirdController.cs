@@ -36,7 +36,7 @@ public class BirdController : MonoBehaviour
     {
         float dt = CoreManager.deltaTime;
 
-        // 判斷是否初次點集
+        // 判斷是否初次點擊
         if (!this._firstTap)
         {
             // Hover the player before starting the game
