@@ -20,7 +20,8 @@ public class CoreManager : MonoBehaviour
 
     private void Awake()
     {
-
+        // Set CoreManager don't destroy on load 
+        DontDestroyOnLoad(this);
     }
 
     private void Start()
