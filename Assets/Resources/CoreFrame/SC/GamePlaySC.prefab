@@ -35,6 +35,7 @@ Transform:
   - {fileID: 7818279245776278188}
   - {fileID: 5569165979308125334}
   - {fileID: 5945806346513993488}
+  - {fileID: 6001224576922000452}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -83,7 +84,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60eb3caa9d5d56e44ba638813f5852d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 0, g: 1, b: 1, a: 1}
+  color: {r: 1, g: 0, b: 0.7943835, a: 1}
   originPos: {x: -2.9, y: -5.1}
   rectSize: {x: 2.9, y: 5.1}
 --- !u!1 &1031125405046900598
@@ -179,6 +180,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8146852a35039e4e8e2d14b7e0b44bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &2363536610429922562
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6001224576922000452}
+  m_Layer: 0
+  m_Name: this scene use bind to get GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &6001224576922000452
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2363536610429922562}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 6486914660641206718}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4125694552499389934
 GameObject:
   m_ObjectHideFlags: 0

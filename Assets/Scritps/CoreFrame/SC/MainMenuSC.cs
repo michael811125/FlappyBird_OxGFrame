@@ -76,8 +76,8 @@ public class MainMenuSC : GSBase
 
     // 初始 MenuBackgroundSC 相關組件
 
-    // 拖曳方式
     public float scrollSpeed = 0.5f;
+    // 拖曳方式 (drag assign it)
     public Renderer ground;
 
     private void _UpdateGroundScroll()

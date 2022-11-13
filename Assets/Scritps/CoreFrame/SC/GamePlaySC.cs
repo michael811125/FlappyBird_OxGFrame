@@ -107,6 +107,9 @@ public class GamePlaySC : GSBase
 
     private void _InitComponents()
     {
+        // Note: collector.GetNode return type is GameObject
+
+        // 綁定方式 (bind with name, also you can use drag to assign it) show you how to bind
         this._bg = this.collector.GetNode("Bg").GetComponent<SpriteRenderer>();
         this._ground = this.collector.GetNode("Ground").GetComponent<Renderer>();
         this._birdContainer = this.collector.GetNode("BirdContainer").transform;
