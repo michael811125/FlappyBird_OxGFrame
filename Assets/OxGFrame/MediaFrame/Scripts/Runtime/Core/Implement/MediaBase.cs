@@ -50,8 +50,8 @@ namespace OxGFrame.MediaFrame
                         return this.file.text;
 
                     case RequestType.StreamingAssets:
-                        string pathName = System.IO.Path.Combine(Application.streamingAssetsPath, this.fullPathName);
-                        return await TextRequest(pathName);
+                        string pathName = System.IO.Path.Combine(GetRequestStreamingAssetsPath(), this.fullPathName);
+                        return await FileRequestString(pathName);
                 }
 
                 return null;
@@ -152,7 +152,7 @@ namespace OxGFrame.MediaFrame
         public abstract float CurrentLength();
 
         /// <summary>
-        /// 設置停止播放時的事件Callback
+        /// 設置停止播放時的事件 Callback
         /// </summary>
         /// <param name="endEvent"></param>
         public virtual void SetEndEvent(Action endEvent)
@@ -161,7 +161,7 @@ namespace OxGFrame.MediaFrame
         }
 
         /// <summary>
-        /// Destroy時會被呼叫
+        /// Destroy 時會被呼叫
         /// </summary>
         public virtual void OnRelease()
         {
@@ -234,7 +234,25 @@ namespace OxGFrame.MediaFrame
             return value;
         }
 
-        public static async UniTask<string> TextRequest(string url)
+        /// <summary>
+        /// 取得 UnityWebRequest StreamingAssets 路徑 (OSX and iOS 需要 + file://)
+        /// </summary>
+        /// <returns></returns>
+        public static string GetRequestStreamingAssetsPath()
+        {
+#if UNITY_STANDALONE_OSX || UNITY_IOS
+            return $"file://{Application.streamingAssetsPath}";
+#else
+            return Application.streamingAssetsPath;
+#endif
+        }
+
+        /// <summary>
+        /// 檔案請求 (string)
+        /// </summary>
+        /// <param name="url"></param>
+        /// <returns></returns>
+        public static async UniTask<string> FileRequestString(string url)
         {
             try
             {
@@ -249,10 +267,10 @@ namespace OxGFrame.MediaFrame
                     return null;
                 }
 
-                string txt = request.downloadHandler.text;
+                string text = request.downloadHandler.text;
                 request.Dispose();
 
-                return txt;
+                return text;
             }
             catch
             {

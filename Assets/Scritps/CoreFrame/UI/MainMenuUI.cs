@@ -133,11 +133,11 @@ public class MainMenuUI : UIBase
 
         // 以目前消逝的時間和頻率計算現在的 θ
         float theta = this.frequency * this._elapsedDt;
-        Debug.Log($"Theta: {theta}");
+        //Debug.Log($"Theta: {theta}");
 
         // 計算 y-axis wave (上下飛動, 所以控制 y)
         float yWave = this.amplitude * Mathf.Sin(theta) + this.yOffset;
-        Debug.Log($"Mathf.Sin: {Mathf.Sin(theta)}");
+        //Debug.Log($"Mathf.Sin: {Mathf.Sin(theta)}");
 
         // 座標位移計算
         this._bird.position += new Vector3(0, yWave, 0);
