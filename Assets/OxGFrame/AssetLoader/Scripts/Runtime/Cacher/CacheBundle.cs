@@ -87,7 +87,7 @@ namespace OxGFrame.AssetLoader.Cacher
             }
 
             // 先設置加載進度
-            this.reqSize = 0;                                  // 會由 LoadBundlePack 累加, 所以需歸0
+            this.reqSize = 0;                                  // 會由 LoadBundlePack 累加, 所以需歸 0
             this.totalSize = this.GetAssetsLength(bundleName); // 返回當前要預加載的總大小
 
             // Loading 標記
@@ -150,7 +150,7 @@ namespace OxGFrame.AssetLoader.Cacher
             if (bundleNames == null || bundleNames.Length == 0) return;
 
             // 先設置加載進度
-            this.reqSize = 0;                                   // 會由 LoadBundlePack 累加, 所以需歸0
+            this.reqSize = 0;                                   // 會由 LoadBundlePack 累加, 所以需歸 0
             this.totalSize = this.GetAssetsLength(bundleNames); // 返回當前要預加載的總大小
 
             for (int i = 0; i < bundleNames.Length; i++)
@@ -334,7 +334,7 @@ namespace OxGFrame.AssetLoader.Cacher
         }
 
         /// <summary>
-        /// [使用計數管理] 從快取【釋放】單個Bundle (釋放Bundle記憶體, 連動銷毀實例對象也會 Missing 場景上有引用的對象)
+        /// [使用計數管理] 從快取【釋放】單個 Bundle (釋放 Bundle 記憶體, 連動銷毀實例對象也會 Missing 場景上有引用的對象)
         /// </summary>
         /// <param name="bundleName"></param>
         public override void Unload(string bundleName)
@@ -400,7 +400,7 @@ namespace OxGFrame.AssetLoader.Cacher
         }
 
         /// <summary>
-        /// [強制釋放] 從快取中【釋放】全部 Bundle (釋放Bundle記憶體, 連動銷毀實例對象也會 Missing 場景上有引用的對象)
+        /// [強制釋放] 從快取中【釋放】全部 Bundle (釋放 Bundle 記憶體, 連動銷毀實例對象也會 Missing 場景上有引用的對象)
         /// </summary>
         public override void Release()
         {
@@ -471,7 +471,7 @@ namespace OxGFrame.AssetLoader.Cacher
             BundlePack bundlePack = new BundlePack();
             bundlePack.bundleName = bundleName;
 
-#if UNITY_STANDALONE_WIN
+#if UNITY_STANDALONE_WIN || UNITY_STANDALONE_OSX
             if (BundleConfig.bundleStreamMode)
             {
                 Stream fs;
@@ -599,8 +599,8 @@ namespace OxGFrame.AssetLoader.Cacher
             }
 #endif
 
-#if UNITY_STANDALONE_OSX || UNITY_ANDROID || UNITY_IOS || UNITY_WEBGL
-            // 使用[文件流]加載方式, 只能存在於Persistent的路徑 (因為 StreamingAssets 只使用 UnityWebRequest 方式請求)
+#if UNITY_ANDROID || UNITY_IOS || UNITY_WEBGL
+            // 使用 [文件流] 加載方式, 只能存在於 Persistent 的路徑 (因為 StreamingAssets 只使用 UnityWebRequest 方式請求)
             if (BundleConfig.bundleStreamMode && !HasInStreamingAssets(bundleName))
             {
                 Stream fs;
@@ -668,7 +668,7 @@ namespace OxGFrame.AssetLoader.Cacher
                         break;
                 }
             }
-            // 使用[內存]加載方式, 會判斷資源如果不在 StreamingAssets 中就從 Persistent 中加載 (反之)
+            // 使用 [內存] 加載方式, 會判斷資源如果不在 StreamingAssets 中就從 Persistent 中加載
             else
             {
                 if (!HasInStreamingAssets(bundleName))
@@ -1055,7 +1055,7 @@ namespace OxGFrame.AssetLoader.Cacher
         {
             fileName = fileName.ToLower();
             // 透過配置檔取得完整檔案目錄名稱 (StreamingAssets 中的配置檔)
-            string fullPathName = Path.Combine(Application.streamingAssetsPath, fileName);
+            string fullPathName = Path.Combine(BundleConfig.GetRequestStreamingAssetsPath(), fileName);
             return fullPathName;
         }
 
