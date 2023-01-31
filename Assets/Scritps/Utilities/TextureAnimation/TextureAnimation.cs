@@ -1,10 +1,7 @@
-using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
-[AddComponentMenu("Lager/Texture/TextureAnimation")]
 [ExecuteInEditMode]
 public class TextureAnimation : MonoBehaviour
 {
@@ -16,15 +13,15 @@ public class TextureAnimation : MonoBehaviour
         PingPongReverse
     }
 
-    [SerializeField, Tooltip("欲播放的Sprites")]
+    [SerializeField, Tooltip("Sprites")]
     private List<Sprite> animSprites = new List<Sprite>();
-    [SerializeField, Tooltip("是否循環播放")]
+    [SerializeField, Tooltip("Loop play")]
     private bool isLoop = false;
-    [SerializeField, Tooltip("播放模式")]
+    [SerializeField, Tooltip("Play Mode")]
     private PlayMode playMode = PlayMode.Normal;
-    [SerializeField, Tooltip("播放影格率(FPS)")]
+    [SerializeField, Tooltip("Frame rate (FPS)")]
     private int frameRate = 30;
-    [SerializeField, Tooltip("不受Time.Scale影響")]
+    [SerializeField, Tooltip("Ignore Time.Scale")]
     private bool ignoreTimeScale = true;
 
     private float _dt = 0;
@@ -78,7 +75,6 @@ public class TextureAnimation : MonoBehaviour
 
     private void OnEnable()
     {
-        // 透過active = true做一個Reset, 直接就歸零播放
         this._Reset();
     }
 
