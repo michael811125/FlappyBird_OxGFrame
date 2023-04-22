@@ -315,7 +315,7 @@ MonoBehaviour:
   canvas: {fileID: 0}
   graphicRaycaster: {fileID: 0}
   uiSetting:
-    canvasType: 0
+    canvasName: CanvasOverlay
     nodeType: 0
     stack: 0
     order: 0

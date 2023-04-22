@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using Cysharp.Threading.Tasks;
 using OxGFrame.CoreFrame.GSFrame;
@@ -64,13 +63,6 @@ public class GamePlaySC : GSBase
             this._UpdateGroundScroll();
             this._UpdatePipeGenerator(dt);
         }
-    }
-
-    public override void OnUpdateOnceAfterProtocol(int funcId = 0)
-    {
-        /**
-        * Do Update Once After Protocol Handle
-        */
     }
 
     protected override void OnClose()

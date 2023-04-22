@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Cysharp.Threading.Tasks;
 using OxGFrame.CoreFrame.GSFrame;
 
@@ -55,13 +53,6 @@ public class MainMenuSC : GSBase
          */
 
         this._UpdateGroundScroll();
-    }
-
-    public override void OnUpdateOnceAfterProtocol(int funcId = 0)
-    {
-        /**
-        * Do Update Once After Protocol Handle
-        */
     }
 
     protected override void OnClose()

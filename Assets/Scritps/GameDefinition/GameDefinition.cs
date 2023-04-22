@@ -1,11 +1,8 @@
-﻿public static class AssetGroup
+﻿public static class SCPath
 {
-    public const int None = 0;
-}
+    private const string prefix = "res#";
 
-public static class SCPath
-{
-    private const string _path = "CoreFrame/SC/";
+    private static string _path = $"{prefix}CoreFrame/SC/";
 
     // 場景   
     public readonly static string MainMenuSC = $"{_path}MainMenuSC"; // 主選單場景
@@ -14,7 +11,9 @@ public static class SCPath
 
 public static class UIPath
 {
-    private const string _path = "CoreFrame/UI/";
+    private const string prefix = "res#";
+
+    private static string _path = $"{prefix}CoreFrame/UI/";
 
     // 介面
     public readonly static string MainMenuUI = $"{_path}MainMenuUI";     // 主選單介面
@@ -25,7 +24,9 @@ public static class UIPath
 
 public static class AudioPath
 {
-    private const string _path = "MediaFrame/Audio/";
+    private const string prefix = "res#";
+
+    private static string _path = $"{prefix}MediaFrame/Audio/";
 
     // 背景音樂
     public readonly static string MenuBgm = $"{_path}MenuBgm";           // 主選單背景音樂

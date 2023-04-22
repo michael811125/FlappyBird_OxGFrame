@@ -1,5 +1,5 @@
 ﻿using Cysharp.Threading.Tasks;
-using OxGFrame.MediaFrame.AudioFrame;
+using OxGFrame.MediaFrame;
 using UnityEngine;
 
 public class CoreManager : MonoBehaviour
@@ -26,14 +26,14 @@ public class CoreManager : MonoBehaviour
 
     private void Start()
     {
-        GSM.GetInstance().OnStart();
+        GSIManager.GetInstance().OnStart();
     }
 
     private void Update()
     {
         deltaTime = Time.deltaTime;
 
-        GSM.GetInstance().OnUpdate(deltaTime);
+        GSIManager.GetInstance().OnUpdate(deltaTime);
     }
 
     /// <summary>
@@ -54,7 +54,7 @@ public class CoreManager : MonoBehaviour
         _currentScore++;
 
         // 播放增加分數音效
-        AudioManager.GetInstance().Play(AudioPath.ScoreSfx).Forget();
+        MediaFrames.AudioFrame.Play(AudioPath.ScoreSfx).Forget();
     }
 
     /// <summary>
@@ -91,7 +91,7 @@ public class CoreManager : MonoBehaviour
     /// <returns></returns>
     public static bool IsGameStart()
     {
-        return GSM.GetInstance().GetGameStage<GamePlayStage>(GSM.GAME_PLAY_STAGE_ID).IsGameStart();
+        return GSIManager.GetInstance().GetGameStage<GamePlayStage>().IsGameStart();
     }
 
     /// <summary>
@@ -100,7 +100,7 @@ public class CoreManager : MonoBehaviour
     public static void GoToMenu()
     {
         // 切換至 MainMenuStage
-        GSM.GetInstance().ChangeGameStage(GSM.MAIN_MENU_STAGE_ID);
+        GSIManager.GetInstance().ChangeGameStage<MainMenuStage>();
     }
 
     /// <summary>
@@ -109,7 +109,7 @@ public class CoreManager : MonoBehaviour
     public static void EnterGame()
     {
         // 切換 MainMenuStage 步驟
-        GSM.GetInstance().GetGameStage<MainMenuStage>(GSM.MAIN_MENU_STAGE_ID).ChangeStep(MainMenuStage.MainMenuStep.START_GAME_PLAY);
+        GSIManager.GetInstance().GetGameStage<MainMenuStage>().ChangeStep(MainMenuStage.MainMenuStep.START_GAME_PLAY);
     }
 
     /// <summary>
@@ -118,7 +118,7 @@ public class CoreManager : MonoBehaviour
     public static void StartGame()
     {
         // 切換 GamingStage 步驟
-        GSM.GetInstance().GetGameStage<GamePlayStage>(GSM.GAME_PLAY_STAGE_ID).ChangeStep(GamePlayStage.GamePlayStep.START_GAME);
+        GSIManager.GetInstance().GetGameStage<GamePlayStage>().ChangeStep(GamePlayStage.GamePlayStep.START_GAME);
     }
 
     /// <summary>
@@ -127,7 +127,7 @@ public class CoreManager : MonoBehaviour
     public static void GameOver()
     {
         // 切換 GamingStage 步驟
-        GSM.GetInstance().GetGameStage<GamePlayStage>(GSM.GAME_PLAY_STAGE_ID).ChangeStep(GamePlayStage.GamePlayStep.GAMEOVER);
+        GSIManager.GetInstance().GetGameStage<GamePlayStage>().ChangeStep(GamePlayStage.GamePlayStep.GAMEOVER);
     }
 
     /// <summary>
@@ -135,6 +135,6 @@ public class CoreManager : MonoBehaviour
     /// </summary>
     public static void Replay()
     {
-        GSM.GetInstance().ChangeGameStageForce(GSM.GAME_PLAY_STAGE_ID);
+        GSIManager.GetInstance().ChangeGameStageForce<GamePlayStage>();
     }
 }

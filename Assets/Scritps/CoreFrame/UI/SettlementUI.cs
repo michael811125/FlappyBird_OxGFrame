@@ -1,10 +1,9 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using OxGFrame.CoreFrame.UIFrame;
 using Cysharp.Threading.Tasks;
 using UnityEngine.UI;
-using OxGFrame.MediaFrame.AudioFrame;
+using OxGFrame.MediaFrame;
 
 public class SettlementUI : UIBase
 {
@@ -109,11 +108,11 @@ public class SettlementUI : UIBase
         this._replayBtn.onClick.AddListener(() =>
         {
             // 播放轉場音效
-            AudioManager.GetInstance().Play(AudioPath.SwooshingSfx).Forget();
+            MediaFrames.AudioFrame.Play(AudioPath.SwooshingSfx).Forget();
 
             // 重新遊玩
             CoreManager.Replay();
-            
+
             // 關閉自身 UI
             this.CloseSelf();
         });
@@ -122,7 +121,7 @@ public class SettlementUI : UIBase
         this._menuBtn.onClick.AddListener(() =>
         {
             // 播放轉場音效
-            AudioManager.GetInstance().Play(AudioPath.SwooshingSfx).Forget();
+            MediaFrames.AudioFrame.Play(AudioPath.SwooshingSfx).Forget();
 
             // 前往主選單
             CoreManager.GoToMenu();
@@ -166,6 +165,5 @@ public class SettlementUI : UIBase
         }
         // 沒到達分數, 關閉獎牌顯示
         else this._medalImg.gameObject.SetActive(false);
-
     }
 }
