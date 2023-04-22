@@ -1,5 +1,25 @@
 # CHANGELOG
 
+# NEW
+
+## [2.0.0] - 2023-04-22 (Breaking Changes)
+- New OxGFrame Version (API Changed).
+- Added YooAsset.
+- Optimized code.
+
+---
+
+# OLD (deprecated)
+
+## [1.9.1] - 2022-12-23
+- Modified CacheBundle use GetAsset to load asset from AB.
+
+## [1.9.0] - 2022-12-12
+- Added file verification for Downloader (when downloaded file md5 compare with server file md5 is inconsistent will redownload again) to ensure file integrity.
+- Added force unload param for Unload method withou ref count (CacheBundle & CacheResource).
+- Added GetAssetAsync (LoadAssetAsync) method for BundlePack class.
+- Optimized CacheBundle (Load AssetBundle from Memory and Stream).
+
 ## [1.8.2] - 2022-11-18
 - Fixed request StreamingAssets path failed issue on iOS (because missing file://).
   - Run bundle mode on iOS (test passed)
@@ -104,7 +124,7 @@
 - Added GSI (Game System Integration) Example for GSIFrame.
 - Added APICenter, EventCenter, GSI singleton (Implement in base class).
 
-#### 【Remark】Namespace already chagned (add OxGFrame front of AnyFrame).
+#### 【Note】Namespace already chagned (add OxGFrame front of AnyFrame).
 
 ## [1.3.0] - 2022-08-18
 - Added ButtonPlus Component (inherit UGUI Button).

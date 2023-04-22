@@ -1,7 +1,5 @@
 ﻿using Cysharp.Threading.Tasks;
-using OxGFrame.MediaFrame.AudioFrame;
-using System.Collections;
-using System.Collections.Generic;
+using OxGFrame.MediaFrame;
 using UnityEngine;
 
 public class BirdController : MonoBehaviour
@@ -81,7 +79,7 @@ public class BirdController : MonoBehaviour
                 this._rigid.AddForce(Vector2.up * thrust);
 
                 // 播放飛起音效
-                AudioManager.GetInstance().Play(AudioPath.FlySfx).Forget();
+                MediaFrames.AudioFrame.Play(AudioPath.FlySfx).Forget();
             }
         }
 
@@ -150,7 +148,7 @@ public class BirdController : MonoBehaviour
     public void BirdHitAndDead()
     {
         // 播放撞擊音效
-        AudioManager.GetInstance().Play(AudioPath.HitSfx).Forget();
+        MediaFrames.AudioFrame.Play(AudioPath.HitSfx).Forget();
 
         // 遊戲結束
         if (CoreManager.IsGameStart()) CoreManager.GameOver();

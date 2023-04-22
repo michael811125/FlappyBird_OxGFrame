@@ -2,7 +2,7 @@
 using OxGFrame.CoreFrame.UIFrame;
 using Cysharp.Threading.Tasks;
 using UnityEngine.UI;
-using OxGFrame.MediaFrame.AudioFrame;
+using OxGFrame.MediaFrame;
 
 public class MainMenuUI : UIBase
 {
@@ -110,7 +110,7 @@ public class MainMenuUI : UIBase
         this._playBtn.onClick.AddListener(() =>
         {
             // 播放轉場音效
-            AudioManager.GetInstance().Play(AudioPath.SwooshingSfx).Forget();
+            MediaFrames.AudioFrame.Play(AudioPath.SwooshingSfx).Forget();
 
             // 開始遊戲
             CoreManager.EnterGame();
