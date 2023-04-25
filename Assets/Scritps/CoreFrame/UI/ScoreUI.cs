@@ -69,14 +69,14 @@ public class ScoreUI : UIBase
         }
     }
 
-    protected override void ShowAnim(AnimEndCb animEndCb)
+    protected override void ShowAnime(AnimeEndCb animeEndCb)
     {
-        animEndCb(); // Must Keep, Because Parent Already Set AnimCallback
+        animeEndCb(); // Must Keep, Because Parent Already Set AnimCallback
     }
 
-    protected override void HideAnim(AnimEndCb animEndCb)
+    protected override void HideAnime(AnimeEndCb animeEndCb)
     {
-        animEndCb(); // Must Keep, Because Parent Already Set AnimCallback
+        animeEndCb(); // Must Keep, Because Parent Already Set AnimCallback
     }
 
     protected override void OnClose()
