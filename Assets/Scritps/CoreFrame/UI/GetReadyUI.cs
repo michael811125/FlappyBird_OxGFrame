@@ -12,7 +12,7 @@ public class GetReadyUI : UIBase
         this.CloseSelf();
     }
 
-    public override void BeginInit()
+    public override void OnInit()
     {
         /**
          * Do Somthing Init Once In Here
@@ -33,18 +33,9 @@ public class GetReadyUI : UIBase
         */
     }
 
-    protected override void InitOnceComponents()
+    protected override void OnBind()
     {
-        /**
-         * Do Somthing Init Once In Here (For Components)
-         */
-    }
 
-    protected override void InitOnceEvents()
-    {
-        /**
-          * Do Somthing Init Once In Here (For Events)
-          */
     }
 
     protected override void OnShow(object obj)
