@@ -5,7 +5,7 @@ using OxGFrame.CoreFrame.GSFrame;
 
 public class GamePlaySC : GSBase
 {
-    public override void BeginInit()
+    public override void OnInit()
     {
         /**
          * Do Somthing Init Once In Here
@@ -26,20 +26,9 @@ public class GamePlaySC : GSBase
         */
     }
 
-    protected override void InitOnceComponents()
+    protected override void OnBind()
     {
-        /**
-         * Do Somthing Init Once In Here (For Components)
-         */
-
         this._InitComponents();
-    }
-
-    protected override void InitOnceEvents()
-    {
-        /**
-          * Do Somthing Init Once In Here (For Events)
-          */
     }
 
     protected override void OnShow(object obj)
