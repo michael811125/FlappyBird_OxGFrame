@@ -1,8 +1,13 @@
-﻿public static class SCPath
-{
-    private const string prefix = "res#";
+﻿//#define BUNDLE_TYPE
 
+public static class SCPath
+{
+#if BUNDLE_TYPE
+    private static string _path = "";
+#else
+    private const string prefix = "res#";
     private static string _path = $"{prefix}CoreFrame/SC/";
+#endif
 
     // 場景   
     public readonly static string MainMenuSC = $"{_path}MainMenuSC"; // 主選單場景
@@ -11,9 +16,12 @@
 
 public static class UIPath
 {
+#if BUNDLE_TYPE
+    private static string _path = "";
+#else
     private const string prefix = "res#";
-
     private static string _path = $"{prefix}CoreFrame/UI/";
+#endif
 
     // 介面
     public readonly static string MainMenuUI = $"{_path}MainMenuUI";     // 主選單介面
@@ -24,9 +32,12 @@ public static class UIPath
 
 public static class AudioPath
 {
+#if BUNDLE_TYPE
+    private static string _path = "";
+#else
     private const string prefix = "res#";
-
     private static string _path = $"{prefix}MediaFrame/Audio/";
+#endif
 
     // 背景音樂
     public readonly static string MenuBgm = $"{_path}MenuBgm";           // 主選單背景音樂
