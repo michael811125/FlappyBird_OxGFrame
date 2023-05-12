@@ -1,6 +1,5 @@
 ﻿using Cysharp.Threading.Tasks;
 using OxGFrame.AssetLoader.Utility;
-using System;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
@@ -68,9 +67,17 @@ namespace OxGFrame.AssetLoader.Bundle
         /// <returns></returns>
         public static async UniTask<bool> InitDefaultPackage()
         {
-            var hostServer = await BundleConfig.GetHostServerUrl(_currentPackageName);
-            var fallbackHostServer = await BundleConfig.GetFallbackHostServerUrl(_currentPackageName);
-            var queryService = new RequestBuiltinQuery();
+            string hostServer = null;
+            string fallbackHostServer = null;
+            IQueryServices queryService = null;
+
+            // Only Host Mode
+            if (BundleConfig.playMode == BundleConfig.PlayMode.HostMode)
+            {
+                hostServer = await BundleConfig.GetHostServerUrl(_currentPackageName);
+                fallbackHostServer = await BundleConfig.GetFallbackHostServerUrl(_currentPackageName);
+                queryService = new RequestBuiltinQuery();
+            }
 
             return await InitPackage(_currentPackageName, false, hostServer, fallbackHostServer, queryService);
         }
@@ -175,7 +182,7 @@ namespace OxGFrame.AssetLoader.Bundle
         /// Unload package and clear package files from sandbox
         /// </summary>
         /// <param name="packageName"></param>
-        public static void UnloadPackageAndClearCacheFiles(string packageName)
+        public static async UniTask UnloadPackageAndClearCacheFiles(string packageName)
         {
             var package = GetPackage(packageName);
             if (package == null) return;
@@ -183,7 +190,7 @@ namespace OxGFrame.AssetLoader.Bundle
             var sandboxPath = BundleConfig.GetLocalSandboxPath();
             string packagePath = Path.Combine(sandboxPath, BundleConfig.yooCacheFolderName, packageName);
             BundleUtility.DeleteFolder(packagePath);
-            YooAssets.DestroyPackage(packageName);
+            await package.ClearAllCacheFilesAsync();
         }
 
         /// <summary>
@@ -380,6 +387,10 @@ namespace OxGFrame.AssetLoader.Bundle
         /// <returns></returns>
         public static ResourceDownloaderOperation GetPackageDownloader(ResourcePackage package, int maxConcurrencyDownloadCount, int failedRetryCount)
         {
+            // if <= -1 will set be default values
+            if (maxConcurrencyDownloadCount <= -1) maxConcurrencyDownloadCount = BundleConfig.maxConcurrencyDownloadCount;
+            if (failedRetryCount <= -1) failedRetryCount = BundleConfig.failedRetryCount;
+
             // create all
             ResourceDownloaderOperation downloader = package.CreateResourceDownloader(maxConcurrencyDownloadCount, failedRetryCount);
 
