@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "com.domybest.mybox": "https://github.com/Deadcows/MyBox.git",
+    "com.michaelo.oxgframe": "https://github.com/michael811125/OxGFrame.git?path=Assets/OxGFrame",
     "com.unity.collab-proxy": "2.0.4",
     "com.unity.feature.2d": "1.0.0",
     "com.unity.ide.rider": "3.0.21",

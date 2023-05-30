@@ -9,6 +9,15 @@
       },
       "hash": "d3c6ad94239b27adbab8834f2b6f105a50022657"
     },
+    "com.michaelo.oxgframe": {
+      "version": "https://github.com/michael811125/OxGFrame.git?path=Assets/OxGFrame",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.unity.scriptablebuildpipeline": "1.21.5"
+      },
+      "hash": "9e520f5c3396850261c6c0f4c290ced2b8c172d2"
+    },
     "com.unity.2d.animation": {
       "version": "7.0.10",
       "depth": 1,
@@ -180,8 +189,8 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.scriptablebuildpipeline": {
-      "version": "1.20.2",
-      "depth": 0,
+      "version": "1.21.5",
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
