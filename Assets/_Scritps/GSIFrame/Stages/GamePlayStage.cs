@@ -29,20 +29,20 @@ public class GamePlayStage : GSIBase
 
     public override void OnUpdate(float dt = 0.0f)
     {
-        /* Do Somthing Update in here */
+        /* Do Somethings Update in here */
 
         switch (this._step)
         {
             case GamePlayStep.INIT_GAME:
 
                 // 重置分數
-                CoreManager.ResetScore();
+                CoreSystem.ResetScore();
 
                 // 開啟 GamePlay 場景
-                CoreFrames.GSFrame.Show(SCPath.GamePlaySC).Forget();
+                CoreFrames.SRFrame.Show(SCs.GamePlaySC).Forget();
 
                 // 開啟 GetReadyUI
-                CoreFrames.UIFrame.Show(UIPath.GetReadyUI).Forget();
+                CoreFrames.UIFrame.Show(UIs.GetReadyUI).Forget();
 
                 this._step = GamePlayStep.WAITING_FOR_READY;
                 break;
@@ -52,7 +52,7 @@ public class GamePlayStage : GSIBase
 
             case GamePlayStep.START_GAME:
                 // 開啟 ScoreUI
-                CoreFrames.UIFrame.Show(UIPath.ScoreUI).Forget();
+                CoreFrames.UIFrame.Show(UIs.ScoreUI).Forget();
 
                 // 標記遊戲開始
                 this._isStart = true;
@@ -65,13 +65,13 @@ public class GamePlayStage : GSIBase
 
             case GamePlayStep.GAMEOVER:
                 // 開啟 SettlementUI
-                CoreFrames.UIFrame.Show(UIPath.SettlementUI).Forget();
+                CoreFrames.UIFrame.Show(UIs.SettlementUI).Forget();
 
                 // 標記遊戲開始標記結束
                 this._isStart = false;
 
                 // 每次 GameOver 記錄分數
-                CoreManager.SaveBestScore();
+                CoreSystem.SaveBestScore();
 
                 this._step = GamePlayStep.DONE;
                 break;
@@ -84,15 +84,15 @@ public class GamePlayStage : GSIBase
     public override void OnExit()
     {
         // 判斷場景是否有開啟, 如果有開啟則關閉再開啟 (確保後續 Replay = reload)
-        if (CoreFrames.GSFrame.CheckIsShowing(SCPath.GamePlaySC))
+        if (CoreFrames.SRFrame.CheckIsShowing(SCs.GamePlaySC))
         {
-            CoreFrames.GSFrame.Close(SCPath.GamePlaySC);
+            CoreFrames.SRFrame.Close(SCs.GamePlaySC);
         }
 
         // 判斷 ScoreUI 是否開啟, 如果有開啟則進行關閉
-        if (CoreFrames.UIFrame.CheckIsShowing(UIPath.ScoreUI))
+        if (CoreFrames.UIFrame.CheckIsShowing(UIs.ScoreUI))
         {
-            CoreFrames.UIFrame.Close(UIPath.ScoreUI);
+            CoreFrames.UIFrame.Close(UIs.ScoreUI);
         }
     }
 

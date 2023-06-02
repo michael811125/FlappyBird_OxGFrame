@@ -25,19 +25,19 @@ public class MainMenuStage : GSIBase
 
     public override void OnUpdate(float dt = 0.0f)
     {
-        /* Do Somthing Update in here */
+        /* Do Somethings Update in here */
 
         switch (this._step)
         {
             case MainMenuStep.INIT_SHOW:
                 // 播放主選單 BGM
-                MediaFrames.AudioFrame.Play(AudioPath.MenuBgm).Forget();
+                MediaFrames.AudioFrame.Play(Audios.MenuBgm).Forget();
 
                 // 開啟主選單場景
-                CoreFrames.GSFrame.Show(SCPath.MainMenuSC).Forget();
+                CoreFrames.SRFrame.Show(SCs.MainMenuSC).Forget();
 
                 // 開啟主選單 UI
-                CoreFrames.UIFrame.Show(UIPath.MainMenuUI).Forget();
+                CoreFrames.UIFrame.Show(UIs.MainMenuUI).Forget();
 
                 this._step = MainMenuStep.WAITING_FOR_PLAYER;
                 break;
@@ -47,13 +47,13 @@ public class MainMenuStage : GSIBase
 
             case MainMenuStep.START_GAME_PLAY:
                 // 關閉主選單 BGM
-                MediaFrames.AudioFrame.Stop(AudioPath.MenuBgm);
+                MediaFrames.AudioFrame.Stop(Audios.MenuBgm);
 
                 // 關閉 MenuBackgroundSC
-                CoreFrames.GSFrame.Close(SCPath.MainMenuSC);
+                CoreFrames.SRFrame.Close(SCs.MainMenuSC);
 
                 // 關閉 MainMenuUI
-                CoreFrames.UIFrame.Close(UIPath.MainMenuUI);
+                CoreFrames.UIFrame.Close(UIs.MainMenuUI);
 
                 // 切換 GamePlay 階段
                 GSIManager.GetInstance().ChangeGameStage<GamePlayStage>();

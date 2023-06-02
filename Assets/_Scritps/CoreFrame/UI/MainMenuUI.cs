@@ -9,7 +9,7 @@ public class MainMenuUI : UIBase
     public override void OnInit()
     {
         /**
-         * Do Somthing Init Once In Here
+         * Do Somethings Init Once In Here
          */
     }
 
@@ -36,7 +36,7 @@ public class MainMenuUI : UIBase
     protected override void OnShow(object obj)
     {
         /**
-         * Do Something Init With Every Showing In Here
+         * Do Somethings Init With Every Showing In Here
          */
     }
 
@@ -98,10 +98,10 @@ public class MainMenuUI : UIBase
         this._playBtn.onClick.AddListener(() =>
         {
             // 播放轉場音效
-            MediaFrames.AudioFrame.Play(AudioPath.SwooshingSfx).Forget();
+            MediaFrames.AudioFrame.Play(Audios.SwooshingSfx).Forget();
 
             // 開始遊戲
-            CoreManager.EnterGame();
+            CoreSystem.EnterGame();
         });
     }
 

@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.code-philosophy.hybridclr": {
+      "version": "https://github.com/focus-creative-games/hybridclr_unity.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "4b43870ff2a6c1e30e7fe99ac361dd437b583155"
+    },
     "com.domybest.mybox": {
       "version": "https://github.com/Deadcows/MyBox.git",
       "depth": 0,
@@ -16,7 +23,7 @@
       "dependencies": {
         "com.unity.scriptablebuildpipeline": "1.21.5"
       },
-      "hash": "9e520f5c3396850261c6c0f4c290ced2b8c172d2"
+      "hash": "8afb8621e16705b33aec83a857d55c3e7af85574"
     },
     "com.unity.2d.animation": {
       "version": "7.0.10",

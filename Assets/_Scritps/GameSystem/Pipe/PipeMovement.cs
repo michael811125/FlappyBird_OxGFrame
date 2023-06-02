@@ -6,9 +6,9 @@ public class PipeMovement : MonoBehaviour
 
     private void Update()
     {
-        if (CoreManager.IsGameStart())
+        if (CoreSystem.IsGameStart())
         {
-            float dt = CoreManager.deltaTime;
+            float dt = CoreSystem.deltaTime;
 
             // Continuosly move the obstacles to the left if the game hasn't ended
             this.transform.position = new Vector2(this.transform.position.x - dt * moveSpeed, this.transform.position.y);

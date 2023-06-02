@@ -11,7 +11,7 @@ public class ScoreUI : UIBase
     public override void OnInit()
     {
         /**
-         * Do Somthing Init Once In Here
+         * Do Somethings Init Once In Here
          */
     }
 
@@ -37,7 +37,7 @@ public class ScoreUI : UIBase
     protected override void OnShow(object obj)
     {
         /**
-         * Do Something Init With Every Showing In Here
+         * Do Somethings Init With Every Showing In Here
          */
     }
 
@@ -49,11 +49,11 @@ public class ScoreUI : UIBase
 
         this._UpdateScoreText();
 
-        if (CoreManager.IsGameStart())
+        if (CoreSystem.IsGameStart())
         {
             if (Keyboard.current.spaceKey.wasReleasedThisFrame)
             {
-                CoreManager.AddScore();
+                CoreSystem.AddScore();
             }
         }
     }
@@ -88,6 +88,6 @@ public class ScoreUI : UIBase
 
     private void _UpdateScoreText()
     {
-        this._score.text = CoreManager.GetScore().ToString();
+        this._score.text = CoreSystem.GetScore().ToString();
     }
 }

@@ -1,14 +1,14 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using Cysharp.Threading.Tasks;
-using OxGFrame.CoreFrame.GSFrame;
+using OxGFrame.CoreFrame.SRFrame;
 
-public class GamePlaySC : GSBase
+public class GamePlaySC : SRBase
 {
     public override void OnInit()
     {
         /**
-         * Do Somthing Init Once In Here
+         * Do Somethings Init Once In Here
          */
     }
 
@@ -34,7 +34,7 @@ public class GamePlaySC : GSBase
     protected override void OnShow(object obj)
     {
         /**
-         * Do Something Init With Every Showing In Here
+         * Do Somethings Init With Every Showing In Here
          */
 
         this._InitBackground();
@@ -47,7 +47,7 @@ public class GamePlaySC : GSBase
          * Do Update Per FrameRate
          */
 
-        if (CoreManager.IsGameStart())
+        if (CoreSystem.IsGameStart())
         {
             this._UpdateGroundScroll();
             this._UpdatePipeGenerator(dt);
@@ -112,7 +112,6 @@ public class GamePlaySC : GSBase
             this._pipeIntervalTimer = 0;
             int idx = Random.Range(0, this.pipes.Count);
             GameObject instPipe = Instantiate(this.pipes[idx], this.pipeStartSpawnPosition, Quaternion.identity, this._pipeContainer);
-            //instPipe.transform.parent = this._pipeContainer;
             instPipe.name = $"Pipe_{idx}";
         }
     }
@@ -126,7 +125,6 @@ public class GamePlaySC : GSBase
     private void _InitBird()
     {
         int idx = Random.Range(0, this.birds.Count);
-        GameObject instBird = Instantiate(this.birds[idx], this._birdContainer.position, Quaternion.identity, this._birdContainer);
-        //instBird.transform.parent = this._birdContainer;
+        Instantiate(this.birds[idx], this._birdContainer.position, Quaternion.identity, this._birdContainer);
     }
 }
