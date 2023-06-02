@@ -10,7 +10,7 @@ public class SettlementUI : UIBase
     public override void OnInit()
     {
         /**
-         * Do Somthing Init Once In Here
+         * Do Somethings Init Once In Here
          */
     }
 
@@ -37,7 +37,7 @@ public class SettlementUI : UIBase
     protected override void OnShow(object obj)
     {
         /**
-         * Do Something Init With Every Showing In Here
+         * Do Somethings Init With Every Showing In Here
          */
 
         this._DrawScoreView();
@@ -96,10 +96,10 @@ public class SettlementUI : UIBase
         this._replayBtn.onClick.AddListener(() =>
         {
             // 播放轉場音效
-            MediaFrames.AudioFrame.Play(AudioPath.SwooshingSfx).Forget();
+            MediaFrames.AudioFrame.Play(Audios.SwooshingSfx).Forget();
 
             // 重新遊玩
-            CoreManager.Replay();
+            CoreSystem.Replay();
 
             // 關閉自身 UI
             this.CloseSelf();
@@ -109,10 +109,10 @@ public class SettlementUI : UIBase
         this._menuBtn.onClick.AddListener(() =>
         {
             // 播放轉場音效
-            MediaFrames.AudioFrame.Play(AudioPath.SwooshingSfx).Forget();
+            MediaFrames.AudioFrame.Play(Audios.SwooshingSfx).Forget();
 
             // 前往主選單
-            CoreManager.GoToMenu();
+            CoreSystem.GoToMenu();
 
             // 關閉自身 UI
             this.CloseSelf();
@@ -122,14 +122,14 @@ public class SettlementUI : UIBase
     private void _DrawScoreView()
     {
         // 顯示當前分數
-        this._score.text = CoreManager.GetScore().ToString(); ;
+        this._score.text = CoreSystem.GetScore().ToString(); ;
         // 顯示最佳分數
-        this._bestScore.text = CoreManager.GetBestScore().ToString();
+        this._bestScore.text = CoreSystem.GetBestScore().ToString();
     }
 
     private void _DrawMedalView()
     {
-        int score = CoreManager.GetScore();
+        int score = CoreSystem.GetScore();
 
         // 分數 >= 40 分 (白金牌)
         if (score >= 40)

@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.code-philosophy.hybridclr": "https://github.com/focus-creative-games/hybridclr_unity.git",
     "com.domybest.mybox": "https://github.com/Deadcows/MyBox.git",
     "com.michaelo.oxgframe": "https://github.com/michael811125/OxGFrame.git?path=Assets/OxGFrame",
     "com.unity.collab-proxy": "2.0.4",

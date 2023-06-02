@@ -1,13 +1,13 @@
 ﻿using UnityEngine;
 using Cysharp.Threading.Tasks;
-using OxGFrame.CoreFrame.GSFrame;
+using OxGFrame.CoreFrame.SRFrame;
 
-public class MainMenuSC : GSBase
+public class MainMenuSC : SRBase
 {
     public override void OnInit()
     {
         /**
-         * Do Somthing Init Once In Here
+         * Do Somethings Init Once In Here
          */
     }
 
@@ -33,7 +33,7 @@ public class MainMenuSC : GSBase
     protected override void OnShow(object obj)
     {
         /**
-         * Do Something Init With Every Showing In Here
+         * Do Somethings Init With Every Showing In Here
          */
     }
 

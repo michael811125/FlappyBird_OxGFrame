@@ -32,7 +32,7 @@ public class BirdController : MonoBehaviour
 
     private void Update()
     {
-        float dt = CoreManager.deltaTime;
+        float dt = CoreSystem.deltaTime;
 
         // 判斷是否初次點擊
         if (!this._firstTap)
@@ -52,7 +52,7 @@ public class BirdController : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (CoreManager.IsGameStart())
+        if (CoreSystem.IsGameStart())
         {
             if (!this._firstTap)
             {
@@ -79,7 +79,7 @@ public class BirdController : MonoBehaviour
                 this._rigid.AddForce(Vector2.up * thrust);
 
                 // 播放飛起音效
-                MediaFrames.AudioFrame.Play(AudioPath.FlySfx).Forget();
+                MediaFrames.AudioFrame.Play(Audios.FlySfx).Forget();
             }
         }
 
@@ -113,7 +113,7 @@ public class BirdController : MonoBehaviour
             Destroy(collider.gameObject);
 
             // 增加分數
-            CoreManager.AddScore();
+            CoreSystem.AddScore();
         }
         // 判斷觸發是否為 Pipe
         else if (collider.transform.CompareTag("Pipe"))
@@ -148,10 +148,10 @@ public class BirdController : MonoBehaviour
     public void BirdHitAndDead()
     {
         // 播放撞擊音效
-        MediaFrames.AudioFrame.Play(AudioPath.HitSfx).Forget();
+        MediaFrames.AudioFrame.Play(Audios.HitSfx).Forget();
 
         // 遊戲結束
-        if (CoreManager.IsGameStart()) CoreManager.GameOver();
+        if (CoreSystem.IsGameStart()) CoreSystem.GameOver();
 
         // 歸零速率
         this._rigid.velocity = Vector2.zero;

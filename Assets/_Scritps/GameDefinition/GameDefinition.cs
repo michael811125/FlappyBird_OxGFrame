@@ -1,6 +1,6 @@
 ﻿//#define BUNDLE_TYPE
 
-public static class SCPath
+public static class SCs
 {
 #if BUNDLE_TYPE
     private static string _path = "";
@@ -14,7 +14,7 @@ public static class SCPath
     public readonly static string GamePlaySC = $"{_path}GamePlaySC"; // 遊戲場景
 }
 
-public static class UIPath
+public static class UIs
 {
 #if BUNDLE_TYPE
     private static string _path = "";
@@ -30,7 +30,7 @@ public static class UIPath
     public readonly static string SettlementUI = $"{_path}SettlementUI"; // 結算介面
 }
 
-public static class AudioPath
+public static class Audios
 {
 #if BUNDLE_TYPE
     private static string _path = "";

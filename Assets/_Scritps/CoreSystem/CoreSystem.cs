@@ -1,31 +1,28 @@
 ﻿using Cysharp.Threading.Tasks;
 using OxGFrame.MediaFrame;
+using OxGFrame.Utility.Singleton;
 using UnityEngine;
 
-public class CoreManager : MonoBehaviour
+public class CoreSystem : MonoSingleton<CoreSystem>
 {
     public static float deltaTime = 0f;
 
-    private static CoreManager _instance = null;
-    public static CoreManager GetInstance()
-    {
-        if (_instance == null)
-        {
-            _instance = FindObjectOfType<CoreManager>();
-        }
-        return _instance;
-    }
+    [Range(24, 60)]
+    public int frameRate = 30;
 
     private static int _currentScore;
 
     private void Awake()
     {
-        // Set CoreManager don't destroy on load 
-        DontDestroyOnLoad(this);
+        // Init instance first
+        GetInstance();
     }
 
     private void Start()
     {
+        // 30 for Mobile, 60 for Desktop
+        Application.targetFrameRate = this.frameRate;
+
         GSIManager.GetInstance().OnStart();
     }
 
@@ -54,7 +51,7 @@ public class CoreManager : MonoBehaviour
         _currentScore++;
 
         // 播放增加分數音效
-        MediaFrames.AudioFrame.Play(AudioPath.ScoreSfx).Forget();
+        MediaFrames.AudioFrame.Play(Audios.ScoreSfx).Forget();
     }
 
     /// <summary>

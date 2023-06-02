@@ -8,14 +8,14 @@ public class GetReadyUI : UIBase
 {
     protected override void MaskEvent()
     {
-        CoreManager.StartGame();
+        CoreSystem.StartGame();
         this.CloseSelf();
     }
 
     public override void OnInit()
     {
         /**
-         * Do Somthing Init Once In Here
+         * Do Somethings Init Once In Here
          */
     }
 
@@ -41,7 +41,7 @@ public class GetReadyUI : UIBase
     protected override void OnShow(object obj)
     {
         /**
-         * Do Something Init With Every Showing In Here
+         * Do Somethings Init With Every Showing In Here
          */
     }
 
