@@ -10,8 +10,8 @@ public static class SCs
 #endif
 
     // 場景   
-    public readonly static string MainMenuSC = $"{_path}MainMenuSC"; // 主選單場景
-    public readonly static string GamePlaySC = $"{_path}GamePlaySC"; // 遊戲場景
+    public readonly static string MainMenuSC = $"{_path}MainMenuSC";     // 主選單場景
+    public readonly static string GamePlaySC = $"{_path}GamePlaySC";     // 遊戲場景
 }
 
 public static class UIs

@@ -49,7 +49,7 @@ public class MainMenuStage : GSIBase
                 // 關閉主選單 BGM
                 MediaFrames.AudioFrame.Stop(Audios.MenuBgm);
 
-                // 關閉 MenuBackgroundSC
+                // 關閉 MainMenuSC
                 CoreFrames.SRFrame.Close(SCs.MainMenuSC);
 
                 // 關閉 MainMenuUI

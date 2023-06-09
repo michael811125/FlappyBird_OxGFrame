@@ -64,7 +64,7 @@ public class GamePlaySC : SRBase
 
     }
 
-    // 初始 GamingBackgroundSC 相關組件
+    // 初始 GamePlaySC 相關組件
 
     [Header("Ground Scroll Speed")]
     public float scrollSpeed = 0.5f;
