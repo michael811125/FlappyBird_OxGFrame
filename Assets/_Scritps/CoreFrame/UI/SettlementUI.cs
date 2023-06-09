@@ -122,7 +122,7 @@ public class SettlementUI : UIBase
     private void _DrawScoreView()
     {
         // 顯示當前分數
-        this._score.text = CoreSystem.GetScore().ToString(); ;
+        this._score.text = CoreSystem.GetScore().ToString();
         // 顯示最佳分數
         this._bestScore.text = CoreSystem.GetBestScore().ToString();
     }

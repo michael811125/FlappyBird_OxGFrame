@@ -34,7 +34,6 @@ public class GamePlayStage : GSIBase
         switch (this._step)
         {
             case GamePlayStep.INIT_GAME:
-
                 // 重置分數
                 CoreSystem.ResetScore();
 
