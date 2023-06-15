@@ -5,7 +5,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "4b43870ff2a6c1e30e7fe99ac361dd437b583155"
+      "hash": "8e178c0e372a396e1bf1687e450d85693a95baf4"
     },
     "com.domybest.mybox": {
       "version": "https://github.com/Deadcows/MyBox.git",
@@ -23,7 +23,7 @@
       "dependencies": {
         "com.unity.scriptablebuildpipeline": "1.21.5"
       },
-      "hash": "39d6b6cd160af4262b11c0aca00b8eca8e988ceb"
+      "hash": "e41f1628449e3f7028b0097b2e6cf457724162b8"
     },
     "com.unity.2d.animation": {
       "version": "7.0.10",
