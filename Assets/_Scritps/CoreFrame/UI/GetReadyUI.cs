@@ -16,14 +16,14 @@ public class GetReadyUI : UIBase
          */
     }
 
-    protected override async UniTask OpenSub()
+    protected override async UniTask OnPreShow()
     {
         /**
         * Open Sub With Async
         */
     }
 
-    protected override void CloseSub()
+    protected override void OnPreClose()
     {
         /**
         * Close Sub
