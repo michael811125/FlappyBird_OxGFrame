@@ -23,7 +23,7 @@
       "dependencies": {
         "com.unity.scriptablebuildpipeline": "1.21.5"
       },
-      "hash": "94b14df86681c8bb99ab34c007df67850cd656fb"
+      "hash": "31c49756bdc516661a2cd7aceea564d96578b21a"
     },
     "com.unity.2d.animation": {
       "version": "7.0.10",
