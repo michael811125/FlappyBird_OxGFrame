@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6205206228649799886}
   - component: {fileID: 4304601081557027661}
   m_Layer: 0
-  m_Name: _Node@Score
+  m_Name: _Node@Score*Txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -189,6 +189,7 @@ MonoBehaviour:
   onCloseAndDestroy: 1
   canvas: {fileID: 0}
   graphicRaycaster: {fileID: 0}
+  reverseChanges: 0
   uiSetting:
     canvasName: CanvasOverlay
     nodeType: 1
@@ -199,4 +200,5 @@ MonoBehaviour:
   autoMask: 0
   maskSetting:
     color: {r: 0, g: 0, b: 0, a: 0.7529412}
+    sprite: {fileID: 0}
     isClickMaskToClose: 1
