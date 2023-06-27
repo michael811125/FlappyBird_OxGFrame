@@ -76,15 +76,15 @@ public class ScoreUI : UIBase
     }
 
     // 初始 ScoreUI 相關組件
-    private Text _score;
+    private Text _scoreTxt;
 
     private void _InitComponents()
     {
-        this._score = this.collector.GetNode("Score").GetComponent<Text>();
+        this._scoreTxt = this.collector.GetNodeComponent<Text>("Score*Txt");
     }
 
     private void _UpdateScoreText()
     {
-        this._score.text = CoreSystem.GetScore().ToString();
+        this._scoreTxt.text = CoreSystem.GetScore().ToString();
     }
 }
