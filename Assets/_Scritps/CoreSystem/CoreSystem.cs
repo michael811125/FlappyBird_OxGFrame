@@ -33,6 +33,7 @@ public class CoreSystem : MonoSingleton<CoreSystem>
         GSIManager.GetInstance().OnUpdate(deltaTime);
     }
 
+    #region Score Controls
     /// <summary>
     /// 重置分數
     /// </summary>
@@ -81,7 +82,9 @@ public class CoreSystem : MonoSingleton<CoreSystem>
     {
         return PlayerPrefs.GetInt("BestScore", 0);
     }
+    #endregion
 
+    #region Game Stage Controls
     /// <summary>
     /// [Global] 遊戲是否開始
     /// </summary>
@@ -134,4 +137,5 @@ public class CoreSystem : MonoSingleton<CoreSystem>
     {
         GSIManager.GetInstance().ChangeGameStageForce<GamePlayStage>();
     }
+    #endregion
 }

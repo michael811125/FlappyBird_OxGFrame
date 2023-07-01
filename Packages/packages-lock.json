@@ -21,9 +21,9 @@
       "depth": 0,
       "source": "git",
       "dependencies": {
-        "com.unity.scriptablebuildpipeline": "1.21.5"
+        "com.unity.scriptablebuildpipeline": "1.21.7"
       },
-      "hash": "6604535df5af8350035c392839072eccb373af78"
+      "hash": "a9856c5c2d48610f8ec81ad0316313d5d17b8c64"
     },
     "com.unity.2d.animation": {
       "version": "7.0.10",
@@ -189,14 +189,14 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.nuget.newtonsoft-json": {
-      "version": "3.2.0",
+      "version": "3.2.1",
       "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.scriptablebuildpipeline": {
-      "version": "1.21.5",
+      "version": "1.21.7",
       "depth": 1,
       "source": "registry",
       "dependencies": {},

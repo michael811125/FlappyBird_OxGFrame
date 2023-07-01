@@ -60,6 +60,9 @@ public class GamePlayStage : GSIBase
                 break;
 
             case GamePlayStep.PLAYING_GAME:
+                /*
+                 * 遊玩期間狀態會一直在此 Update
+                 */
                 break;
 
             case GamePlayStep.GAMEOVER:
