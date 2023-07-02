@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: BindCodeSetting
   m_EditorClassIdentifier: 
   variableCaseType: 0
-  variableAccessModifier: private
+  variableAccessModifier: protected
   variablePrefix: _
-  methodAccessModifier: private
-  methodPrefix: _
+  methodAccessModifier: protected
+  methodPrefix: 
   methodName: InitComponents
   indicateModifier: 1
   _tailRules:
@@ -51,4 +51,8 @@ MonoBehaviour:
       Component: TMP_Dropdown
     - TailName: TmpField
       Component: TMP_InputField
+    - TailName: BtnPlus
+      Component: ButtonPlus
+    - TailName: NodePool
+      Component: NodePool
     keyCollision: 0

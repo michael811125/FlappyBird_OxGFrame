@@ -250,6 +250,7 @@ MonoBehaviour:
   onCloseAndDestroy: 1
   canvas: {fileID: 0}
   graphicRaycaster: {fileID: 0}
+  reverseChanges: 0
   uiSetting:
     canvasName: CanvasOverlay
     nodeType: 2
@@ -260,6 +261,8 @@ MonoBehaviour:
   autoMask: 1
   maskSetting:
     color: {r: 0, g: 0, b: 0, a: 0.3764706}
+    sprite: {fileID: 0}
+    material: {fileID: 0}
     isClickMaskToClose: 0
   medals:
   - {fileID: 21300116, guid: 1768d357aa7331f4f9c0e023cf9249f1, type: 3}
@@ -279,7 +282,7 @@ GameObject:
   - component: {fileID: 4552605840823099245}
   - component: {fileID: 4179911649280585885}
   m_Layer: 0
-  m_Name: Img
+  m_Name: Img#
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
