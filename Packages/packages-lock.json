@@ -23,7 +23,14 @@
       "dependencies": {
         "com.unity.scriptablebuildpipeline": "1.21.7"
       },
-      "hash": "4130a1c8f7401db140998d87d6a038b93325b515"
+      "hash": "c8eb53b8f9a7eb15d4f5daccb7aa2512beab1e7b"
+    },
+    "com.michaelo.oxgkit.utilities": {
+      "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/Utilities/Scripts",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "934dd44aed0da1b6c6da76b40cefbe239d0fc917"
     },
     "com.unity.2d.animation": {
       "version": "7.0.10",

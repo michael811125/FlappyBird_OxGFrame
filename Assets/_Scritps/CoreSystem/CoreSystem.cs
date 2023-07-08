@@ -1,6 +1,6 @@
 ﻿using Cysharp.Threading.Tasks;
 using OxGFrame.MediaFrame;
-using OxGFrame.Utility.Singleton;
+using OxGKit.Utilities.Singleton;
 using UnityEngine;
 
 public class CoreSystem : MonoSingleton<CoreSystem>
