@@ -22,37 +22,117 @@ MonoBehaviour:
   _tailRules:
     list:
     - TailName: Trans
-      Component: Transform
+      Reference:
+        componentName: Transform
+        pluralize:
+          endRemoveCount: 0
+          endPluralTxt: es
     - TailName: RectTrans
-      Component: RectTransform
+      Reference:
+        componentName: RectTransform
+        pluralize:
+          endRemoveCount: 0
+          endPluralTxt: es
     - TailName: Img
-      Component: Image
+      Reference:
+        componentName: Image
+        pluralize:
+          endRemoveCount: 0
+          endPluralTxt: s
     - TailName: RawImg
-      Component: RawImage
+      Reference:
+        componentName: RawImage
+        pluralize:
+          endRemoveCount: 0
+          endPluralTxt: s
     - TailName: Txt
-      Component: Text
+      Reference:
+        componentName: Text
+        pluralize:
+          endRemoveCount: 0
+          endPluralTxt: s
     - TailName: Btn
-      Component: Button
+      Reference:
+        componentName: Button
+        pluralize:
+          endRemoveCount: 0
+          endPluralTxt: s
     - TailName: Tgl
-      Component: Toggle
+      Reference:
+        componentName: Toggle
+        pluralize:
+          endRemoveCount: 0
+          endPluralTxt: s
     - TailName: Sld
-      Component: Slider
+      Reference:
+        componentName: Slider
+        pluralize:
+          endRemoveCount: 0
+          endPluralTxt: s
     - TailName: ScrBar
-      Component: Scrollbar
+      Reference:
+        componentName: Scrollbar
+        pluralize:
+          endRemoveCount: 0
+          endPluralTxt: s
     - TailName: ScrView
-      Component: ScrollRect
+      Reference:
+        componentName: ScrollRect
+        pluralize:
+          endRemoveCount: 0
+          endPluralTxt: s
     - TailName: Drd
-      Component: Dropdown
+      Reference:
+        componentName: Dropdown
+        pluralize:
+          endRemoveCount: 0
+          endPluralTxt: s
     - TailName: Field
-      Component: InputField
+      Reference:
+        componentName: InputField
+        pluralize:
+          endRemoveCount: 0
+          endPluralTxt: s
     - TailName: TmpTxt
-      Component: TMP_Text
+      Reference:
+        componentName: TMP_Text
+        pluralize:
+          endRemoveCount: 0
+          endPluralTxt: s
     - TailName: TmpDrd
-      Component: TMP_Dropdown
+      Reference:
+        componentName: TMP_Dropdown
+        pluralize:
+          endRemoveCount: 0
+          endPluralTxt: s
     - TailName: TmpField
-      Component: TMP_InputField
+      Reference:
+        componentName: TMP_InputField
+        pluralize:
+          endRemoveCount: 0
+          endPluralTxt: s
     - TailName: BtnPlus
-      Component: ButtonPlus
+      Reference:
+        componentName: ButtonPlus
+        pluralize:
+          endRemoveCount: 0
+          endPluralTxt: es
     - TailName: NodePool
-      Component: NodePool
+      Reference:
+        componentName: NodePool
+        pluralize:
+          endRemoveCount: 0
+          endPluralTxt: s
+    - TailName: TestA
+      Reference:
+        componentName: NodePool
+        pluralize:
+          endRemoveCount: 0
+          endPluralTxt: s
+    - TailName: TESTB
+      Reference:
+        componentName: NodePool
+        pluralize:
+          endRemoveCount: 0
+          endPluralTxt: s
     keyCollision: 0
