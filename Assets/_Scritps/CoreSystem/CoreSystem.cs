@@ -23,14 +23,14 @@ public class CoreSystem : MonoSingleton<CoreSystem>
         // 30 for Mobile, 60 for Desktop
         Application.targetFrameRate = this.frameRate;
 
-        GSIManager.GetInstance().OnStart();
+        GSIManager.Start();
     }
 
     private void Update()
     {
         deltaTime = Time.deltaTime;
 
-        GSIManager.GetInstance().OnUpdate(deltaTime);
+        GSIManager.Update(deltaTime);
     }
 
     #region Score Controls
@@ -91,7 +91,7 @@ public class CoreSystem : MonoSingleton<CoreSystem>
     /// <returns></returns>
     public static bool IsGameStart()
     {
-        return GSIManager.GetInstance().GetGameStage<GamePlayStage>().IsGameStart();
+        return GSIManager.GetStage<GamePlayStage>().IsGameStart();
     }
 
     /// <summary>
@@ -100,7 +100,7 @@ public class CoreSystem : MonoSingleton<CoreSystem>
     public static void GoToMenu()
     {
         // 切換至 MainMenuStage
-        GSIManager.GetInstance().ChangeGameStage<MainMenuStage>();
+        GSIManager.ChangeStage<MainMenuStage>();
     }
 
     /// <summary>
@@ -109,7 +109,7 @@ public class CoreSystem : MonoSingleton<CoreSystem>
     public static void EnterGame()
     {
         // 切換 MainMenuStage 步驟
-        GSIManager.GetInstance().GetGameStage<MainMenuStage>().ChangeStep(MainMenuStage.MainMenuStep.START_GAME_PLAY);
+        GSIManager.GetStage<MainMenuStage>().ChangeStep(MainMenuStage.MainMenuStep.START_GAME_PLAY);
     }
 
     /// <summary>
@@ -118,7 +118,7 @@ public class CoreSystem : MonoSingleton<CoreSystem>
     public static void StartGame()
     {
         // 切換 GamingStage 步驟
-        GSIManager.GetInstance().GetGameStage<GamePlayStage>().ChangeStep(GamePlayStage.GamePlayStep.START_GAME);
+        GSIManager.GetStage<GamePlayStage>().ChangeStep(GamePlayStage.GamePlayStep.START_GAME);
     }
 
     /// <summary>
@@ -127,7 +127,7 @@ public class CoreSystem : MonoSingleton<CoreSystem>
     public static void GameOver()
     {
         // 切換 GamingStage 步驟
-        GSIManager.GetInstance().GetGameStage<GamePlayStage>().ChangeStep(GamePlayStage.GamePlayStep.GAMEOVER);
+        GSIManager.GetStage<GamePlayStage>().ChangeStep(GamePlayStage.GamePlayStep.GAMEOVER);
     }
 
     /// <summary>
@@ -135,7 +135,7 @@ public class CoreSystem : MonoSingleton<CoreSystem>
     /// </summary>
     public static void Replay()
     {
-        GSIManager.GetInstance().ChangeGameStageForce<GamePlayStage>();
+        GSIManager.ChangeStage<GamePlayStage>(true);
     }
     #endregion
 }
