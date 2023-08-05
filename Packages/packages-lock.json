@@ -5,7 +5,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "8a95fd57f592ae3c45347a00da1a6db186f0dd66"
+      "hash": "c3f6325e4af43abd430cce8b3f10908580303358"
     },
     "com.domybest.mybox": {
       "version": "https://github.com/Deadcows/MyBox.git",
@@ -23,7 +23,7 @@
       "dependencies": {
         "com.unity.scriptablebuildpipeline": "1.21.7"
       },
-      "hash": "ad14bdfee0346ac0844630ef428fa05aa8c222ad"
+      "hash": "ddd8fc6c8a5b943fbe948b817d92c342900c5940"
     },
     "com.michaelo.oxgkit.utilities": {
       "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/Utilities/Scripts",

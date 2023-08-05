@@ -56,7 +56,7 @@ public class MainMenuStage : GSIBase
                 CoreFrames.UIFrame.Close(UIs.MainMenuUI);
 
                 // 切換 GamePlay 階段
-                GSIManager.GetInstance().ChangeGameStage<GamePlayStage>();
+                GSIManager.ChangeStage<GamePlayStage>();
                 break;
         }
     }
