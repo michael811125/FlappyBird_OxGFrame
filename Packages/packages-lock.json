@@ -14,7 +14,7 @@
       "dependencies": {
         "com.unity.ugui": "1.0.0"
       },
-      "hash": "731d19fc919ed5a049c8e8d3b8e9bfca34671f53"
+      "hash": "e89d9a715429ea2c306532f574c70d281404e6c0"
     },
     "com.michaelo.oxgframe": {
       "version": "https://github.com/michael811125/OxGFrame.git?path=Assets/OxGFrame",
@@ -23,14 +23,14 @@
       "dependencies": {
         "com.unity.scriptablebuildpipeline": "1.21.7"
       },
-      "hash": "89019410e9b1b2690c442a288132ccc587823f18"
+      "hash": "e7968d6f7699da3247246f189fa120d2f51a147d"
     },
     "com.michaelo.oxgkit.utilities": {
       "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/Utilities/Scripts",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "2088b11901a1490650e77270d93fd97776e7fa49"
+      "hash": "5de16c9849c936e0476afcc4b300425008730caa"
     },
     "com.unity.2d.animation": {
       "version": "7.0.10",
