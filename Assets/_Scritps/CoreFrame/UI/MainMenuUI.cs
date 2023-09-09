@@ -42,10 +42,6 @@ public class MainMenuUI : UIBase
 
     protected override void OnUpdate(float dt)
     {
-        /**
-         * Do Update Per FrameRate
-         */
-
         this._UpdateBirdWave(dt);
     }
 

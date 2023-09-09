@@ -4,16 +4,25 @@
 /[Aa]ssetBundles/
 /[Ee]xportBundles/
 /[Bb]undles/
-/[Ss]andbox/
-/[Yy]oo/
 /[Hh]ybridCLRData/
+/Assets/HotfixCollector/
+/Assets/StreamingAssets/appconfig.json
+/Assets/StreamingAssets/appconfig.json.meta
+# New YooAsset Version (above v1.5.0)
+/[Yy]oo/
+/Assets/StreamingAssets/[Yy]oo/
+/Assets/StreamingAssets/[Yy]oo.meta
+# Old YooAsset Version (blow v1.4.17)
+/[Ss]andbox/
+/Assets/StreamingAssets/BuildinFiles/
+/Assets/StreamingAssets/BuildinFiles.meta
 
 # =============== #
 # Unity generated #
 # =============== #
-[Tt]emp/
-[Oo]bj/
-[Bb]uild
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
 /[Bb]uilds/
 /[Ll]ibrary/
 sysinfo.txt

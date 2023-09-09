@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 61790415404012296}
   - component: {fileID: 58451495819905482}
   - component: {fileID: -3839895736074758822}
-  - component: {fileID: 2916910778321377079}
+  - component: {fileID: 5962921637328039010}
   m_Layer: 0
   m_Name: Bird3
   m_TagString: Player
@@ -169,7 +169,7 @@ MonoBehaviour:
   maxTiltSmooth: 5
   hoverAmplitude: 0.1
   hoverFrequency: 5
---- !u!114 &2916910778321377079
+--- !u!114 &5962921637328039010
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -178,14 +178,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1134499528716596}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b34c50deb67b3cb4c8a290d5cb3d57e2, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e8a614497186bb49a0a3bbb8fcc734b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animSprites:
+  _sprites:
   - {fileID: 21300082, guid: 1768d357aa7331f4f9c0e023cf9249f1, type: 3}
   - {fileID: 21300086, guid: 1768d357aa7331f4f9c0e023cf9249f1, type: 3}
   - {fileID: 21300126, guid: 1768d357aa7331f4f9c0e023cf9249f1, type: 3}
-  isLoop: 1
-  playMode: 0
-  frameRate: 9
-  ignoreTimeScale: 1
+  _isLoop: 1
+  _playMode: 0
+  _frameRate: 9
+  _ignoreTimeScale: 1

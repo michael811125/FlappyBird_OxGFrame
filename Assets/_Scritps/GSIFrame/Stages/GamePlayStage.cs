@@ -38,7 +38,7 @@ public class GamePlayStage : GSIBase
                 CoreSystem.ResetScore();
 
                 // 開啟 GamePlay 場景
-                CoreFrames.SRFrame.Show(SCs.GamePlaySC).Forget();
+                CoreFrames.SRFrame.Show(SRs.GamePlaySR).Forget();
 
                 // 開啟 GetReadyUI
                 CoreFrames.UIFrame.Show(UIs.GetReadyUI).Forget();
@@ -86,9 +86,9 @@ public class GamePlayStage : GSIBase
     public override void OnExit()
     {
         // 判斷場景是否有開啟, 如果有開啟則關閉再開啟 (確保後續 Replay = reload)
-        if (CoreFrames.SRFrame.CheckIsShowing(SCs.GamePlaySC))
+        if (CoreFrames.SRFrame.CheckIsShowing(SRs.GamePlaySR))
         {
-            CoreFrames.SRFrame.Close(SCs.GamePlaySC);
+            CoreFrames.SRFrame.Close(SRs.GamePlaySR);
         }
 
         // 判斷 ScoreUI 是否開啟, 如果有開啟則進行關閉
