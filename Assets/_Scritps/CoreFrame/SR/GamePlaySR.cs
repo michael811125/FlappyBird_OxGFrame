@@ -3,7 +3,7 @@ using UnityEngine;
 using Cysharp.Threading.Tasks;
 using OxGFrame.CoreFrame.SRFrame;
 
-public class GamePlaySC : SRBase
+public class GamePlaySR : SRBase
 {
     public override void OnInit()
     {
@@ -33,20 +33,12 @@ public class GamePlaySC : SRBase
 
     protected override void OnShow(object obj)
     {
-        /**
-         * Do Somethings Init With Every Showing In Here
-         */
-
         this._InitBackground();
         this._InitBird();
     }
 
     protected override void OnUpdate(float dt)
     {
-        /**
-         * Do Update Per FrameRate
-         */
-
         if (CoreSystem.IsGameStart())
         {
             this._UpdateGroundScroll();
@@ -91,8 +83,8 @@ public class GamePlaySC : SRBase
         // Note: collector.GetNode return type is GameObject
 
         // 綁定方式 (bind with name, also you can use drag to assign it) show you how to bind
-        this._bg = this.collector.GetNode("Bg").GetComponent<SpriteRenderer>();
-        this._ground = this.collector.GetNode("Ground").GetComponent<Renderer>();
+        this._bg = this.collector.GetNodeComponent<SpriteRenderer>("Bg");
+        this._ground = this.collector.GetNodeComponent<Renderer>("Ground");
         this._birdContainer = this.collector.GetNode("BirdContainer").transform;
         this._pipeContainer = this.collector.GetNode("PipeContainer").transform;
     }

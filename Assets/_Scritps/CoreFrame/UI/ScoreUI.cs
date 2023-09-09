@@ -40,10 +40,6 @@ public class ScoreUI : UIBase
 
     protected override void OnUpdate(float dt)
     {
-        /**
-         * Do Update Per FrameRate
-         */
-
         this._UpdateScoreText();
 
         if (CoreSystem.IsGameStart())

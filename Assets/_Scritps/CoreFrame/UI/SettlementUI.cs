@@ -36,10 +36,6 @@ public class SettlementUI : UIBase
 
     protected override void OnShow(object obj)
     {
-        /**
-         * Do Somethings Init With Every Showing In Here
-         */
-
         this._DrawScoreView();
         this._DrawMedalView();
     }
@@ -83,9 +79,9 @@ public class SettlementUI : UIBase
 
     private void _InitComponents()
     {
-        this._score = this.collector.GetNode("Score").GetComponent<Text>();
-        this._bestScore = this.collector.GetNode("BestScore").GetComponent<Text>();
-        this._medalImg = this.collector.GetNode("Medal").GetComponent<Image>();
+        this._score = this.collector.GetNodeComponent<Text>("Score");
+        this._bestScore = this.collector.GetNodeComponent<Text>("BestScore");
+        this._medalImg = this.collector.GetNodeComponent<Image>("Medal");
         this._replayBtn = this.collector.GetNode("Replay").GetComponentInChildren<Button>();
         this._menuBtn = this.collector.GetNode("Menu").GetComponentInChildren<Button>();
     }

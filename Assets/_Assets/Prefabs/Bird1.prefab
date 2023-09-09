@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 61628308580313780}
   - component: {fileID: 58596148591762704}
   - component: {fileID: 6807272789617132377}
-  - component: {fileID: 836620416733061601}
+  - component: {fileID: 2707171552164377610}
   m_Layer: 0
   m_Name: Bird1
   m_TagString: Player
@@ -78,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300124, guid: 1768d357aa7331f4f9c0e023cf9249f1, type: 3}
+  m_Sprite: {fileID: 21300120, guid: 1768d357aa7331f4f9c0e023cf9249f1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -169,7 +169,7 @@ MonoBehaviour:
   maxTiltSmooth: 5
   hoverAmplitude: 0.1
   hoverFrequency: 5
---- !u!114 &836620416733061601
+--- !u!114 &2707171552164377610
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -178,14 +178,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1777335255771388}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b34c50deb67b3cb4c8a290d5cb3d57e2, type: 3}
+  m_Script: {fileID: 11500000, guid: 5e8a614497186bb49a0a3bbb8fcc734b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animSprites:
+  _sprites:
   - {fileID: 21300120, guid: 1768d357aa7331f4f9c0e023cf9249f1, type: 3}
   - {fileID: 21300122, guid: 1768d357aa7331f4f9c0e023cf9249f1, type: 3}
   - {fileID: 21300124, guid: 1768d357aa7331f4f9c0e023cf9249f1, type: 3}
-  isLoop: 1
-  playMode: 0
-  frameRate: 9
-  ignoreTimeScale: 1
+  _isLoop: 1
+  _playMode: 0
+  _frameRate: 9
+  _ignoreTimeScale: 1

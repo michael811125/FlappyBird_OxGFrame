@@ -1,17 +1,17 @@
 ﻿//#define BUNDLE_TYPE
 
-public static class SCs
+public static class SRs
 {
 #if BUNDLE_TYPE
     private static string _path = "";
 #else
     private const string prefix = "res#";
-    private static string _path = $"{prefix}CoreFrame/SC/";
+    private static string _path = $"{prefix}CoreFrame/SR/";
 #endif
 
     // 場景   
-    public readonly static string MainMenuSC = $"{_path}MainMenuSC";     // 主選單場景
-    public readonly static string GamePlaySC = $"{_path}GamePlaySC";     // 遊戲場景
+    public readonly static string MainMenuSR = $"{_path}MainMenuSR";     // 主選單場景
+    public readonly static string GamePlaySR = $"{_path}GamePlaySR";     // 遊戲場景
 }
 
 public static class UIs

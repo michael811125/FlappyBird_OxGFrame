@@ -2,7 +2,7 @@
 using Cysharp.Threading.Tasks;
 using OxGFrame.CoreFrame.SRFrame;
 
-public class MainMenuSC : SRBase
+public class MainMenuSR : SRBase
 {
     public override void OnInit()
     {
@@ -39,10 +39,6 @@ public class MainMenuSC : SRBase
 
     protected override void OnUpdate(float dt)
     {
-        /**
-         * Do Update Per FrameRate
-         */
-
         this._UpdateGroundScroll();
     }
 

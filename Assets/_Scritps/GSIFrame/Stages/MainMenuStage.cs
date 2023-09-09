@@ -34,7 +34,7 @@ public class MainMenuStage : GSIBase
                 MediaFrames.AudioFrame.Play(Audios.MenuBgm).Forget();
 
                 // 開啟主選單場景
-                CoreFrames.SRFrame.Show(SCs.MainMenuSC).Forget();
+                CoreFrames.SRFrame.Show(SRs.MainMenuSR).Forget();
 
                 // 開啟主選單 UI
                 CoreFrames.UIFrame.Show(UIs.MainMenuUI).Forget();
@@ -50,7 +50,7 @@ public class MainMenuStage : GSIBase
                 MediaFrames.AudioFrame.Stop(Audios.MenuBgm);
 
                 // 關閉 MainMenuSC
-                CoreFrames.SRFrame.Close(SCs.MainMenuSC);
+                CoreFrames.SRFrame.Close(SRs.MainMenuSR);
 
                 // 關閉 MainMenuUI
                 CoreFrames.UIFrame.Close(UIs.MainMenuUI);
