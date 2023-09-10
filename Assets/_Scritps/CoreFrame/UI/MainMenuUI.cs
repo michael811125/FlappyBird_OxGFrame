@@ -3,14 +3,13 @@ using OxGFrame.CoreFrame.UIFrame;
 using Cysharp.Threading.Tasks;
 using UnityEngine.UI;
 using OxGFrame.MediaFrame;
+using OxGKit.Utilities.Timer;
 
 public class MainMenuUI : UIBase
 {
     public override void OnInit()
     {
-        /**
-         * Do Somethings Init Once In Here
-         */
+        this._flyUpdater = new RTUpdater();
     }
 
     protected override async UniTask OnPreShow()
@@ -35,14 +34,12 @@ public class MainMenuUI : UIBase
 
     protected override void OnShow(object obj)
     {
-        /**
-         * Do Somethings Init With Every Showing In Here
-         */
+        // 啟動 Updater
+        this._flyUpdater.Start();
     }
 
     protected override void OnUpdate(float dt)
     {
-        this._UpdateBirdWave(dt);
     }
 
     protected override void ShowAnime(AnimeEndCb animeEndCb)
@@ -57,7 +54,8 @@ public class MainMenuUI : UIBase
 
     protected override void OnClose()
     {
-
+        // 停止 Updater
+        this._flyUpdater.Stop();
     }
 
     public override void OnRelease()
@@ -65,11 +63,12 @@ public class MainMenuUI : UIBase
 
     }
 
-    public float frequency = 10f; // 較佳預設值, 震動頻率 (次數/s)
-    public float amplitude = 2f;  // 較佳預設值, 震動幅度 (次數/s)
-    public float yOffset = 0;     // 位移 Y-Offset
-
-    private float _elapsedDt = 0; // 消逝時間
+    public float frequency = 10f;         // 較佳預設值, 震動頻率 (次數/s)
+    public float amplitude = 2f;          // 較佳預設值, 震動幅度 (次數/s)
+    public float yOffset = 0;             // 位移 Y-Offset
+                                          
+    private float _elapsedDt = 0;         // 消逝時間
+    private RTUpdater _flyUpdater = null; // 飛行動畫的獨立 Updater 
 
     // 組件拖曳方式
     public Button rate;
@@ -99,9 +98,13 @@ public class MainMenuUI : UIBase
             // 開始遊戲
             CoreSystem.EnterGame();
         });
+
+        // 獨立建立以現實時間控制的 Updater 進行穩定刷新飛行動畫, 並設置 9 FrameRate
+        this._flyUpdater.targetFrameRate = 9;
+        this._flyUpdater.onUpdate = this._UpdateBirdFlyWave;
     }
 
-    private void _UpdateBirdWave(float dt)
+    private void _UpdateBirdFlyWave(float dt)
     {
         // 公式:  【1° = 180°/π, 1rad = π/180°】
         //         1弧度 = (π/180) * 1角度 => 角度轉弧度常數
@@ -119,7 +122,7 @@ public class MainMenuUI : UIBase
         float theta = this.frequency * this._elapsedDt;
         //Debug.Log($"Theta: {theta}");
 
-        // 計算 y-axis wave (上下飛動, 所以控制 y)
+        // 計算 y-axis wave (上下擺動, 所以控制 y)
         float yWave = this.amplitude * Mathf.Sin(theta) + this.yOffset;
         //Debug.Log($"Mathf.Sin: {Mathf.Sin(theta)}");
 

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class CoreSystem : MonoSingleton<CoreSystem>
 {
+    public static int frameCount = 0;
     public static float deltaTime = 0f;
 
     [Range(24, 60)]
@@ -23,14 +24,20 @@ public class CoreSystem : MonoSingleton<CoreSystem>
         // 30 for Mobile, 60 for Desktop
         Application.targetFrameRate = this.frameRate;
 
+        // 需動 GSIManager 的 Start
         GSIManager.Start();
     }
 
     private void Update()
     {
+        frameCount = Time.frameCount;
         deltaTime = Time.deltaTime;
 
+        // 驅動 GSIManager 的 Update
         GSIManager.Update(deltaTime);
+
+        // 每 60 幀刷新檢查 FrameRate 設置
+        if (Time.frameCount % 60 == 0) Application.targetFrameRate = this.frameRate;
     }
 
     #region Score Controls
