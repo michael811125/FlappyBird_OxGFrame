@@ -23,14 +23,14 @@
       "dependencies": {
         "com.unity.scriptablebuildpipeline": "1.21.7"
       },
-      "hash": "8be04d462a7cd404ec6b9d9ce9a49e544e2a892a"
+      "hash": "d290b4cfc2583301370a6d5bf0ce079183e5b138"
     },
     "com.michaelo.oxgkit.loggingsystem": {
       "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/LoggingSystem/Scripts",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "11d5dbba89b7b6233ac5faf5505a7fd1d025ee71"
+      "hash": "fc12aa077e3b3b45598199ca80bb7168d503b7a3"
     },
     "com.michaelo.oxgkit.utilities": {
       "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/Utilities/Scripts",
