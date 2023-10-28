@@ -17,7 +17,7 @@ public class GamePlayStage : GSIBase
     private GamePlayStep _step;
     private bool _isStart = false;
 
-    public async override UniTask OnInit()
+    public async override UniTask OnCreate()
     {
     }
 

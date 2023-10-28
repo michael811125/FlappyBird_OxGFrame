@@ -14,7 +14,7 @@ public class MainMenuStage : GSIBase
 
     private MainMenuStep _step;
 
-    public async override UniTask OnInit()
+    public async override UniTask OnCreate()
     {
     }
 
