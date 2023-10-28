@@ -17,9 +17,9 @@ MonoBehaviour:
   variablePrefix: _
   methodAccessModifier: protected
   methodPrefix: 
-  methodName: InitComponents
+  methodName: InitBindingComponents
   indicateModifier: 1
-  _tailRules:
+  tailRules:
     list:
     - TailName: Trans
       Reference:
@@ -123,16 +123,5 @@ MonoBehaviour:
         pluralize:
           endRemoveCount: 0
           endPluralTxt: s
-    - TailName: TestA
-      Reference:
-        componentName: NodePool
-        pluralize:
-          endRemoveCount: 0
-          endPluralTxt: s
-    - TailName: TESTB
-      Reference:
-        componentName: NodePool
-        pluralize:
-          endRemoveCount: 0
-          endPluralTxt: s
     keyCollision: 0
+  sortTailRules: 0

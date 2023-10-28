@@ -5,7 +5,7 @@ using OxGFrame.CoreFrame.SRFrame;
 
 public class GamePlaySR : SRBase
 {
-    public override void OnInit()
+    public override void OnCreate()
     {
         /**
          * Do Somethings Init Once In Here

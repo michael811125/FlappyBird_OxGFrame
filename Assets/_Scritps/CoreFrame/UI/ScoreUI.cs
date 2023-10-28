@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class ScoreUI : UIBase
 {
-    public override void OnInit()
+    public override void OnCreate()
     {
         /**
          * Do Somethings Init Once In Here

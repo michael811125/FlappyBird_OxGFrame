@@ -7,7 +7,7 @@ using OxGKit.Utilities.Timer;
 
 public class MainMenuUI : UIBase
 {
-    public override void OnInit()
+    public override void OnCreate()
     {
         this._flyUpdater = new RTUpdater();
     }

@@ -13,13 +13,13 @@ public class CoreSystem : MonoSingleton<CoreSystem>
 
     private static int _currentScore;
 
-    private void Awake()
+    protected override void OnCreate()
     {
         // Init instance first
         GetInstance();
     }
 
-    private void Start()
+    protected override void OnStart()
     {
         // 30 for Mobile, 60 for Desktop
         Application.targetFrameRate = this.frameRate;
@@ -38,6 +38,11 @@ public class CoreSystem : MonoSingleton<CoreSystem>
 
         // 每 60 幀刷新檢查 FrameRate 設置
         if (Time.frameCount % 60 == 0) Application.targetFrameRate = this.frameRate;
+    }
+
+    protected override void OnRelease()
+    {
+
     }
 
     #region Score Controls

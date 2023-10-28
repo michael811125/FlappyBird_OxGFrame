@@ -9,7 +9,7 @@ public class GetReadyUI : UIBase
         this.CloseSelf();
     }
 
-    public override void OnInit()
+    public override void OnCreate()
     {
         /**
          * Do Somethings Init Once In Here
