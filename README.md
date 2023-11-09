@@ -1,7 +1,7 @@
 ## FlappyBird
 
 ### Demo 分支選項
-- [使用 Resouces 開發](https://github.com/michael811125/FlappyBird_OxGFrame/tree/resources)
+- [使用 Resources 開發](https://github.com/michael811125/FlappyBird_OxGFrame/tree/resources)
 - TODO: 使用 AssetBundle 開發 
 - TODO: 使用 AssetBundle + CLR 開發
 
