@@ -1,5 +1,8 @@
 ## FlappyBird
 
+### 資源方式
+使用 Resources 方式進行開發。
+
 ### 專案說明
 
 基於 OxGFrame 重新詮釋 FlappyBird 小遊戲，使用單一場景進行開發，讓邏輯與遊戲階段更為鮮明。
