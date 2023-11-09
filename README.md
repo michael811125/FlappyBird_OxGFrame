@@ -1,5 +1,10 @@
 ## FlappyBird
 
+### Demo 分支選項
+- [使用 Resouces 開發](https://github.com/michael811125/FlappyBird_OxGFrame/tree/resources)
+- TODO: 使用 AssetBundle 開發 
+- TODO: 使用 AssetBundle + CLR 開發
+
 ### 專案說明
 
 基於 OxGFrame 重新詮釋 FlappyBird 小遊戲，使用單一場景進行開發，讓邏輯與遊戲階段更為鮮明。
