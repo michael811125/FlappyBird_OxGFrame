@@ -2,7 +2,7 @@
 
 ### 資源方式
 
-使用 AssetBundle 方式進行開發。
+使用 AssetBundle + HybridCLR (Hotfix) 方式進行開發。
 
 ### 專案說明
 
