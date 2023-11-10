@@ -152,8 +152,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e2a69858bdd2584b9ba0bdd13207d6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dontDestoryOnLoad: 0
-  frameRate: 30
+  dontDestoryOnLoad: 1
+  frameRate: 60
 --- !u!4 &212097644
 Transform:
   m_ObjectHideFlags: 0
