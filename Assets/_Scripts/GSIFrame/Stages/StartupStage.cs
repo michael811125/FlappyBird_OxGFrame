@@ -1,4 +1,5 @@
 ﻿using Cysharp.Threading.Tasks;
+using OxGFrame.AssetLoader;
 using OxGFrame.GSIFrame;
 
 public class StartupStage : GSIBase
@@ -12,11 +13,16 @@ public class StartupStage : GSIBase
 
     public async override UniTask OnEnter()
     {
-        GSIManager.ChangeStage<LogoStage>();
+
     }
 
     public override void OnUpdate(float dt = 0.0f)
     {
+        // 輪詢 Bundle 相關配置是否已經初始完畢
+        if (AssetPatcher.IsInitialized())
+        {
+            GSIManager.ChangeStage<LogoStage>();
+        }
     }
 
     public override void OnExit()

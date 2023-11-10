@@ -80,7 +80,7 @@ public class BirdController : MonoBehaviour
                 this._rigid.AddForce(Vector2.up * thrust);
 
                 // 播放飛起音效
-                MediaFrames.AudioFrame.Play(Audios.FlySfx).Forget();
+                MediaFrames.AudioFrame.Play(Pkgs.PatchPkg, Audios.FlySfx).Forget();
             }
         }
 
@@ -149,7 +149,7 @@ public class BirdController : MonoBehaviour
     public void BirdHitAndDead()
     {
         // 播放撞擊音效
-        MediaFrames.AudioFrame.Play(Audios.HitSfx).Forget();
+        MediaFrames.AudioFrame.Play(Pkgs.PatchPkg, Audios.HitSfx).Forget();
 
         // 遊戲結束
         if (CoreSystem.IsGameStart()) CoreSystem.GameOver();

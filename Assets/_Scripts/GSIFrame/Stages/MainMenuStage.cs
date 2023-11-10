@@ -31,13 +31,13 @@ public class MainMenuStage : GSIBase
         {
             case MainMenuStep.INIT_SHOW:
                 // 播放主選單 BGM
-                MediaFrames.AudioFrame.Play(Audios.MenuBgm).Forget();
+                MediaFrames.AudioFrame.Play(Pkgs.PatchPkg, Audios.MenuBgm).Forget();
 
                 // 開啟主選單場景
-                CoreFrames.SRFrame.Show(SRs.MainMenuSR).Forget();
+                CoreFrames.SRFrame.Show(Pkgs.PatchPkg, SRs.MainMenuSR).Forget();
 
                 // 開啟主選單 UI
-                CoreFrames.UIFrame.Show(UIs.MainMenuUI, null, UIs.AwaitingUI, 0).Forget();
+                CoreFrames.UIFrame.Show(Pkgs.PatchPkg, UIs.MainMenuUI, null, UIs.AwaitingUI, 0).Forget();
 
                 this._step = MainMenuStep.WAITING_FOR_PLAYER;
                 break;

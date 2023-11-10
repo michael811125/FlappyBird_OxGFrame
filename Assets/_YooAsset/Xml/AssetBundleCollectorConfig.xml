@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root Version="v2.0.0">
+  <Common ShowPackageView="True" ShowEditorAlias="False" UniqueBundleName="True" />
+  <Package PackageName="BuiltinPkg" PackageDesc="For StreamingAssets" AutoAddressable="True" LocationToLower="False" IncludeAssetGUID="False" IgnoreDefaultType="True">
+    <Group GroupActiveRule="EnableGroup" GroupName="Builtin" GroupDesc="In StreamingAssets" AssetTags="">
+      <Collector CollectPath="Assets/_Bundles/CoreFrame/UI/AwaitingUI" CollectGUID="f59f27082cf1b644f804099d9117cbeb" CollectType="MainAssetCollector" AddressRule="AddressByFileName" PackRule="PackSeparately" FilterRule="CollectPrefab" UserData="" AssetTags="" />
+      <Collector CollectPath="Assets/_Bundles/CoreFrame/UI/LogoUI" CollectGUID="fc4881401ff1af440b51111907307af2" CollectType="MainAssetCollector" AddressRule="AddressByFileName" PackRule="PackSeparately" FilterRule="CollectPrefab" UserData="" AssetTags="" />
+      <Collector CollectPath="Assets/_Bundles/CoreFrame/UI/PatchUI" CollectGUID="59e406d5a43292d4e8d8309e4aebf414" CollectType="MainAssetCollector" AddressRule="AddressByFileName" PackRule="PackSeparately" FilterRule="CollectPrefab" UserData="" AssetTags="" />
+    </Group>
+  </Package>
+  <Package PackageName="PatchPkg" PackageDesc="For CDN" AutoAddressable="True" LocationToLower="False" IncludeAssetGUID="False" IgnoreDefaultType="True">
+    <Group GroupActiveRule="EnableGroup" GroupName="Patch" GroupDesc="Update" AssetTags="">
+      <Collector CollectPath="Assets/_Bundles/CoreFrame" CollectGUID="492fd654cdb69d84489315d9d7ca1d55" CollectType="MainAssetCollector" AddressRule="AddressByFileName" PackRule="PackSeparately" FilterRule="CollectPrefab" UserData="" AssetTags="" />
+    </Group>
+  </Package>
+  <Package PackageName="HotfixPkg" PackageDesc="For Hotfix" AutoAddressable="True" LocationToLower="False" IncludeAssetGUID="False" IgnoreDefaultType="True">
+    <Group GroupActiveRule="EnableGroup" GroupName="Scene" GroupDesc="Hotfix Main" AssetTags="">
+      <Collector CollectPath="Assets/_Scenes/Hotfix/Main" CollectGUID="3b17349128724014ca7e6b200de0484d" CollectType="MainAssetCollector" AddressRule="AddressByFileName" PackRule="PackSeparately" FilterRule="CollectScene" UserData="" AssetTags="" />
+    </Group>
+    <Group GroupActiveRule="EnableGroup" GroupName="AOTAssemblies" GroupDesc="Dlls" AssetTags="">
+      <Collector CollectPath="Assets/HotfixCollector/AOTDlls" CollectGUID="" CollectType="MainAssetCollector" AddressRule="AddressByFileName" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
+    </Group>
+    <Group GroupActiveRule="EnableGroup" GroupName="HotfixAssetmblies" GroupDesc="Dlls" AssetTags="">
+      <Collector CollectPath="Assets/HotfixCollector/HotfixDlls" CollectGUID="" CollectType="MainAssetCollector" AddressRule="AddressByFileName" PackRule="PackDirectory" FilterRule="CollectAll" UserData="" AssetTags="" />
+    </Group>
+  </Package>
+</root>

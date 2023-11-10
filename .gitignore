@@ -14,8 +14,8 @@
 /Assets/StreamingAssets/[Yy]oo.meta
 # Old YooAsset Version (blow v1.4.17)
 /[Ss]andbox/
-/Assets/StreamingAssets/BuildinFiles/
-/Assets/StreamingAssets/BuildinFiles.meta
+#/Assets/StreamingAssets/BuildinFiles/
+#/Assets/StreamingAssets/BuildinFiles.meta
 
 # =============== #
 # Unity generated #

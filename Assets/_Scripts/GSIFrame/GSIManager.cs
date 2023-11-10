@@ -10,10 +10,13 @@ public class GSIManager : GSIManagerBase<GSIManager>
         // 2. 商標階段
         this.AddGameStage<LogoStage>();
 
-        // 3. 主選單階段
+        // 3. 補丁階段
+        this.AddGameStage<PatchStage>();
+
+        // 4. 主選單階段
         this.AddGameStage<MainMenuStage>();
 
-        // 4. 遊戲階段
+        // 5. 遊戲階段
         this.AddGameStage<GameplayStage>();
     }
 

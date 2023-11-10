@@ -66,7 +66,7 @@ public class MainMenuUI : UIBase
     public float frequency = 10f;         // 較佳預設值, 震動頻率 (次數/s)
     public float amplitude = 2f;          // 較佳預設值, 震動幅度 (次數/s)
     public float yOffset = 0;             // 位移 Y-Offset
-                                          
+
     private float _elapsedDt = 0;         // 消逝時間
     private RTUpdater _flyUpdater = null; // 飛行動畫的獨立 Updater 
 
@@ -93,7 +93,7 @@ public class MainMenuUI : UIBase
         this._playBtn.onClick.AddListener(() =>
         {
             // 播放轉場音效
-            MediaFrames.AudioFrame.Play(Audios.SwooshingSfx).Forget();
+            MediaFrames.AudioFrame.Play(Pkgs.PatchPkg, Audios.SwooshingSfx).Forget();
 
             // 開始遊戲
             CoreSystem.EnterGame();
