@@ -5,9 +5,9 @@
 /[Ee]xportBundles/
 /[Bb]undles/
 /[Hh]ybridCLRData/
-/Assets/HotfixCollector/
-/Assets/StreamingAssets/appconfig.json
-/Assets/StreamingAssets/appconfig.json.meta
+#/Assets/HotfixCollector/
+#/Assets/StreamingAssets/appconfig.json
+#/Assets/StreamingAssets/appconfig.json.meta
 # New YooAsset Version (above v1.5.0)
 /[Yy]oo/
 /Assets/StreamingAssets/[Yy]oo/
