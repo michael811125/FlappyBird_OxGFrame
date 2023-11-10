@@ -19,7 +19,7 @@
 
 ### 配置說明
 
-設定 Game 視窗為 W: 1080 * H: 1920，再開啟 FlappyBird.unity 場景直接 Play。
+設定 Game 視窗為 W: 1080 * H: 1920，再開啟 Main.unity 場景直接 Play。
 
 ---
 
