@@ -324,6 +324,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5015912702362567919, guid: 992bffa5c79679749861326baa5441c6, type: 3}
+      propertyPath: playMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5015912702362567919, guid: 992bffa5c79679749861326baa5441c6, type: 3}
       propertyPath: _decryptInfo._decryptArgs
       value: ht2xor,1,2,3
       objectReference: {fileID: 0}
