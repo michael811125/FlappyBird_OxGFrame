@@ -21,10 +21,10 @@ public class LogoStage : GSIBase
 
     public async override UniTask OnEnter()
     {
-        // Show LogoUI
-        await CoreFrames.UIFrame.Show(UIs.LogoUI);
+        // 顯示 LogoUI
+        await CoreFrames.UIFrame.Show(Pkgs.BuiltinPkg, UIs.LogoUI);
 
-        // Set buffer timer for Logo
+        // 設定 LogoUI 動畫的緩衝時間
         this._realTimer.Reset();
         this._realTimer.Play();
         this._realTimer.SetTimer(2f);
@@ -39,11 +39,11 @@ public class LogoStage : GSIBase
             case LogoStep.WAITING_FOR_LOGO:
                 if (this._realTimer.IsTimerTimeout())
                 {
-                    // Close LogoUI
+                    // 關閉 LogoUI
                     CoreFrames.UIFrame.Close(UIs.LogoUI);
-                    // Set close LogoUI buffer time
+                    // 設定 LogoUI 結束動畫的緩衝時間
                     this._realTimer.SetTimer(1f);
-                    // Change step
+                    // 切換下一步
                     this._step = LogoStep.START_MAIN_MENU;
                 }
                 break;
@@ -51,8 +51,8 @@ public class LogoStage : GSIBase
             case LogoStep.START_MAIN_MENU:
                 if (this._realTimer.IsTimerTimeout())
                 {
-                    // Change to MainMenuStage
-                    GSIManager.ChangeStage<MainMenuStage>();
+                    // 切換至 Patch 階段
+                    GSIManager.ChangeStage<PatchStage>();
                 }
                 break;
         }

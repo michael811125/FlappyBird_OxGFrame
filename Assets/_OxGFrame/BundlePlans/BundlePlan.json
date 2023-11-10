@@ -1,0 +1,12 @@
+[
+  {
+    "planName": "Bundle Plan For Demo",
+    "appPackages": [
+      "BuiltinPkg",
+      "PatchPkg"
+    ],
+    "groupInfoArgs": "",
+    "groupInfos": [],
+    "individualPackages": []
+  }
+]

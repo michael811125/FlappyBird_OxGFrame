@@ -64,7 +64,7 @@ public class CoreSystem : MonoSingleton<CoreSystem>
         _currentScore++;
 
         // 播放增加分數音效
-        MediaFrames.AudioFrame.Play(Audios.ScoreSfx).Forget();
+        MediaFrames.AudioFrame.Play(Pkgs.PatchPkg, Audios.ScoreSfx).Forget();
     }
 
     /// <summary>

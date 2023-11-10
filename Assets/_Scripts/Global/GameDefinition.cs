@@ -1,4 +1,10 @@
-﻿//#define BUNDLE_TYPE
+﻿#define BUNDLE_TYPE
+
+public static class Pkgs
+{
+    public readonly static string BuiltinPkg = "BuiltinPkg";
+    public readonly static string PatchPkg = "PatchPkg";
+}
 
 public static class SRs
 {
@@ -25,6 +31,7 @@ public static class UIs
 
     // 介面
     public readonly static string AwaitingUI = $"{_path}AwaitingUI";       // 等待介面 (Common)
+    public readonly static string PatchUI = $"{_path}PatchUI";             // 補丁更新介面
     public readonly static string DescriptionUI = $"{_path}DescriptionUI"; // 說明介面 (Common)
     public readonly static string DoubleCheckUI = $"{_path}DoubleCheckUI"; // 重複確認介面 (Common)
     public readonly static string LoadingUI = $"{_path}LoadingUI";         // 加載介面 (Common)

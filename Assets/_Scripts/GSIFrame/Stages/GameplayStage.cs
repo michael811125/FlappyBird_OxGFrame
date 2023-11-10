@@ -38,10 +38,10 @@ public class GameplayStage : GSIBase
                 CoreSystem.ResetScore();
 
                 // 開啟 GamePlay 場景
-                CoreFrames.SRFrame.Show(SRs.GameplaySR).Forget();
+                CoreFrames.SRFrame.Show(Pkgs.PatchPkg, SRs.GameplaySR).Forget();
 
                 // 開啟 GetReadyUI
-                CoreFrames.UIFrame.Show(UIs.GetReadyUI, null, UIs.AwaitingUI, 0).Forget();
+                CoreFrames.UIFrame.Show(Pkgs.PatchPkg, UIs.GetReadyUI, null, UIs.AwaitingUI, 0).Forget();
 
                 this._step = GamePlayStep.WAITING_FOR_READY;
                 break;
@@ -51,7 +51,7 @@ public class GameplayStage : GSIBase
 
             case GamePlayStep.START_GAME:
                 // 開啟 ScoreUI
-                CoreFrames.UIFrame.Show(UIs.ScoreUI).Forget();
+                CoreFrames.UIFrame.Show(Pkgs.PatchPkg, UIs.ScoreUI).Forget();
 
                 // 標記遊戲開始
                 this._isStart = true;
@@ -67,7 +67,7 @@ public class GameplayStage : GSIBase
 
             case GamePlayStep.GAMEOVER:
                 // 開啟 SettlementUI
-                CoreFrames.UIFrame.Show(UIs.SettlementUI, null, UIs.AwaitingUI, 0).Forget();
+                CoreFrames.UIFrame.Show(Pkgs.PatchPkg, UIs.SettlementUI, null, UIs.AwaitingUI, 0).Forget();
 
                 // 標記遊戲開始標記結束
                 this._isStart = false;
