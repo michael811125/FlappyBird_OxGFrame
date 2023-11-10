@@ -1,6 +1,7 @@
 ## FlappyBird
 
 ### 資源方式
+
 使用 Resources 方式進行開發。
 
 ### 專案說明
