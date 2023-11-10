@@ -1,0 +1,29 @@
+{
+    "name": "FlappyBird.Main.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:e34a5702dd353724aa315fb8011f08c3",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:48c9f6afdac61634db0e0f241c7d4d51",
+        "GUID:ece7467d68eab7a449913173f8960045",
+        "GUID:352d9ecbfdfabfd4dbccfe69f910465c",
+        "GUID:02b9a6f6b4dfd0b42b1b13bae3b89abf",
+        "GUID:37d0f7f3cce4b0a4994bb1bbbc9d330e",
+        "GUID:92f995b379f3fa34caef3c6147971e38",
+        "GUID:a24dbf7565faccf4bbaa3b675e168c4f",
+        "GUID:981f0bbbcbf62b74c9821862b0cd0202",
+        "GUID:f3b8d4b152174ca47b578c325544e581",
+        "GUID:f22fac247a56d2d41b687bb0d900e54e",
+        "GUID:c55575a9f1747c240822f4b7e0400716",
+        "GUID:15fc0a57446b3144c949da3e2b9737a9"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

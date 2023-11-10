@@ -78,7 +78,54 @@ MonoBehaviour:
         CollectorGUID: d448e07f61251a24190af973b159e81c
         CollectorType: 0
         AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+  - PackageName: HotfixPkg
+    PackageDesc: For Hotfix
+    EnableAddressable: 1
+    LocationToLower: 0
+    IncludeAssetGUID: 0
+    IgnoreDefaultType: 1
+    AutoCollectShaders: 1
+    Groups:
+    - GroupName: Scene
+      GroupDesc: Hotfix Main
+      AssetTags: 
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/_Scenes/Hotfix
+        CollectorGUID: 8e546b7e22460a74cb15b14523deabbb
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
         PackRuleName: PackSeparately
-        FilterRuleName: CollectPrefab
+        FilterRuleName: CollectScene
+        AssetTags: 
+        UserData: 
+    - GroupName: AOTAssemblies
+      GroupDesc: Dlls
+      AssetTags: 
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/HotfixCollector/AOTDlls
+        CollectorGUID: 
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
+        AssetTags: 
+        UserData: 
+    - GroupName: HotfixAssetmblies
+      GroupDesc: Dlls
+      AssetTags: 
+      ActiveRuleName: EnableGroup
+      Collectors:
+      - CollectPath: Assets/HotfixCollector/HotfixDlls
+        CollectorGUID: 
+        CollectorType: 0
+        AddressRuleName: AddressByFileName
+        PackRuleName: PackDirectory
+        FilterRuleName: CollectAll
         AssetTags: 
         UserData: 
