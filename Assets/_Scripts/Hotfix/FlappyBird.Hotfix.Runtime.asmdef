@@ -1,0 +1,29 @@
+{
+    "name": "FlappyBird.Hotfix.Runtime",
+    "rootNamespace": "",
+    "references": [
+        "GUID:2da4c02832e957e4590832fad335bcb4",
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:e34a5702dd353724aa315fb8011f08c3",
+        "GUID:a24dbf7565faccf4bbaa3b675e168c4f",
+        "GUID:ece7467d68eab7a449913173f8960045",
+        "GUID:02b9a6f6b4dfd0b42b1b13bae3b89abf",
+        "GUID:92f995b379f3fa34caef3c6147971e38",
+        "GUID:37d0f7f3cce4b0a4994bb1bbbc9d330e",
+        "GUID:f3b8d4b152174ca47b578c325544e581",
+        "GUID:981f0bbbcbf62b74c9821862b0cd0202",
+        "GUID:f22fac247a56d2d41b687bb0d900e54e",
+        "GUID:c55575a9f1747c240822f4b7e0400716",
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:75469ad4d38634e559750d17036d5f7c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<linker>
+  <assembly fullname="OxGFrame.Hoxfixer.Runtime" preserve="all" />
+  <assembly fullname="OxGFrame.AssetLoader.Runtime" preserve="all" />
+  <assembly fullname="OxGFrame.CoreFrame.Runtime" preserve="all" />
+  <assembly fullname="OxGFrame.MediaFrame.Runtime" preserve="all" />
+  <assembly fullname="OxGFrame.CenterFrame.Runtime" preserve="all" />
+  <assembly fullname="OxGFrame.GSIFrame.Runtime" preserve="all" />
+  <assembly fullname="OxGKit.Utilities.Runtime" preserve="all" />
+  <assembly fullname="UniFramework.Event" preserve="all" />
+  <assembly fullname="UniFramework.Machine" preserve="all" />
+  <assembly fullname="YooAsset" preserve="all" />
+</linker>
