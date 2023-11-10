@@ -1,6 +1,6 @@
 ﻿using OxGKit.LoggingSystem;
 
-[LoggerName("FlappyBird.MainLogger.Logger")]
+[LoggerName("FlappyBird.Main.Logger")]
 public class MainLogger : Logging
 {
     public MainLogger() { }
