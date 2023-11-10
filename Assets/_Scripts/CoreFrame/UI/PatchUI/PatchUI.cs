@@ -40,8 +40,8 @@ public class PatchUI : UIBase
     protected override void OnBind()
     {
         this.InitComponents();
-        this.InitEvents();
-        this.InitPatchEvents();
+        this._InitEvents();
+        this._InitPatchEvents();
     }
 
     protected override void OnShow(object obj)
@@ -106,7 +106,7 @@ public class PatchUI : UIBase
         this._repairBtnPlus = this.collector.GetNodeComponent<ButtonPlus>("Repair*BtnPlus");
     }
 
-    private void InitEvents()
+    private void _InitEvents()
     {
         this._repairBtnPlus.On(() =>
         {
@@ -120,7 +120,7 @@ public class PatchUI : UIBase
     }
 
     #region Patch Event
-    private void InitPatchEvents()
+    private void _InitPatchEvents()
     {
         // 0. PatchRepairFailed
         // 1. PatchFsmState
@@ -135,26 +135,26 @@ public class PatchUI : UIBase
         // 10. PatchDownloadCanceled
 
         #region Add PatchEvents Handle
-        this._patchEvents.AddListener<PatchEvents.PatchRepairFailed>(this.OnHandleEventMessage);
-        this._patchEvents.AddListener<PatchEvents.PatchFsmState>(this.OnHandleEventMessage);
-        this._patchEvents.AddListener<PatchEvents.PatchGoToAppStore>(this.OnHandleEventMessage);
-        this._patchEvents.AddListener<PatchEvents.PatchAppVersionUpdateFailed>(this.OnHandleEventMessage);
-        this._patchEvents.AddListener<PatchEvents.PatchInitPatchModeFailed>(this.OnHandleEventMessage);
-        this._patchEvents.AddListener<PatchEvents.PatchCreateDownloader>(this.OnHandleEventMessage);
-        this._patchEvents.AddListener<PatchEvents.PatchDownloadProgression>(this.OnHandleEventMessage);
-        this._patchEvents.AddListener<PatchEvents.PatchVersionUpdateFailed>(this.OnHandleEventMessage);
-        this._patchEvents.AddListener<PatchEvents.PatchManifestUpdateFailed>(this.OnHandleEventMessage);
-        this._patchEvents.AddListener<PatchEvents.PatchDownloadFailed>(this.OnHandleEventMessage);
-        this._patchEvents.AddListener<PatchEvents.PatchDownloadCanceled>(this.OnHandleEventMessage);
+        this._patchEvents.AddListener<PatchEvents.PatchRepairFailed>(this._OnHandleEventMessage);
+        this._patchEvents.AddListener<PatchEvents.PatchFsmState>(this._OnHandleEventMessage);
+        this._patchEvents.AddListener<PatchEvents.PatchGoToAppStore>(this._OnHandleEventMessage);
+        this._patchEvents.AddListener<PatchEvents.PatchAppVersionUpdateFailed>(this._OnHandleEventMessage);
+        this._patchEvents.AddListener<PatchEvents.PatchInitPatchModeFailed>(this._OnHandleEventMessage);
+        this._patchEvents.AddListener<PatchEvents.PatchCreateDownloader>(this._OnHandleEventMessage);
+        this._patchEvents.AddListener<PatchEvents.PatchDownloadProgression>(this._OnHandleEventMessage);
+        this._patchEvents.AddListener<PatchEvents.PatchVersionUpdateFailed>(this._OnHandleEventMessage);
+        this._patchEvents.AddListener<PatchEvents.PatchManifestUpdateFailed>(this._OnHandleEventMessage);
+        this._patchEvents.AddListener<PatchEvents.PatchDownloadFailed>(this._OnHandleEventMessage);
+        this._patchEvents.AddListener<PatchEvents.PatchDownloadCanceled>(this._OnHandleEventMessage);
         #endregion
     }
 
-    private void OnHandleEventMessage(IEventMessage message)
+    private void _OnHandleEventMessage(IEventMessage message)
     {
         if (message is PatchEvents.PatchRepairFailed)
         {
             // Show Patch Failed Retry UI
-            this.ShowRetryEvent(0);
+            this._ShowRetryEvent(0);
         }
         else if (message is PatchEvents.PatchFsmState)
         {
@@ -212,12 +212,12 @@ public class PatchUI : UIBase
         else if (message is PatchEvents.PatchAppVersionUpdateFailed)
         {
             // Show App Version Update Failed Retry UI
-            this.ShowRetryEvent(1);
+            this._ShowRetryEvent(1);
         }
         else if (message is PatchEvents.PatchInitPatchModeFailed)
         {
             // Show Patch Init Patch Failed Retry UI
-            this.ShowRetryEvent(2);
+            this._ShowRetryEvent(2);
         }
         else if (message is PatchEvents.PatchCreateDownloader)
         {
@@ -245,7 +245,7 @@ public class PatchUI : UIBase
                 $"DownloadSpeed: {BundleUtility.GetSpeedBytesToString((ulong)downloadInfo.downloadSpeedBytes)}"
             );
 
-            this.UpdateDownloadInfo
+            this._UpdateDownloadInfo
             (
                 downloadInfo.progress,
                 downloadInfo.currentDownloadCount,
@@ -259,22 +259,22 @@ public class PatchUI : UIBase
         else if (message is PatchEvents.PatchVersionUpdateFailed)
         {
             // Show Patch Version Update Failed Retry UI
-            this.ShowRetryEvent(3);
+            this._ShowRetryEvent(3);
         }
         else if (message is PatchEvents.PatchManifestUpdateFailed)
         {
             // Show Patch Manifest Update Failed Retry UI
-            this.ShowRetryEvent(4);
+            this._ShowRetryEvent(4);
         }
         else if (message is PatchEvents.PatchDownloadFailed)
         {
             // Show Patch Download Files Failed Retry UI
-            this.ShowRetryEvent(5);
+            this._ShowRetryEvent(5);
         }
         else if (message is PatchEvents.PatchDownloadCanceled)
         {
             // Show Patch Download Canceled Retry UI
-            this.ShowRetryEvent(5);
+            this._ShowRetryEvent(5);
         }
         else
         {
@@ -282,7 +282,7 @@ public class PatchUI : UIBase
         }
     }
 
-    private void UpdateDownloadInfo(float progress, int dlCount, long dlBytes, int totalCount, long totalBytes, long dlSpeedBytes)
+    private void _UpdateDownloadInfo(float progress, int dlCount, long dlBytes, int totalCount, long totalBytes, long dlSpeedBytes)
     {
         if (!this._progressGroup.activeSelf) this._progressGroup.SetActive(true);
 
@@ -307,7 +307,7 @@ public class PatchUI : UIBase
     }
     #endregion
 
-    private void ShowRetryEvent(int retryEvent)
+    private void _ShowRetryEvent(int retryEvent)
     {
         string title = "Notice";
         string msg = string.Empty;

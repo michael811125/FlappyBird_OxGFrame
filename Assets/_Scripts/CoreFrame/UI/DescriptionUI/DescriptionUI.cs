@@ -1,4 +1,4 @@
-using OxGFrame.CoreFrame.UIFrame;
+﻿using OxGFrame.CoreFrame.UIFrame;
 using Cysharp.Threading.Tasks;
 using UnityEngine.UI;
 using UnityEngine;
@@ -107,10 +107,10 @@ public class DescriptionUI : UIBase
         string msg = args?[0].ToString();
         this._closeAction = args?[1] as Action;
 
-        this.DrawDescTextView(msg);
+        this._DrawDescTextView(msg);
     }
 
-    private void DrawDescTextView(string msg)
+    private void _DrawDescTextView(string msg)
     {
         this._descTmpTxt.text = msg;
 
