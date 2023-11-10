@@ -29,7 +29,7 @@ public class LogoUI : UIBase
 
     protected override void OnBind()
     {
-        this.InitComponents();
+        this._InitComponents();
     }
 
     protected override void OnShow(object obj)
@@ -79,7 +79,7 @@ public class LogoUI : UIBase
 
     private EasyAnimation _easyAnime;
 
-    private void InitComponents()
+    private void _InitComponents()
     {
         this._easyAnime = this.collector.GetNode("EasyAnime").GetComponent<EasyAnimation>();
     }
