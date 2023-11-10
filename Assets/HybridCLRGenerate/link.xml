@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<linker>
+  <assembly fullname="FlappyBird.Main.Runtime">
+    <type fullname="MainExtensions" preserve="all" />
+  </assembly>
+  <assembly fullname="OxGFrame.AssetLoader.Runtime">
+    <type fullname="OxGFrame.AssetLoader.AssetPatcher" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.Bundle.GroupInfo" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.PatchEvent.PatchEvents" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.PatchEvent.PatchEvents/PatchAppVersionUpdateFailed" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.PatchEvent.PatchEvents/PatchCreateDownloader" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.PatchEvent.PatchEvents/PatchDownloadCanceled" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.PatchEvent.PatchEvents/PatchDownloadFailed" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.PatchEvent.PatchEvents/PatchDownloadProgression" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.PatchEvent.PatchEvents/PatchFsmState" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.PatchEvent.PatchEvents/PatchGoToAppStore" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.PatchEvent.PatchEvents/PatchInitPatchModeFailed" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.PatchEvent.PatchEvents/PatchManifestUpdateFailed" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.PatchEvent.PatchEvents/PatchRepairFailed" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.PatchEvent.PatchEvents/PatchVersionUpdateFailed" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.PatchEvent.PatchUserEvents" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.PatchEvent.PatchUserEvents/UserBeginDownload" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.PatchEvent.PatchUserEvents/UserTryAppVersionUpdate" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.PatchEvent.PatchUserEvents/UserTryCreateDownloader" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.PatchEvent.PatchUserEvents/UserTryInitPatchMode" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.PatchEvent.PatchUserEvents/UserTryPatchManifestUpdate" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.PatchEvent.PatchUserEvents/UserTryPatchRepair" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.PatchEvent.PatchUserEvents/UserTryPatchVersionUpdate" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.PatchFsm.PatchFsmStates" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.PatchFsm.PatchFsmStates/FsmAppVersionUpdate" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.PatchFsm.PatchFsmStates/FsmBeginDownload" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.PatchFsm.PatchFsmStates/FsmClearCache" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.PatchFsm.PatchFsmStates/FsmCreateDownloader" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.PatchFsm.PatchFsmStates/FsmDownloadOver" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.PatchFsm.PatchFsmStates/FsmInitPatchMode" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.PatchFsm.PatchFsmStates/FsmPatchDone" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.PatchFsm.PatchFsmStates/FsmPatchManifestUpdate" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.PatchFsm.PatchFsmStates/FsmPatchPrepare" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.PatchFsm.PatchFsmStates/FsmPatchRepair" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.PatchFsm.PatchFsmStates/FsmPatchVersionUpdate" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.Progression" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.Utility.BundleUtility" preserve="all" />
+  </assembly>
+  <assembly fullname="OxGFrame.CenterFrame.Runtime">
+    <type fullname="OxGFrame.CenterFrame.CenterBase`2" preserve="all" />
+    <type fullname="OxGFrame.CenterFrame.EventCenter.EventBase" preserve="all" />
+  </assembly>
+  <assembly fullname="OxGFrame.CoreFrame.Runtime">
+    <type fullname="OxGFrame.CoreFrame.CoreFrames" preserve="all" />
+    <type fullname="OxGFrame.CoreFrame.CoreFrames/SRFrame" preserve="all" />
+    <type fullname="OxGFrame.CoreFrame.CoreFrames/UIFrame" preserve="all" />
+    <type fullname="OxGFrame.CoreFrame.FrameBase" preserve="all" />
+    <type fullname="OxGFrame.CoreFrame.FrameBase/Collector" preserve="all" />
+    <type fullname="OxGFrame.CoreFrame.SRFrame.SRBase" preserve="all" />
+    <type fullname="OxGFrame.CoreFrame.UIFrame.AnimeEndCb" preserve="all" />
+    <type fullname="OxGFrame.CoreFrame.UIFrame.UIBase" preserve="all" />
+  </assembly>
+  <assembly fullname="OxGFrame.GSIFrame.Runtime">
+    <type fullname="OxGFrame.GSIFrame.GSIBase" preserve="all" />
+    <type fullname="OxGFrame.GSIFrame.GSIManagerBase`1" preserve="all" />
+  </assembly>
+  <assembly fullname="OxGFrame.MediaFrame.Runtime">
+    <type fullname="OxGFrame.MediaFrame.AudioFrame.AudioBase" preserve="all" />
+    <type fullname="OxGFrame.MediaFrame.MediaFrames" preserve="all" />
+    <type fullname="OxGFrame.MediaFrame.MediaFrames/AudioFrame" preserve="all" />
+  </assembly>
+  <assembly fullname="OxGKit.LoggingSystem.Runtime">
+    <type fullname="OxGKit.LoggingSystem.LoggerNameAttribute" preserve="all" />
+    <type fullname="OxGKit.LoggingSystem.Logging" preserve="all" />
+    <type fullname="OxGKit.LoggingSystem.LoggingLauncher" preserve="all" />
+  </assembly>
+  <assembly fullname="OxGKit.Utilities.Runtime">
+    <type fullname="OxGKit.Utilities.Button.ButtonPlus" preserve="all" />
+    <type fullname="OxGKit.Utilities.Singleton.MonoSingleton`1" preserve="all" />
+    <type fullname="OxGKit.Utilities.TextureAnime.TextureAnimation" preserve="all" />
+    <type fullname="OxGKit.Utilities.Timer.RTUpdater" preserve="all" />
+    <type fullname="OxGKit.Utilities.Timer.RTUpdater/RealTimeUpdate" preserve="all" />
+  </assembly>
+  <assembly fullname="UniFramework.Event">
+    <type fullname="UniFramework.Event.EventGroup" preserve="all" />
+    <type fullname="UniFramework.Event.IEventMessage" preserve="all" />
+  </assembly>
+  <assembly fullname="UniFramework.Machine">
+    <type fullname="UniFramework.Machine.IStateNode" preserve="all" />
+  </assembly>
+  <assembly fullname="UniTask">
+    <type fullname="Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskMethodBuilder" preserve="all" />
+    <type fullname="Cysharp.Threading.Tasks.CompilerServices.AsyncUniTaskVoidMethodBuilder" preserve="all" />
+    <type fullname="Cysharp.Threading.Tasks.UniTask" preserve="all" />
+    <type fullname="Cysharp.Threading.Tasks.UniTaskExtensions" preserve="all" />
+    <type fullname="Cysharp.Threading.Tasks.UniTaskVoid" preserve="all" />
+    <type fullname="Cysharp.Threading.Tasks.UniTask`1" preserve="all" />
+    <type fullname="Cysharp.Threading.Tasks.UniTask`1/Awaiter" preserve="all" />
+  </assembly>
+  <assembly fullname="Unity.InputSystem">
+    <type fullname="UnityEngine.InputSystem.Controls.ButtonControl" preserve="all" />
+    <type fullname="UnityEngine.InputSystem.Controls.KeyControl" preserve="all" />
+    <type fullname="UnityEngine.InputSystem.Keyboard" preserve="all" />
+  </assembly>
+  <assembly fullname="Unity.TextMeshPro">
+    <type fullname="TMPro.TMP_Text" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.CoreModule">
+    <type fullname="UnityEngine.Application" preserve="all" />
+    <type fullname="UnityEngine.Behaviour" preserve="all" />
+    <type fullname="UnityEngine.Component" preserve="all" />
+    <type fullname="UnityEngine.Debug" preserve="all" />
+    <type fullname="UnityEngine.Events.UnityAction" preserve="all" />
+    <type fullname="UnityEngine.Events.UnityEvent" preserve="all" />
+    <type fullname="UnityEngine.Events.UnityEventBase" preserve="all" />
+    <type fullname="UnityEngine.GameObject" preserve="all" />
+    <type fullname="UnityEngine.HeaderAttribute" preserve="all" />
+    <type fullname="UnityEngine.Material" preserve="all" />
+    <type fullname="UnityEngine.Mathf" preserve="all" />
+    <type fullname="UnityEngine.MonoBehaviour" preserve="all" />
+    <type fullname="UnityEngine.Object" preserve="all" />
+    <type fullname="UnityEngine.PlayerPrefs" preserve="all" />
+    <type fullname="UnityEngine.Quaternion" preserve="all" />
+    <type fullname="UnityEngine.Random" preserve="all" />
+    <type fullname="UnityEngine.RangeAttribute" preserve="all" />
+    <type fullname="UnityEngine.RectTransform" preserve="all" />
+    <type fullname="UnityEngine.Renderer" preserve="all" />
+    <type fullname="UnityEngine.Sprite" preserve="all" />
+    <type fullname="UnityEngine.SpriteRenderer" preserve="all" />
+    <type fullname="UnityEngine.Time" preserve="all" />
+    <type fullname="UnityEngine.Transform" preserve="all" />
+    <type fullname="UnityEngine.Vector2" preserve="all" />
+    <type fullname="UnityEngine.Vector3" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.InputLegacyModule">
+    <type fullname="UnityEngine.Input" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.Physics2DModule">
+    <type fullname="UnityEngine.BoxCollider2D" preserve="all" />
+    <type fullname="UnityEngine.Collider2D" preserve="all" />
+    <type fullname="UnityEngine.Collision2D" preserve="all" />
+    <type fullname="UnityEngine.Rigidbody2D" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.UI">
+    <type fullname="UnityEngine.UI.Button" preserve="all" />
+    <type fullname="UnityEngine.UI.Button/ButtonClickedEvent" preserve="all" />
+    <type fullname="UnityEngine.UI.Image" preserve="all" />
+    <type fullname="UnityEngine.UI.LayoutRebuilder" preserve="all" />
+    <type fullname="UnityEngine.UI.Slider" preserve="all" />
+    <type fullname="UnityEngine.UI.Text" preserve="all" />
+    <type fullname="UnityEngine.UI.VerticalLayoutGroup" preserve="all" />
+  </assembly>
+  <assembly fullname="mscorlib">
+    <type fullname="System.Action" preserve="all" />
+    <type fullname="System.Action`1" preserve="all" />
+    <type fullname="System.Array" preserve="all" />
+    <type fullname="System.Collections.Generic.List`1" preserve="all" />
+    <type fullname="System.Collections.IEnumerator" preserve="all" />
+    <type fullname="System.Diagnostics.DebuggableAttribute" preserve="all" />
+    <type fullname="System.Diagnostics.DebuggableAttribute/DebuggingModes" preserve="all" />
+    <type fullname="System.Diagnostics.DebuggerHiddenAttribute" preserve="all" />
+    <type fullname="System.Enum" preserve="all" />
+    <type fullname="System.Exception" preserve="all" />
+    <type fullname="System.IDisposable" preserve="all" />
+    <type fullname="System.Int32" preserve="all" />
+    <type fullname="System.NotImplementedException" preserve="all" />
+    <type fullname="System.Object" preserve="all" />
+    <type fullname="System.Runtime.CompilerServices.AsyncStateMachineAttribute" preserve="all" />
+    <type fullname="System.Runtime.CompilerServices.CompilationRelaxationsAttribute" preserve="all" />
+    <type fullname="System.Runtime.CompilerServices.CompilerGeneratedAttribute" preserve="all" />
+    <type fullname="System.Runtime.CompilerServices.IAsyncStateMachine" preserve="all" />
+    <type fullname="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute" preserve="all" />
+    <type fullname="System.Single" preserve="all" />
+    <type fullname="System.String" preserve="all" />
+    <type fullname="System.TimeSpan" preserve="all" />
+    <type fullname="System.Type" preserve="all" />
+    <type fullname="System.ValueType" preserve="all" />
+  </assembly>
+</linker>
