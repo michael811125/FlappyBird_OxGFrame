@@ -21,6 +21,7 @@ public class StartupStage : GSIBase
         // 輪詢 Bundle 相關配置是否已經初始完畢
         if (AssetPatcher.IsInitialized())
         {
+            this.StopUpdate();
             GSIManager.ChangeStage<LogoStage>();
         }
     }
