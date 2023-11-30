@@ -551,7 +551,7 @@ MonoBehaviour:
     color: {r: 0, g: 0, b: 0, a: 0.7529412}
     sprite: {fileID: 0}
     material: {fileID: 0}
-    isClickMaskToClose: 1
+    isClickMaskToClose: 0
 --- !u!1 &3719002674120948960
 GameObject:
   m_ObjectHideFlags: 0
