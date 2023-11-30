@@ -227,7 +227,19 @@ public class PatchUI : UIBase
 
             #region Show GroupInfos
             var msgData = message as PatchEvents.PatchCreateDownloader;
-            PatchUserEvents.UserBeginDownload.SendEventMessage(msgData.groupInfos[0]);
+            UIEventCenter.Find<EDoubleCheckUI>().Emit
+            (
+                "Hint",
+                $"Patch Size: {BundleUtility.GetBytesToString((ulong)msgData.groupInfos[0].totalBytes)}\nDo you want to download?\n(Mobile data will be consumed during the download process. It is recommended to use Wi-Fi)",
+                () =>
+                {
+                    PatchUserEvents.UserBeginDownload.SendEventMessage(msgData.groupInfos[0]);
+                },
+                () =>
+                {
+                    Application.Quit();
+                }
+            );
             #endregion
         }
         else if (message is PatchEvents.PatchDownloadProgression)
