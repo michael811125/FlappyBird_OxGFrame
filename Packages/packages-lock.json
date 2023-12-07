@@ -5,7 +5,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "febff1c658fa9d76726f3aa25f26ec6d35c1e2e6"
+      "hash": "f810ede6d74a7fcfc2c2fd03ad08c44696b3a0e0"
     },
     "com.domybest.lwmybox": {
       "version": "https://github.com/michael811125/LWMyBox.git",
@@ -23,7 +23,7 @@
       "dependencies": {
         "com.unity.scriptablebuildpipeline": "1.21.7"
       },
-      "hash": "de6d347bcbc330319099679cf73c9151f4511888"
+      "hash": "ac99614252c04b4afe8fa5c8f62df198800d204e"
     },
     "com.michaelo.oxgkit.loggingsystem": {
       "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/LoggingSystem/Scripts",
