@@ -23,7 +23,7 @@
       "dependencies": {
         "com.unity.scriptablebuildpipeline": "1.21.7"
       },
-      "hash": "ce3ca79dc85cc7bf0307d7bd3a7d85d88983a018"
+      "hash": "ac99614252c04b4afe8fa5c8f62df198800d204e"
     },
     "com.michaelo.oxgkit.loggingsystem": {
       "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/LoggingSystem/Scripts",
