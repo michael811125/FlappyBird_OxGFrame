@@ -23,21 +23,21 @@
       "dependencies": {
         "com.unity.scriptablebuildpipeline": "1.21.7"
       },
-      "hash": "114c4586bd5dfab71dd46849a320000007fd8426"
+      "hash": "e0dc838781ffa360056bc6f15c4e20c79842ea7d"
     },
     "com.michaelo.oxgkit.loggingsystem": {
       "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/LoggingSystem/Scripts",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "5dc642db814162b80829112b350fec77fe4eca7b"
+      "hash": "ce96c8f0018e6b4f589339d6f9aa81a528055816"
     },
     "com.michaelo.oxgkit.utilities": {
       "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/Utilities/Scripts",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "5dc642db814162b80829112b350fec77fe4eca7b"
+      "hash": "ce96c8f0018e6b4f589339d6f9aa81a528055816"
     },
     "com.unity.2d.animation": {
       "version": "7.0.12",
