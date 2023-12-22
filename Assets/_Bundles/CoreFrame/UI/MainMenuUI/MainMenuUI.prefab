@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 2230465199194686694}
   - component: {fileID: 7265939172521899731}
   - component: {fileID: 8514659418814297719}
-  - component: {fileID: 3686804186974758279}
+  - component: {fileID: 8858914882876784310}
   m_Layer: 0
-  m_Name: Img
+  m_Name: _Node@Rank*BtnPlus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3686804186974758279
+--- !u!114 &8858914882876784310
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -86,7 +86,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1283975540026950779}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 0b8ac0111dd8c2c4ca422724f3bc1058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -121,6 +121,20 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  extdTransition: 0
+  transScale:
+    originSize: 1
+    size: 0.95
+  extdLongClick: 0
+  ignoreTimeScale: 1
+  triggerTime: 1
+  intervalTime: 0.1
+  _onLongClickPressed:
+    m_PersistentCalls:
+      m_Calls: []
+  _onLongClickReleased:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &2481595688254593326
 GameObject:
   m_ObjectHideFlags: 0
@@ -134,7 +148,7 @@ GameObject:
   - component: {fileID: 7330837107903570720}
   - component: {fileID: 8332888979815350341}
   m_Layer: 0
-  m_Name: _Node@Bird
+  m_Name: _Node@Bird*Trans
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -318,6 +332,7 @@ MonoBehaviour:
     nodeType: 0
     stack: 0
     order: 0
+    allowCloseStackByStack: 0
     whenCloseAllToSkip: 0
     whenHideAllToSkip: 0
   autoMask: 0
@@ -379,9 +394,9 @@ GameObject:
   - component: {fileID: 678218172836825950}
   - component: {fileID: 8096381678620100134}
   - component: {fileID: 4977474691878638747}
-  - component: {fileID: 6206181921202779527}
+  - component: {fileID: 3887576758379768159}
   m_Layer: 0
-  m_Name: Img
+  m_Name: _Node@Rate*BtnPlus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -445,7 +460,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &6206181921202779527
+--- !u!114 &3887576758379768159
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -454,7 +469,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4381597442532363637}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 0b8ac0111dd8c2c4ca422724f3bc1058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -487,6 +502,20 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 4977474691878638747}
   m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+  extdTransition: 0
+  transScale:
+    originSize: 1
+    size: 0.95
+  extdLongClick: 0
+  ignoreTimeScale: 1
+  triggerTime: 1
+  intervalTime: 0.1
+  _onLongClickPressed:
+    m_PersistentCalls:
+      m_Calls: []
+  _onLongClickReleased:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &4528493239857755803
@@ -574,9 +603,9 @@ GameObject:
   - component: {fileID: 800385182993585299}
   - component: {fileID: 8754735330460334725}
   - component: {fileID: 6141242920613736670}
-  - component: {fileID: 857272499000743264}
+  - component: {fileID: 4437609968836778005}
   m_Layer: 0
-  m_Name: Img
+  m_Name: _Node@Play*BtnPlus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -640,7 +669,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &857272499000743264
+--- !u!114 &4437609968836778005
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -649,7 +678,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 7771009006974440970}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 0b8ac0111dd8c2c4ca422724f3bc1058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -682,6 +711,20 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 6141242920613736670}
   m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+  extdTransition: 0
+  transScale:
+    originSize: 1
+    size: 0.95
+  extdLongClick: 0
+  ignoreTimeScale: 1
+  triggerTime: 1
+  intervalTime: 0.1
+  _onLongClickPressed:
+    m_PersistentCalls:
+      m_Calls: []
+  _onLongClickReleased:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &8508069400546461123
