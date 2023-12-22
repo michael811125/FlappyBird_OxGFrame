@@ -15,27 +15,52 @@ MonoBehaviour:
   variableCaseType: 0
   variableAccessModifier: protected
   variablePrefix: _
+  methodType: 0
   methodAccessModifier: protected
   methodPrefix: 
-  methodName: InitBindingComponents
+  methodName: InitBind
   indicateModifier: 1
   tailRules:
     list:
-    - TailName: Trans
+    - TailName: Btn
       Reference:
-        componentName: Transform
+        componentName: Button
+        pluralize:
+          endRemoveCount: 0
+          endPluralTxt: s
+    - TailName: BtnPlus
+      Reference:
+        componentName: ButtonPlus
         pluralize:
           endRemoveCount: 0
           endPluralTxt: es
-    - TailName: RectTrans
+    - TailName: Drd
       Reference:
-        componentName: RectTransform
+        componentName: Dropdown
         pluralize:
           endRemoveCount: 0
-          endPluralTxt: es
+          endPluralTxt: s
+    - TailName: EasyAnime
+      Reference:
+        componentName: EasyAnimation
+        pluralize:
+          endRemoveCount: 0
+          endPluralTxt: s
+    - TailName: Field
+      Reference:
+        componentName: InputField
+        pluralize:
+          endRemoveCount: 0
+          endPluralTxt: s
     - TailName: Img
       Reference:
         componentName: Image
+        pluralize:
+          endRemoveCount: 0
+          endPluralTxt: s
+    - TailName: NodePool
+      Reference:
+        componentName: NodePool
         pluralize:
           endRemoveCount: 0
           endPluralTxt: s
@@ -45,27 +70,15 @@ MonoBehaviour:
         pluralize:
           endRemoveCount: 0
           endPluralTxt: s
-    - TailName: Txt
+    - TailName: RectTrans
       Reference:
-        componentName: Text
+        componentName: RectTransform
         pluralize:
           endRemoveCount: 0
-          endPluralTxt: s
-    - TailName: Btn
+          endPluralTxt: es
+    - TailName: Ren
       Reference:
-        componentName: Button
-        pluralize:
-          endRemoveCount: 0
-          endPluralTxt: s
-    - TailName: Tgl
-      Reference:
-        componentName: Toggle
-        pluralize:
-          endRemoveCount: 0
-          endPluralTxt: s
-    - TailName: Sld
-      Reference:
-        componentName: Slider
+        componentName: Renderer
         pluralize:
           endRemoveCount: 0
           endPluralTxt: s
@@ -81,21 +94,21 @@ MonoBehaviour:
         pluralize:
           endRemoveCount: 0
           endPluralTxt: s
-    - TailName: Drd
+    - TailName: Sld
       Reference:
-        componentName: Dropdown
+        componentName: Slider
         pluralize:
           endRemoveCount: 0
           endPluralTxt: s
-    - TailName: Field
+    - TailName: SprRen
       Reference:
-        componentName: InputField
+        componentName: SpriteRenderer
         pluralize:
           endRemoveCount: 0
           endPluralTxt: s
-    - TailName: TmpTxt
+    - TailName: Tgl
       Reference:
-        componentName: TMP_Text
+        componentName: Toggle
         pluralize:
           endRemoveCount: 0
           endPluralTxt: s
@@ -111,15 +124,21 @@ MonoBehaviour:
         pluralize:
           endRemoveCount: 0
           endPluralTxt: s
-    - TailName: BtnPlus
+    - TailName: TmpTxt
       Reference:
-        componentName: ButtonPlus
+        componentName: TMP_Text
+        pluralize:
+          endRemoveCount: 0
+          endPluralTxt: s
+    - TailName: Trans
+      Reference:
+        componentName: Transform
         pluralize:
           endRemoveCount: 0
           endPluralTxt: es
-    - TailName: NodePool
+    - TailName: Txt
       Reference:
-        componentName: NodePool
+        componentName: Text
         pluralize:
           endRemoveCount: 0
           endPluralTxt: s

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2996293755146264221}
   - component: {fileID: 7760838167516863939}
   m_Layer: 0
-  m_Name: _Node@EasyAnime
+  m_Name: _Node@Transition*EasyAnime
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

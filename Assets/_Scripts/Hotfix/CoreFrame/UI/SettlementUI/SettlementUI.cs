@@ -4,9 +4,35 @@ using OxGFrame.CoreFrame.UIFrame;
 using Cysharp.Threading.Tasks;
 using UnityEngine.UI;
 using OxGFrame.MediaFrame;
+using OxGKit.Utilities.Button;
 
 public class SettlementUI : UIBase
 {
+    #region Binding Components
+    protected Text _scoreTxt;
+    protected Text _bestScoreTxt;
+    protected Image _medalImg;
+    protected GameObject _replay;
+    protected ButtonPlus _replayBtnPlus;
+    protected GameObject _menu;
+    protected ButtonPlus _menuBtnPlus;
+
+    /// <summary>
+    /// Auto Binding Section
+    /// </summary>
+    protected override void OnAutoBind()
+    {
+        base.OnAutoBind();
+        this._scoreTxt = this.collector.GetNodeComponent<Text>("Score*Txt");
+        this._bestScoreTxt = this.collector.GetNodeComponent<Text>("BestScore*Txt");
+        this._medalImg = this.collector.GetNodeComponent<Image>("Medal*Img");
+        this._replay = this.collector.GetNode("Replay");
+        this._replayBtnPlus = this.collector.GetNodeComponent<ButtonPlus>("Replay*BtnPlus");
+        this._menu = this.collector.GetNode("Menu");
+        this._menuBtnPlus = this.collector.GetNodeComponent<ButtonPlus>("Menu*BtnPlus");
+    }
+    #endregion
+
     public override void OnCreate()
     {
         /**
@@ -30,7 +56,6 @@ public class SettlementUI : UIBase
 
     protected override void OnBind()
     {
-        this._InitComponents();
         this._InitEvents();
     }
 
@@ -67,29 +92,12 @@ public class SettlementUI : UIBase
 
     }
 
-    // 初始 SettlementUI 相關組件
-
     public List<Sprite> medals = new List<Sprite>();
-
-    private Text _score;
-    private Text _bestScore;
-    private Image _medalImg;
-    private Button _replayBtn;
-    private Button _menuBtn;
-
-    private void _InitComponents()
-    {
-        this._score = this.collector.GetNodeComponent<Text>("Score");
-        this._bestScore = this.collector.GetNodeComponent<Text>("BestScore");
-        this._medalImg = this.collector.GetNodeComponent<Image>("Medal");
-        this._replayBtn = this.collector.GetNode("Replay").GetComponentInChildren<Button>();
-        this._menuBtn = this.collector.GetNode("Menu").GetComponentInChildren<Button>();
-    }
 
     private void _InitEvents()
     {
-        this._replayBtn.onClick.RemoveAllListeners();
-        this._replayBtn.onClick.AddListener(() =>
+        this._replayBtnPlus.onClick.RemoveAllListeners();
+        this._replayBtnPlus.onClick.AddListener(() =>
         {
             // 播放轉場音效
             MediaFrames.AudioFrame.Play(Audios.SwooshingSfx).Forget();
@@ -101,8 +109,8 @@ public class SettlementUI : UIBase
             this.CloseSelf();
         });
 
-        this._menuBtn.onClick.RemoveAllListeners();
-        this._menuBtn.onClick.AddListener(() =>
+        this._menuBtnPlus.onClick.RemoveAllListeners();
+        this._menuBtnPlus.onClick.AddListener(() =>
         {
             // 播放轉場音效
             MediaFrames.AudioFrame.Play(Audios.SwooshingSfx).Forget();
@@ -118,9 +126,9 @@ public class SettlementUI : UIBase
     private void _DrawScoreView()
     {
         // 顯示當前分數
-        this._score.text = HCoreSystem.GetScore().ToString();
+        this._scoreTxt.text = HCoreSystem.GetScore().ToString();
         // 顯示最佳分數
-        this._bestScore.text = HCoreSystem.GetBestScore().ToString();
+        this._bestScoreTxt.text = HCoreSystem.GetBestScore().ToString();
     }
 
     private void _DrawMedalView()
