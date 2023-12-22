@@ -7,6 +7,23 @@ public class LoadingUI : UIBase
 {
     // Use _Node@XXX to Bind
 
+    #region Binding Components
+    protected GameObject _bird;
+    protected GameObject _progressGroup;
+    protected Slider _progressSld;
+
+    /// <summary>
+    /// Auto Binding Section
+    /// </summary>
+    protected override void OnAutoBind()
+    {
+        base.OnAutoBind();
+        this._bird = this.collector.GetNode("Bird");
+        this._progressGroup = this.collector.GetNode("ProgressGroup");
+        this._progressSld = this.collector.GetNodeComponent<Slider>("Progress*Sld");
+    }
+    #endregion
+
     public override void OnCreate()
     {
         /**
@@ -30,7 +47,6 @@ public class LoadingUI : UIBase
 
     protected override void OnBind()
     {
-        this.InitComponents();
     }
 
     protected override void OnShow(object obj)
@@ -74,15 +90,6 @@ public class LoadingUI : UIBase
         /**
          * Do Somethings on release (CloseAndDestroy)
          */
-    }
-
-    protected GameObject _progressGroup;
-    protected Slider _progressSld;
-
-    protected void InitComponents()
-    {
-        this._progressGroup = this.collector.GetNode("ProgressGroup");
-        this._progressSld = this.collector.GetNodeComponent<Slider>("Progress*Sld");
     }
 
     protected void BasicDisplay()

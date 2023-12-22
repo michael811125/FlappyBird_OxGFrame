@@ -9,6 +9,21 @@ public class DescriptionUI : UIBase
 {
     // Use _Node@XXX to Bind
 
+    #region Binding Components
+    protected GameObject _layout;
+    protected TMP_Text _descTmpTxt;
+
+    /// <summary>
+    /// Auto Binding Section
+    /// </summary>
+    protected override void OnAutoBind()
+    {
+        base.OnAutoBind();
+        this._layout = this.collector.GetNode("Layout");
+        this._descTmpTxt = this.collector.GetNodeComponent<TMP_Text>("Desc*TmpTxt");
+    }
+    #endregion
+
     public override void OnCreate()
     {
         /**
@@ -32,7 +47,6 @@ public class DescriptionUI : UIBase
 
     protected override void OnBind()
     {
-        this.InitComponents();
     }
 
     protected override void OnShow(object obj)
@@ -87,16 +101,6 @@ public class DescriptionUI : UIBase
 
     // Data
     private Action _closeAction;
-
-    // Components
-    private VerticalLayoutGroup _layout;
-    protected TMP_Text _descTmpTxt;
-
-    protected void InitComponents()
-    {
-        this._layout = this.collector.GetNodeComponent<VerticalLayoutGroup>("Layout");
-        this._descTmpTxt = this.collector.GetNodeComponent<TMP_Text>("Desc*TmpTxt");
-    }
 
     protected void BasicDisplay(object obj)
     {
