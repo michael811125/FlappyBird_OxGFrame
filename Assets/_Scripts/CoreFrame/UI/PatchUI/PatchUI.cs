@@ -16,6 +16,29 @@ public class PatchUI : UIBase
 {
     // Use _Node@XXX to Bind
 
+    #region Binding Components
+    protected GameObject _progressGroup;
+    protected TMP_Text _dlInfoTmpTxt;
+    protected TMP_Text _dlSpeedTmpTxt;
+    protected Slider _progressSld;
+    protected TMP_Text _msgTmpTxt;
+    protected ButtonPlus _repairBtnPlus;
+
+    /// <summary>
+    /// Auto Binding Section
+    /// </summary>
+    protected override void OnAutoBind()
+    {
+        base.OnAutoBind();
+        this._progressGroup = this.collector.GetNode("ProgressGroup");
+        this._dlInfoTmpTxt = this.collector.GetNodeComponent<TMP_Text>("DlInfo*TmpTxt");
+        this._dlSpeedTmpTxt = this.collector.GetNodeComponent<TMP_Text>("DlSpeed*TmpTxt");
+        this._progressSld = this.collector.GetNodeComponent<Slider>("Progress*Sld");
+        this._msgTmpTxt = this.collector.GetNodeComponent<TMP_Text>("Msg*TmpTxt");
+        this._repairBtnPlus = this.collector.GetNodeComponent<ButtonPlus>("Repair*BtnPlus");
+    }
+    #endregion
+
     public override void OnCreate()
     {
         /**
@@ -39,7 +62,6 @@ public class PatchUI : UIBase
 
     protected override void OnBind()
     {
-        this.InitComponents();
         this._InitEvents();
         this._InitPatchEvents();
     }
@@ -88,23 +110,6 @@ public class PatchUI : UIBase
     }
 
     private EventGroup _patchEvents = new EventGroup();
-
-    protected GameObject _progressGroup;
-    protected TMP_Text _dlInfoTmpTxt;
-    protected TMP_Text _dlSpeedTmpTxt;
-    protected Slider _progressSld;
-    protected TMP_Text _msgTmpTxt;
-    protected ButtonPlus _repairBtnPlus;
-
-    protected void InitComponents()
-    {
-        this._progressGroup = this.collector.GetNode("ProgressGroup");
-        this._dlInfoTmpTxt = this.collector.GetNodeComponent<TMP_Text>("DlInfo*TmpTxt");
-        this._dlSpeedTmpTxt = this.collector.GetNodeComponent<TMP_Text>("DlSpeed*TmpTxt");
-        this._progressSld = this.collector.GetNodeComponent<Slider>("Progress*Sld");
-        this._msgTmpTxt = this.collector.GetNodeComponent<TMP_Text>("Msg*TmpTxt");
-        this._repairBtnPlus = this.collector.GetNodeComponent<ButtonPlus>("Repair*BtnPlus");
-    }
 
     private void _InitEvents()
     {

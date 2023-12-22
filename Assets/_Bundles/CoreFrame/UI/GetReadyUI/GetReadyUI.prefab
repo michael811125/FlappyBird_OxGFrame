@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 4091226344178941638}
   - component: {fileID: 4791932806490806290}
   m_Layer: 0
-  m_Name: ReadyImg#
+  m_Name: ReadyImg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -252,6 +252,7 @@ MonoBehaviour:
     nodeType: 2
     stack: 1
     order: 0
+    allowCloseStackByStack: 0
     whenCloseAllToSkip: 0
     whenHideAllToSkip: 0
   autoMask: 1
@@ -270,7 +271,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2230492031285626675}
   m_Layer: 0
-  m_Name: Group
+  m_Name: Group#
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

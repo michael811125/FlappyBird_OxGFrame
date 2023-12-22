@@ -4,6 +4,19 @@ using OxGFrame.CoreFrame.SRFrame;
 
 public class MainMenuSR : SRBase
 {
+    #region Binding Components
+    protected Renderer _groundRen;
+
+    /// <summary>
+    /// Auto Binding Section
+    /// </summary>
+    protected override void OnAutoBind()
+    {
+        base.OnAutoBind();
+        this._groundRen = this.collector.GetNodeComponent<Renderer>("Ground*Ren");
+    }
+    #endregion
+
     public override void OnCreate()
     {
         /**
@@ -52,15 +65,11 @@ public class MainMenuSR : SRBase
 
     }
 
-    // 初始 MenuBackgroundSC 相關組件
-
     public float scrollSpeed = 0.5f;
-    // 拖曳方式 (drag assign it)
-    public Renderer ground;
 
     private void _UpdateGroundScroll()
     {
         Vector2 textureOffset = new Vector2(Time.time * this.scrollSpeed, 0);
-        this.ground.material.mainTextureOffset = textureOffset;
+        this._groundRen.material.mainTextureOffset = textureOffset;
     }
 }
