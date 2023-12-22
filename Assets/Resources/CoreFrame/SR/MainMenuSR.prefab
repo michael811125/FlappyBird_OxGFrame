@@ -82,7 +82,7 @@ GameObject:
   - component: {fileID: 3397678639006698856}
   - component: {fileID: 9045776950682833501}
   m_Layer: 0
-  m_Name: Ground
+  m_Name: _Node@Ground*Ren
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -190,7 +190,7 @@ GameObject:
   - component: {fileID: 3156820035051763057}
   - component: {fileID: 1028018503036622245}
   m_Layer: 0
-  m_Name: Bg#
+  m_Name: Bg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -1,10 +1,22 @@
-﻿using OxGFrame.CoreFrame.UIFrame;
-using Cysharp.Threading.Tasks;
-using System;
+﻿using Cysharp.Threading.Tasks;
+using OxGFrame.CoreFrame.UIFrame;
 
 public class LogoUI : UIBase
 {
     // Use _Node@XXX to Bind
+
+    #region Binding Components
+    protected EasyAnimation _transitionEasyAnime;
+
+    /// <summary>
+    /// Auto Binding Section
+    /// </summary>
+    protected override void OnAutoBind()
+    {
+        base.OnAutoBind();
+        this._transitionEasyAnime = this.collector.GetNodeComponent<EasyAnimation>("Transition*EasyAnime");
+    }
+    #endregion
 
     public override void OnCreate()
     {
@@ -29,7 +41,6 @@ public class LogoUI : UIBase
 
     protected override void OnBind()
     {
-        this._InitComponents();
     }
 
     protected override void OnShow(object obj)
@@ -55,12 +66,12 @@ public class LogoUI : UIBase
 
     protected override void ShowAnime(AnimeEndCb animeEndCb)
     {
-        this._easyAnime.Play("Intro", () => { animeEndCb(); });
+        this._transitionEasyAnime.Play("Intro", () => { animeEndCb(); });
     }
 
     protected override void HideAnime(AnimeEndCb animeEndCb)
     {
-        this._easyAnime.Play("Outro", () => { animeEndCb(); });
+        this._transitionEasyAnime.Play("Outro", () => { animeEndCb(); });
     }
 
     protected override void OnClose()
@@ -75,12 +86,5 @@ public class LogoUI : UIBase
         /**
          * Do Somethings on release (CloseAndDestroy)
          */
-    }
-
-    private EasyAnimation _easyAnime;
-
-    private void _InitComponents()
-    {
-        this._easyAnime = this.collector.GetNode("EasyAnime").GetComponent<EasyAnimation>();
     }
 }

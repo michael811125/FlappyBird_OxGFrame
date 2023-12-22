@@ -1,10 +1,29 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
 using OxGFrame.CoreFrame.SRFrame;
+using System.Collections.Generic;
+using UnityEngine;
 
 public class GameplaySR : SRBase
 {
+    #region Binding Components
+    protected SpriteRenderer _bgSprRen;
+    protected Renderer _groundRen;
+    protected Transform _birdContainerTrans;
+    protected Transform _pipeContainerTrans;
+
+    /// <summary>
+    /// Auto Binding Section
+    /// </summary>
+    protected override void OnAutoBind()
+    {
+        base.OnAutoBind();
+        this._bgSprRen = this.collector.GetNodeComponent<SpriteRenderer>("Bg*SprRen");
+        this._groundRen = this.collector.GetNodeComponent<Renderer>("Ground*Ren");
+        this._birdContainerTrans = this.collector.GetNodeComponent<Transform>("BirdContainer*Trans");
+        this._pipeContainerTrans = this.collector.GetNodeComponent<Transform>("PipeContainer*Trans");
+    }
+    #endregion
+
     public override void OnCreate()
     {
         /**
@@ -28,7 +47,6 @@ public class GameplaySR : SRBase
 
     protected override void OnBind()
     {
-        this._InitComponents();
     }
 
     protected override void OnShow(object obj)
@@ -56,8 +74,6 @@ public class GameplaySR : SRBase
 
     }
 
-    // 初始 GamePlaySC 相關組件
-
     [Header("Ground Scroll Speed")]
     public float scrollSpeed = 0.5f;
 
@@ -73,26 +89,10 @@ public class GameplaySR : SRBase
     public List<GameObject> pipes = new List<GameObject>();
     private float _pipeIntervalTimer;
 
-    private SpriteRenderer _bg;
-    private Renderer _ground;
-    private Transform _birdContainer;
-    private Transform _pipeContainer;
-
-    private void _InitComponents()
-    {
-        // Note: collector.GetNode return type is GameObject
-
-        // 綁定方式 (bind with name, also you can use drag to assign it) show you how to bind
-        this._bg = this.collector.GetNodeComponent<SpriteRenderer>("Bg");
-        this._ground = this.collector.GetNodeComponent<Renderer>("Ground");
-        this._birdContainer = this.collector.GetNode("BirdContainer").transform;
-        this._pipeContainer = this.collector.GetNode("PipeContainer").transform;
-    }
-
     private void _UpdateGroundScroll()
     {
         Vector2 textureOffset = new Vector2(Time.time * this.scrollSpeed, 0);
-        this._ground.material.mainTextureOffset = textureOffset;
+        this._groundRen.material.mainTextureOffset = textureOffset;
     }
 
     private void _UpdatePipeGenerator(float dt)
@@ -103,7 +103,7 @@ public class GameplaySR : SRBase
             // Wait for some time, create an obstacle, then set wait time to 0 and start again
             this._pipeIntervalTimer = 0;
             int idx = Random.Range(0, this.pipes.Count);
-            GameObject instPipe = Instantiate(this.pipes[idx], this.pipeStartSpawnPosition, Quaternion.identity, this._pipeContainer);
+            GameObject instPipe = Instantiate(this.pipes[idx], this.pipeStartSpawnPosition, Quaternion.identity, this._pipeContainerTrans);
             instPipe.name = $"Pipe_{idx}";
         }
     }
@@ -111,12 +111,12 @@ public class GameplaySR : SRBase
     private void _InitBackground()
     {
         int idx = Random.Range(0, this.bgs.Count);
-        this._bg.sprite = this.bgs[idx];
+        this._bgSprRen.sprite = this.bgs[idx];
     }
 
     private void _InitBird()
     {
         int idx = Random.Range(0, this.birds.Count);
-        Instantiate(this.birds[idx], this._birdContainer.position, Quaternion.identity, this._birdContainer);
+        Instantiate(this.birds[idx], this._birdContainerTrans.position, Quaternion.identity, this._birdContainerTrans);
     }
 }

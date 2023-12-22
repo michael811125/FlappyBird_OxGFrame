@@ -4,9 +4,35 @@ using Cysharp.Threading.Tasks;
 using UnityEngine.UI;
 using OxGFrame.MediaFrame;
 using OxGKit.Utilities.Timer;
+using OxGKit.Utilities.Button;
 
 public class MainMenuUI : UIBase
 {
+    #region Binding Components
+    protected GameObject _rate;
+    protected ButtonPlus _rateBtnPlus;
+    protected GameObject _play;
+    protected ButtonPlus _playBtnPlus;
+    protected GameObject _rank;
+    protected ButtonPlus _rankBtnPlus;
+    protected Transform _birdTrans;
+
+    /// <summary>
+    /// Auto Binding Section
+    /// </summary>
+    protected override void OnAutoBind()
+    {
+        base.OnAutoBind();
+        this._rate = this.collector.GetNode("Rate");
+        this._rateBtnPlus = this.collector.GetNodeComponent<ButtonPlus>("Rate*BtnPlus");
+        this._play = this.collector.GetNode("Play");
+        this._playBtnPlus = this.collector.GetNodeComponent<ButtonPlus>("Play*BtnPlus");
+        this._rank = this.collector.GetNode("Rank");
+        this._rankBtnPlus = this.collector.GetNodeComponent<ButtonPlus>("Rank*BtnPlus");
+        this._birdTrans = this.collector.GetNodeComponent<Transform>("Bird*Trans");
+    }
+    #endregion
+
     public override void OnCreate()
     {
         this._flyUpdater = new RTUpdater();
@@ -28,7 +54,6 @@ public class MainMenuUI : UIBase
 
     protected override void OnBind()
     {
-        this._InitComponents();
         this._InitEvents();
     }
 
@@ -66,31 +91,16 @@ public class MainMenuUI : UIBase
     public float frequency = 10f;         // 較佳預設值, 震動頻率 (次數/s)
     public float amplitude = 2f;          // 較佳預設值, 震動幅度 (次數/s)
     public float yOffset = 0;             // 位移 Y-Offset
-                                          
+
     private float _elapsedDt = 0;         // 消逝時間
     private RTUpdater _flyUpdater = null; // 飛行動畫的獨立 Updater 
-
-    // 組件拖曳方式
-    public Button rate;
-    public Button rank;
-
-    // 組件綁定方式
-    private Transform _bird;
-    private Button _playBtn;
-
-
-    private void _InitComponents()
-    {
-        this._bird = this.collector.GetNode("Bird").transform;
-        this._playBtn = this.collector.GetNode("Play").GetComponentInChildren<Button>();
-    }
 
     private void _InitEvents()
     {
         // 移除所有事件, 確保沒有其他不必要的事件
-        this._playBtn.onClick.RemoveAllListeners();
+        this._playBtnPlus.onClick.RemoveAllListeners();
         // 加入 Play 點擊事件
-        this._playBtn.onClick.AddListener(() =>
+        this._playBtnPlus.onClick.AddListener(() =>
         {
             // 播放轉場音效
             MediaFrames.AudioFrame.Play(Audios.SwooshingSfx).Forget();
@@ -127,6 +137,6 @@ public class MainMenuUI : UIBase
         //Debug.Log($"Mathf.Sin: {Mathf.Sin(theta)}");
 
         // 座標位移計算
-        this._bird.position += new Vector3(0, yWave, 0);
+        this._birdTrans.position += new Vector3(0, yWave, 0);
     }
 }
