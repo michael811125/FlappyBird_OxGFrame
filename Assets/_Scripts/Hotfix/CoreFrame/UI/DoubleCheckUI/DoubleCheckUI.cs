@@ -8,6 +8,29 @@ public class DoubleCheckUI : UIBase
 {
     // Use _Node@XXX to Bind
 
+    #region Binding Components
+    protected TMP_Text _titleTmpTxt;
+    protected TMP_Text _msgTmpTxt;
+    protected ButtonPlus _noBtnPlus;
+    protected TMP_Text _noBtnTmpTxt;
+    protected ButtonPlus _yesBtnPlus;
+    protected TMP_Text _yesBtnTmpTxt;
+
+    /// <summary>
+    /// Auto Binding Section
+    /// </summary>
+    protected override void OnAutoBind()
+    {
+        base.OnAutoBind();
+        this._titleTmpTxt = this.collector.GetNodeComponent<TMP_Text>("Title*TmpTxt");
+        this._msgTmpTxt = this.collector.GetNodeComponent<TMP_Text>("Msg*TmpTxt");
+        this._noBtnPlus = this.collector.GetNodeComponent<ButtonPlus>("No*BtnPlus");
+        this._noBtnTmpTxt = this.collector.GetNodeComponent<TMP_Text>("NoBtn*TmpTxt");
+        this._yesBtnPlus = this.collector.GetNodeComponent<ButtonPlus>("Yes*BtnPlus");
+        this._yesBtnTmpTxt = this.collector.GetNodeComponent<TMP_Text>("YesBtn*TmpTxt");
+    }
+    #endregion
+
     public override void OnCreate()
     {
         /**
@@ -31,7 +54,6 @@ public class DoubleCheckUI : UIBase
 
     protected override void OnBind()
     {
-        this.InitComponents();
     }
 
     protected override void OnShow(object obj)
@@ -79,23 +101,6 @@ public class DoubleCheckUI : UIBase
 
     protected Action _noAction;
     protected Action _yesAction;
-
-    protected TMP_Text _titleTmpTxt;
-    protected TMP_Text _msgTmpTxt;
-    protected ButtonPlus _noBtnPlus;
-    protected TMP_Text _noBtnTmpTxt;
-    protected ButtonPlus _yesBtnPlus;
-    protected TMP_Text _yesBtnTmpTxt;
-
-    protected void InitComponents()
-    {
-        this._titleTmpTxt = this.collector.GetNodeComponent<TMP_Text>("Title*TmpTxt");
-        this._msgTmpTxt = this.collector.GetNodeComponent<TMP_Text>("Msg*TmpTxt");
-        this._noBtnPlus = this.collector.GetNodeComponent<ButtonPlus>("No*BtnPlus");
-        this._noBtnTmpTxt = this.collector.GetNodeComponent<TMP_Text>("NoBtn*TmpTxt");
-        this._yesBtnPlus = this.collector.GetNodeComponent<ButtonPlus>("Yes*BtnPlus");
-        this._yesBtnTmpTxt = this.collector.GetNodeComponent<TMP_Text>("YesBtn*TmpTxt");
-    }
 
     protected void BasicDisplay(object obj)
     {

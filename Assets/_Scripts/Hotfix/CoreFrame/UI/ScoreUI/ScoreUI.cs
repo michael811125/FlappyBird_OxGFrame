@@ -5,6 +5,19 @@ using UnityEngine.InputSystem;
 
 public class ScoreUI : UIBase
 {
+    #region Binding Components
+    protected Text _scoreTxt;
+
+    /// <summary>
+    /// Auto Binding Section
+    /// </summary>
+    protected override void OnAutoBind()
+    {
+        base.OnAutoBind();
+        this._scoreTxt = this.collector.GetNodeComponent<Text>("Score*Txt");
+    }
+    #endregion
+
     public override void OnCreate()
     {
         /**
@@ -28,7 +41,6 @@ public class ScoreUI : UIBase
 
     protected override void OnBind()
     {
-        this._InitComponents();
     }
 
     protected override void OnShow(object obj)
@@ -69,14 +81,6 @@ public class ScoreUI : UIBase
     public override void OnRelease()
     {
 
-    }
-
-    // 初始 ScoreUI 相關組件
-    private Text _scoreTxt;
-
-    private void _InitComponents()
-    {
-        this._scoreTxt = this.collector.GetNodeComponent<Text>("Score*Txt");
     }
 
     private void _UpdateScoreText()

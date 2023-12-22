@@ -49,7 +49,7 @@ GameObject:
   - component: {fileID: 5914511318967926116}
   - component: {fileID: 7106074926767005338}
   m_Layer: 0
-  m_Name: GameOver
+  m_Name: GameOver#
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -254,6 +254,7 @@ MonoBehaviour:
     nodeType: 2
     stack: 1
     order: 0
+    allowCloseStackByStack: 0
     whenCloseAllToSkip: 0
     whenHideAllToSkip: 0
   autoMask: 1
@@ -278,9 +279,9 @@ GameObject:
   - component: {fileID: 680889078280596086}
   - component: {fileID: 2401683832958117183}
   - component: {fileID: 4552605840823099245}
-  - component: {fileID: 4179911649280585885}
+  - component: {fileID: 6347136574948912333}
   m_Layer: 0
-  m_Name: Img#
+  m_Name: _Node@Menu*BtnPlus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -344,7 +345,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4179911649280585885
+--- !u!114 &6347136574948912333
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -353,7 +354,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3542463388424272061}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 0b8ac0111dd8c2c4ca422724f3bc1058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -386,6 +387,20 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 4552605840823099245}
   m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+  extdTransition: 0
+  transScale:
+    originSize: 1
+    size: 0.95
+  extdLongClick: 0
+  ignoreTimeScale: 1
+  triggerTime: 1
+  intervalTime: 0.1
+  _onLongClickPressed:
+    m_PersistentCalls:
+      m_Calls: []
+  _onLongClickReleased:
     m_PersistentCalls:
       m_Calls: []
 --- !u!1 &3939073746617940282
@@ -669,7 +684,7 @@ GameObject:
   - component: {fileID: 4071283191872390071}
   - component: {fileID: 1080013203274981078}
   m_Layer: 0
-  m_Name: _Node@Medal
+  m_Name: _Node@Medal*Img
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -746,7 +761,7 @@ GameObject:
   - component: {fileID: 5382834585114487114}
   - component: {fileID: 7133272174078596298}
   m_Layer: 0
-  m_Name: _Node@Score
+  m_Name: _Node@Score*Txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -841,7 +856,7 @@ GameObject:
   - component: {fileID: 915908306910506396}
   - component: {fileID: 8047228586684722021}
   m_Layer: 0
-  m_Name: _Node@BestScore
+  m_Name: _Node@BestScore*Txt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1010,9 +1025,9 @@ GameObject:
   - component: {fileID: 3442540999536176610}
   - component: {fileID: 2101281516946623685}
   - component: {fileID: 797017165447004957}
-  - component: {fileID: 8477671426716910571}
+  - component: {fileID: 6697857299192695153}
   m_Layer: 0
-  m_Name: Img
+  m_Name: _Node@Replay*BtnPlus
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1076,7 +1091,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8477671426716910571
+--- !u!114 &6697857299192695153
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1085,7 +1100,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 9055427060200044487}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 0b8ac0111dd8c2c4ca422724f3bc1058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -1118,5 +1133,19 @@ MonoBehaviour:
   m_Interactable: 1
   m_TargetGraphic: {fileID: 797017165447004957}
   m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+  extdTransition: 0
+  transScale:
+    originSize: 1
+    size: 0.95
+  extdLongClick: 0
+  ignoreTimeScale: 1
+  triggerTime: 1
+  intervalTime: 0.1
+  _onLongClickPressed:
+    m_PersistentCalls:
+      m_Calls: []
+  _onLongClickReleased:
     m_PersistentCalls:
       m_Calls: []
