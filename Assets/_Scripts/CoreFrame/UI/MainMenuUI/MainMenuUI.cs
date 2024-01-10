@@ -137,6 +137,6 @@ public class MainMenuUI : UIBase
         //Debug.Log($"Mathf.Sin: {Mathf.Sin(theta)}");
 
         // 座標位移計算
-        this._birdTrans.position += new Vector3(0, yWave, 0);
+        if (this._birdTrans != null) this._birdTrans.position += new Vector3(0, yWave, 0);
     }
 }
