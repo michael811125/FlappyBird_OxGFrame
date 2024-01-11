@@ -51,12 +51,14 @@ public static class Audios
     private static string _path = $"{prefix}MediaFrame/Audio/";
 #endif
 
-    // 背景音樂
+    // 背景音樂 BGM
     public readonly static string MenuBgm = $"{_path}MenuBgm";             // 主選單背景音樂
 
-    // 音效                                                                
+    // 通用音效 General
+    public readonly static string SwooshingSfx = $"{_path}SwooshingSfx";   // 轉場音效
+
+    // 互動音效 Interact
     public readonly static string ScoreSfx = $"{_path}ScoreSfx";           // 分數音效
     public readonly static string HitSfx = $"{_path}HitSfx";               // 撞擊音效
     public readonly static string FlySfx = $"{_path}FlySfx";               // 飛起音效
-    public readonly static string SwooshingSfx = $"{_path}SwooshingSfx";   // 轉場音效
 }
