@@ -31,10 +31,10 @@ public static class UIs
 
     // 介面
     public readonly static string AwaitingUI = $"{_path}AwaitingUI";       // 等待介面 (Common)
-    public readonly static string PatchUI = $"{_path}PatchUI";             // 補丁更新介面
     public readonly static string DescriptionUI = $"{_path}DescriptionUI"; // 說明介面 (Common)
     public readonly static string DoubleCheckUI = $"{_path}DoubleCheckUI"; // 重複確認介面 (Common)
     public readonly static string LoadingUI = $"{_path}LoadingUI";         // 加載介面 (Common)
+    public readonly static string PatchUI = $"{_path}PatchUI";             // 補丁更新介面
     public readonly static string LogoUI = $"{_path}LogoUI";               // 商標介面
     public readonly static string MainMenuUI = $"{_path}MainMenuUI";       // 主選單介面
     public readonly static string GetReadyUI = $"{_path}GetReadyUI";       // 準備介面
