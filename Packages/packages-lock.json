@@ -5,7 +5,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "f810ede6d74a7fcfc2c2fd03ad08c44696b3a0e0"
+      "hash": "6ffb977ef31eb20ab1824f92174fc6e891209401"
     },
     "com.domybest.lwmybox": {
       "version": "https://github.com/michael811125/LWMyBox.git",
@@ -23,21 +23,21 @@
       "dependencies": {
         "com.unity.scriptablebuildpipeline": "1.21.7"
       },
-      "hash": "9b7c844c39d526c20f585e52242611e414b4b275"
+      "hash": "664e3f3a35fc837186fee43f8d8a7ceaa8c29c52"
     },
     "com.michaelo.oxgkit.loggingsystem": {
       "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/LoggingSystem/Scripts",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "398db5c8fc940333d25428fe6c9095ab21546fba"
+      "hash": "fafc7e74f295da723fee38d7e675bfffaf21c849"
     },
     "com.michaelo.oxgkit.utilities": {
       "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/Utilities/Scripts",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "cce50d46da2953c2dc4782d68b66bdc71a0016f1"
+      "hash": "fafc7e74f295da723fee38d7e675bfffaf21c849"
     },
     "com.unity.2d.animation": {
       "version": "7.0.12",
@@ -266,6 +266,22 @@
         "com.unity.searcher": "4.9.1"
       }
     },
+    "com.unity.sysroot": {
+      "version": "2.0.7",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {},
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.sysroot.linux-x86_64": {
+      "version": "2.0.6",
+      "depth": 1,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.sysroot": "2.0.7"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.test-framework": {
       "version": "1.1.33",
       "depth": 0,
@@ -295,6 +311,16 @@
         "com.unity.modules.animation": "1.0.0",
         "com.unity.modules.audio": "1.0.0",
         "com.unity.modules.particlesystem": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
+    "com.unity.toolchain.win-x86_64-linux-x86_64": {
+      "version": "2.0.6",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.sysroot": "2.0.7",
+        "com.unity.sysroot.linux-x86_64": "2.0.6"
       },
       "url": "https://packages.unity.com"
     },

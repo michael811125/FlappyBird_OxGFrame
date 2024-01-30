@@ -51,7 +51,7 @@ public class HCoreSystem : MonoSingleton<HCoreSystem>
 
     private void _InitLoggers()
     {
-        Logging.CreateLogger<HotfixLogger>();
+        Logging.CreateLogger<HLogger>();
         LoggingLauncher.ReloadLoggerSetting();
     }
 

@@ -252,7 +252,7 @@ public class PatchUI : UIBase
             #region Download Progression
             // Receive Progression
             var downloadInfo = message as PatchEvents.PatchDownloadProgression;
-            Logging.Print<MainLogger>
+            Logging.Print<MLogger>
             (
                 $"Progress: {downloadInfo.progress}, " +
                 $"TotalCount: {downloadInfo.totalDownloadCount}, " +
