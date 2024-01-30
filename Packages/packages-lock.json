@@ -5,7 +5,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "f810ede6d74a7fcfc2c2fd03ad08c44696b3a0e0"
+      "hash": "6ffb977ef31eb20ab1824f92174fc6e891209401"
     },
     "com.domybest.lwmybox": {
       "version": "https://github.com/michael811125/LWMyBox.git",
@@ -23,21 +23,21 @@
       "dependencies": {
         "com.unity.scriptablebuildpipeline": "1.21.7"
       },
-      "hash": "9b7c844c39d526c20f585e52242611e414b4b275"
+      "hash": "664e3f3a35fc837186fee43f8d8a7ceaa8c29c52"
     },
     "com.michaelo.oxgkit.loggingsystem": {
       "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/LoggingSystem/Scripts",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "398db5c8fc940333d25428fe6c9095ab21546fba"
+      "hash": "fafc7e74f295da723fee38d7e675bfffaf21c849"
     },
     "com.michaelo.oxgkit.utilities": {
       "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/Utilities/Scripts",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "cce50d46da2953c2dc4782d68b66bdc71a0016f1"
+      "hash": "fafc7e74f295da723fee38d7e675bfffaf21c849"
     },
     "com.unity.2d.animation": {
       "version": "7.0.12",

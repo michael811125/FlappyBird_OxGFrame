@@ -5,7 +5,7 @@ public class PipeDestroyer : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D collider)
     {
-        Logging.Print<MainLogger>($"PipeController Hit: {collider.gameObject.name}");
+        Logging.Print<MLogger>($"PipeController Hit: {collider.gameObject.name}");
 
         if (collider.gameObject.transform.parent != null)
         {
