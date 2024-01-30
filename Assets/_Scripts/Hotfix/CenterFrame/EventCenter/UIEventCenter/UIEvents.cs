@@ -29,7 +29,7 @@ public class EDescriptionUI : EventBase
 
     public async override UniTaskVoid HandleEvent()
     {
-        Logging.Print<HotfixLogger>($"<color=#FFC078>【Handle Event】 -> {nameof(EDescriptionUI)}</color>");
+        Logging.Print<HLogger>($"<color=#FFC078>【Handle Event】 -> {nameof(EDescriptionUI)}</color>");
 
         await CoreFrames.UIFrame.Show<DescriptionUI>(Pkgs.PatchPkg, UIs.DescriptionUI, new object[] { this._msg, this._closeAction }, UIs.AwaitingUI, 0);
 
@@ -65,7 +65,7 @@ public class EDoubleCheckUI : EventBase
 
     public async override UniTaskVoid HandleEvent()
     {
-        Logging.Print<HotfixLogger>($"<color=#FFC078>【Handle Event】 -> {nameof(EDoubleCheckUI)}</color>");
+        Logging.Print<HLogger>($"<color=#FFC078>【Handle Event】 -> {nameof(EDoubleCheckUI)}</color>");
 
         await CoreFrames.UIFrame.Show<DoubleCheckUI>(Pkgs.PatchPkg, UIs.DoubleCheckUI, new object[] { this._title, this._msg, this._yesAction, this._noAction }, UIs.AwaitingUI, 0);
 

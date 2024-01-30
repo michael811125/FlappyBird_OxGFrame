@@ -1,7 +1,7 @@
 ﻿using OxGKit.LoggingSystem;
 
 [LoggerName("FlappyBird.Hotfix.Logger")]
-public class HotfixLogger : Logging
+public class HLogger : Logging
 {
-    public HotfixLogger() { }
+    public HLogger() { }
 }

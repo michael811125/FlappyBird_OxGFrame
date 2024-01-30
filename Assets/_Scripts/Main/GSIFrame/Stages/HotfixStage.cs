@@ -85,7 +85,7 @@ public class HotfixStage : GSIBase
                 if (Hotfixers.IsDone())
                 {
                     this._hotfix = Hotfix.WAITING_FOR_BUFFER_TIME;
-                    Logging.Print<MainLogger>("<color=#7bff9e>Hotfix finished.</color>");
+                    Logging.Print<MLogger>("<color=#7bff9e>Hotfix finished.</color>");
                 }
                 break;
 

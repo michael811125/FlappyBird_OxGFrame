@@ -40,7 +40,7 @@ public class CoreSystem : MonoBehaviour
         Logging.CreateLogger<OxGFrame.GSIFrame.Logger>();
         Logging.CreateLogger<OxGFrame.CenterFrame.Logger>();
         Logging.CreateLogger<OxGKit.Utilities.Logger>();
-        Logging.CreateLogger<MainLogger>();
+        Logging.CreateLogger<MLogger>();
         LoggingLauncher.ReloadLoggerSetting();
     }
 }
