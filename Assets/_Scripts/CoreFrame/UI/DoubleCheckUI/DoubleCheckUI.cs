@@ -75,14 +75,14 @@ public class DoubleCheckUI : UIBase
          */
     }
 
-    protected override void ShowAnime(AnimeEndCb animeEndCb)
+    protected override void ShowAnimation(AnimationEnd animationEnd)
     {
-        animeEndCb(); // Must Keep, Because Parent Already Set AnimeCallback
+        animationEnd(); // Must Keep, Because Parent Already Set AnimeCallback
     }
 
-    protected override void HideAnime(AnimeEndCb animeEndCb)
+    protected override void HideAnimation(AnimationEnd animationEnd)
     {
-        animeEndCb(); // Must Keep, Because Parent Already Set AnimeCallback
+        animationEnd(); // Must Keep, Because Parent Already Set AnimeCallback
     }
 
     protected override void OnClose()
