@@ -64,14 +64,14 @@ public class LogoUI : UIBase
          */
     }
 
-    protected override void ShowAnime(AnimeEndCb animeEndCb)
+    protected override void ShowAnimation(AnimationEnd animationEnd)
     {
-        this._transitionEasyAnime.Play("Intro", () => { animeEndCb(); });
+        this._transitionEasyAnime.Play("Intro", () => { animationEnd(); });
     }
 
-    protected override void HideAnime(AnimeEndCb animeEndCb)
+    protected override void HideAnimation(AnimationEnd animationEnd)
     {
-        this._transitionEasyAnime.Play("Outro", () => { animeEndCb(); });
+        this._transitionEasyAnime.Play("Outro", () => { animationEnd(); });
     }
 
     protected override void OnClose()
