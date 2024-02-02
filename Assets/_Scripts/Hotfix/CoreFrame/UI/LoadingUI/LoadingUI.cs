@@ -51,7 +51,7 @@ public class LoadingUI : UIBase
 
     protected override void OnShow(object obj)
     {
-        this.BasicDisplay();
+        this._BasicDisplay();
     }
 
     protected override void OnUpdate(float dt)
@@ -92,7 +92,7 @@ public class LoadingUI : UIBase
          */
     }
 
-    protected void BasicDisplay()
+    private void _BasicDisplay()
     {
         this.DrawProgressView(0, 0, 0);
     }

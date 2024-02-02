@@ -93,7 +93,7 @@ public class HotfixStage : GSIBase
                 // If buffer timeout
                 if (this._realTimer.IsTimerTimeout())
                 {
-                    // Set timer for outro anime
+                    // Set timer for outro anim
                     this._realTimer.SetTimer(1f);
 
                     // Close LogoUI
