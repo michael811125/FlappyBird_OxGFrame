@@ -132,12 +132,13 @@ public class PatchUI : UIBase
         // 2. PatchGoToAppStore
         // 3. PatchAppVersionUpdateFailed
         // 4. PatchInitPatchModeFailed
-        // 5. PatchCreateDownloader
-        // 6. PatchDownloadProgression
-        // 7. PatchVersionUpdateFailed
-        // 8. PatchManifestUpdateFailed
-        // 9. PatchDownloadFailed
-        // 10. PatchDownloadCanceled
+        // 5. PatchVersionUpdateFailed
+        // 6. PatchManifestUpdateFailed
+        // 7. PatchCreateDownloader
+        // 8. PatchCheckDiskNotEnoughSpace
+        // 9. PatchDownloadProgression
+        // 10. PatchDownloadFailed
+        // 11. PatchDownloadCanceled
 
         #region Add PatchEvents Handle
         this._patchEvents.AddListener<PatchEvents.PatchRepairFailed>(this._OnHandleEventMessage);
@@ -145,10 +146,11 @@ public class PatchUI : UIBase
         this._patchEvents.AddListener<PatchEvents.PatchGoToAppStore>(this._OnHandleEventMessage);
         this._patchEvents.AddListener<PatchEvents.PatchAppVersionUpdateFailed>(this._OnHandleEventMessage);
         this._patchEvents.AddListener<PatchEvents.PatchInitPatchModeFailed>(this._OnHandleEventMessage);
-        this._patchEvents.AddListener<PatchEvents.PatchCreateDownloader>(this._OnHandleEventMessage);
-        this._patchEvents.AddListener<PatchEvents.PatchDownloadProgression>(this._OnHandleEventMessage);
         this._patchEvents.AddListener<PatchEvents.PatchVersionUpdateFailed>(this._OnHandleEventMessage);
         this._patchEvents.AddListener<PatchEvents.PatchManifestUpdateFailed>(this._OnHandleEventMessage);
+        this._patchEvents.AddListener<PatchEvents.PatchCreateDownloader>(this._OnHandleEventMessage);
+        this._patchEvents.AddListener<PatchEvents.PatchCheckDiskNotEnoughSpace>(this._OnHandleEventMessage);
+        this._patchEvents.AddListener<PatchEvents.PatchDownloadProgression>(this._OnHandleEventMessage);
         this._patchEvents.AddListener<PatchEvents.PatchDownloadFailed>(this._OnHandleEventMessage);
         this._patchEvents.AddListener<PatchEvents.PatchDownloadCanceled>(this._OnHandleEventMessage);
         #endregion
@@ -224,6 +226,16 @@ public class PatchUI : UIBase
             // Show Patch Init Patch Failed Retry UI
             this._ShowRetryEvent(2);
         }
+        else if (message is PatchEvents.PatchVersionUpdateFailed)
+        {
+            // Show Patch Version Update Failed Retry UI
+            this._ShowRetryEvent(3);
+        }
+        else if (message is PatchEvents.PatchManifestUpdateFailed)
+        {
+            // Show Patch Manifest Update Failed Retry UI
+            this._ShowRetryEvent(4);
+        }
         else if (message is PatchEvents.PatchCreateDownloader)
         {
             // Show GroupInfos UI for user to choose which one they want to download
@@ -246,6 +258,15 @@ public class PatchUI : UIBase
                 }
             );
             #endregion
+        }
+        else if (message is PatchEvents.PatchCheckDiskNotEnoughSpace)
+        {
+            // Show Disk Not Enough Space Retry UI
+
+            // Note: You can retry create downloader again (unless, user frees up space) or submit Application.Quit event!!!
+
+            // Here use action type is 6 (Application.Quit)
+            this._ShowRetryEvent(6, message);
         }
         else if (message is PatchEvents.PatchDownloadProgression)
         {
@@ -272,16 +293,6 @@ public class PatchUI : UIBase
                 downloadInfo.downloadSpeedBytes
             );
             #endregion
-        }
-        else if (message is PatchEvents.PatchVersionUpdateFailed)
-        {
-            // Show Patch Version Update Failed Retry UI
-            this._ShowRetryEvent(3);
-        }
-        else if (message is PatchEvents.PatchManifestUpdateFailed)
-        {
-            // Show Patch Manifest Update Failed Retry UI
-            this._ShowRetryEvent(4);
         }
         else if (message is PatchEvents.PatchDownloadFailed)
         {
@@ -324,7 +335,7 @@ public class PatchUI : UIBase
     }
     #endregion
 
-    private void _ShowRetryEvent(int retryEvent)
+    private void _ShowRetryEvent(int retryEvent, IEventMessage eventMessage = null)
     {
         string title = "Notice";
         string msg = string.Empty;
@@ -360,6 +371,28 @@ public class PatchUI : UIBase
             case 5:
                 msg = "Patch download failed.\nDo you want to retry?";
                 retryAction = PatchUserEvents.UserTryCreateDownloader.SendEventMessage;
+                break;
+
+            case 6:
+                int availableMegabytes = 0;
+                ulong patchTotalBytes = 0;
+                if (eventMessage != null)
+                {
+                    var msgData = eventMessage as PatchEvents.PatchCheckDiskNotEnoughSpace;
+                    availableMegabytes = msgData.availableMegabytes;
+                    patchTotalBytes = msgData.patchTotalBytes;
+                }
+                msg = $"Disk not enough space!!!\nAvailable disk space size: {BundleUtility.GetMegabytesToString(availableMegabytes)}\nPatch total size: {BundleUtility.GetBytesToString(patchTotalBytes)}";
+                Action quit = () =>
+                {
+                    // Application quit
+#if UNITY_EDITOR
+                    UnityEditor.EditorApplication.isPlaying = false;
+#else
+                    Application.Quit();
+#endif
+                };
+                retryAction = quit;
                 break;
         }
 
