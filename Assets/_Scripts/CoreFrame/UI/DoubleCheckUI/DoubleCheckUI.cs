@@ -58,7 +58,7 @@ public class DoubleCheckUI : UIBase
 
     protected override void OnShow(object obj)
     {
-        this.BasicDisplay(obj);
+        this._BasicDisplay(obj);
     }
 
     protected override void OnUpdate(float dt)
@@ -102,7 +102,7 @@ public class DoubleCheckUI : UIBase
     protected Action _noAction;
     protected Action _yesAction;
 
-    protected void BasicDisplay(object obj)
+    private void _BasicDisplay(object obj)
     {
         object[] args = obj as object[];
 
@@ -113,22 +113,22 @@ public class DoubleCheckUI : UIBase
         this._yesAction = args?[2] as Action;
         this._noAction = args?[3] as Action;
 
-        this.DrawTitleView(title);
-        this.DrawMsgView(msg);
-        this.DrawButtonsView();
+        this._DrawTitleView(title);
+        this._DrawMsgView(msg);
+        this._DrawButtonsView();
     }
 
-    protected void DrawTitleView(string title)
+    protected void _DrawTitleView(string title)
     {
         this._titleTmpTxt.text = title;
     }
 
-    protected void DrawMsgView(string msg)
+    protected void _DrawMsgView(string msg)
     {
         this._msgTmpTxt.text = msg;
     }
 
-    protected void DrawButtonsView()
+    protected void _DrawButtonsView()
     {
         this._yesBtnPlus.On(() =>
         {
