@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public class EasyAnimator : EasyAnime
+public class EasyAnimator : EasyAnim
 {
     [SerializeField]
     protected Animator _animator = null;
@@ -16,12 +16,12 @@ public class EasyAnimator : EasyAnime
         return this._animator;
     }
 
-    public override void Play(string paramName, Action animeEnd)
+    public override void Play(string paramName, Action animEnd)
     {
-        // Set anime end callback
-        this.SetAnimeEnd(animeEnd);
+        // Set anim end callback
+        this.SetAnimEnd(animEnd);
 
-        if (this.HasAnime(paramName))
+        if (this.HasAnim(paramName))
         {
             // Reset first to make sure is clear param set
             this._animator.ResetTrigger(paramName);
@@ -30,10 +30,10 @@ public class EasyAnimator : EasyAnime
             this._animator?.SetTrigger(paramName);
         }
         // If cannot found param name just call end back directly
-        else this.AnimeEnd();
+        else this.AnimEnd();
     }
 
-    public override bool HasAnime(string paramName)
+    public override bool HasAnim(string paramName)
     {
         return this._animator.ContainsParam(paramName);
     }

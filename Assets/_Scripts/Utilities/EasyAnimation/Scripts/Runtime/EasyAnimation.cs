@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public class EasyAnimation : EasyAnime
+public class EasyAnimation : EasyAnim
 {
     [SerializeField]
     protected Animation _animation = null;
@@ -16,22 +16,22 @@ public class EasyAnimation : EasyAnime
         return this._animation;
     }
 
-    public override void Play(string animeName, Action animeEnd)
+    public override void Play(string animName, Action animEnd)
     {
-        // Set anime end callback
-        this.SetAnimeEnd(animeEnd);
+        // Set anim end callback
+        this.SetAnimEnd(animEnd);
 
-        if (this.HasAnime(animeName))
+        if (this.HasAnim(animName))
         {
-            // Play animation by anime name
-            this._animation?.Play(animeName);
+            // Play animation by anim name
+            this._animation?.Play(animName);
         }
-        // If cannot found anime name just call end back directly
-        else this.AnimeEnd();
+        // If cannot found anim name just call end back directly
+        else this.AnimEnd();
     }
 
-    public override bool HasAnime(string animeName)
+    public override bool HasAnim(string animName)
     {
-        return this._animation.GetClip(animeName) != null;
+        return this._animation.GetClip(animName) != null;
     }
 }

@@ -15,6 +15,7 @@ MonoBehaviour:
   variableCaseType: 0
   variableAccessModifier: protected
   variablePrefix: _
+  methodType: 0
   methodAccessModifier: protected
   methodPrefix: 
   methodName: InitBindingComponents
@@ -120,6 +121,12 @@ MonoBehaviour:
     - TailName: NodePool
       Reference:
         componentName: NodePool
+        pluralize:
+          endRemoveCount: 0
+          endPluralTxt: s
+    - TailName: EasyAnim
+      Reference:
+        componentName: EasyAnimation
         pluralize:
           endRemoveCount: 0
           endPluralTxt: s
