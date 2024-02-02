@@ -40,7 +40,7 @@ MonoBehaviour:
         pluralize:
           endRemoveCount: 0
           endPluralTxt: s
-    - TailName: EasyAnime
+    - TailName: EasyAnim
       Reference:
         componentName: EasyAnimation
         pluralize:
