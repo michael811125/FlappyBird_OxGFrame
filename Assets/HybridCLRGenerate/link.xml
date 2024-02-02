@@ -52,7 +52,7 @@
     <type fullname="OxGFrame.CoreFrame.FrameBase" preserve="all" />
     <type fullname="OxGFrame.CoreFrame.FrameBase/Collector" preserve="all" />
     <type fullname="OxGFrame.CoreFrame.SRFrame.SRBase" preserve="all" />
-    <type fullname="OxGFrame.CoreFrame.UIFrame.AnimeEndCb" preserve="all" />
+    <type fullname="OxGFrame.CoreFrame.UIFrame.AnimEndCb" preserve="all" />
     <type fullname="OxGFrame.CoreFrame.UIFrame.UIBase" preserve="all" />
   </assembly>
   <assembly fullname="OxGFrame.GSIFrame.Runtime">
@@ -72,7 +72,7 @@
   <assembly fullname="OxGKit.Utilities.Runtime">
     <type fullname="OxGKit.Utilities.Button.ButtonPlus" preserve="all" />
     <type fullname="OxGKit.Utilities.Singleton.MonoSingleton`1" preserve="all" />
-    <type fullname="OxGKit.Utilities.TextureAnime.TextureAnimation" preserve="all" />
+    <type fullname="OxGKit.Utilities.TextureAnim.TextureAnimation" preserve="all" />
     <type fullname="OxGKit.Utilities.Timer.RTUpdater" preserve="all" />
     <type fullname="OxGKit.Utilities.Timer.RTUpdater/RealTimeUpdate" preserve="all" />
   </assembly>
