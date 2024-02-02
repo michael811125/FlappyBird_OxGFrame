@@ -51,7 +51,7 @@ public class DescriptionUI : UIBase
 
     protected override void OnShow(object obj)
     {
-        this.BasicDisplay(obj);
+        this._BasicDisplay(obj);
     }
 
     protected override void OnUpdate(float dt)
@@ -102,7 +102,7 @@ public class DescriptionUI : UIBase
     // Data
     private Action _closeAction;
 
-    protected void BasicDisplay(object obj)
+    private void _BasicDisplay(object obj)
     {
         object[] args = obj as object[];
 
