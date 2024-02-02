@@ -6,7 +6,7 @@ public class LogoUI : UIBase
     // Use _Node@XXX to Bind
 
     #region Binding Components
-    protected EasyAnimation _transitionEasyAnime;
+    protected EasyAnimation _transitionEasyAnim;
 
     /// <summary>
     /// Auto Binding Section
@@ -14,7 +14,7 @@ public class LogoUI : UIBase
     protected override void OnAutoBind()
     {
         base.OnAutoBind();
-        this._transitionEasyAnime = this.collector.GetNodeComponent<EasyAnimation>("Transition*EasyAnime");
+        this._transitionEasyAnim = this.collector.GetNodeComponent<EasyAnimation>("Transition*EasyAnim");
     }
     #endregion
 
@@ -66,12 +66,12 @@ public class LogoUI : UIBase
 
     protected override void ShowAnimation(AnimationEnd animationEnd)
     {
-        this._transitionEasyAnime.Play("Intro", () => { animationEnd(); });
+        this._transitionEasyAnim.Play("Intro", () => { animationEnd(); });
     }
 
     protected override void HideAnimation(AnimationEnd animationEnd)
     {
-        this._transitionEasyAnime.Play("Outro", () => { animationEnd(); });
+        this._transitionEasyAnim.Play("Outro", () => { animationEnd(); });
     }
 
     protected override void OnClose()

@@ -50,12 +50,12 @@ public class AwaitingUI : UIBase
 
     protected override void ShowAnimation(AnimationEnd animationEnd)
     {
-        animationEnd(); // Must Keep, Because Parent Already Set AnimeCallback
+        animationEnd(); // Must Keep, Because Parent Already Set AnimCallback
     }
 
     protected override void HideAnimation(AnimationEnd animationEnd)
     {
-        animationEnd(); // Must Keep, Because Parent Already Set AnimeCallback
+        animationEnd(); // Must Keep, Because Parent Already Set AnimCallback
     }
 
     protected override void OnClose()
