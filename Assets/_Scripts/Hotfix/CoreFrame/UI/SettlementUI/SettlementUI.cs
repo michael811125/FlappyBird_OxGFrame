@@ -74,12 +74,12 @@ public class SettlementUI : UIBase
 
     protected override void ShowAnimation(AnimationEnd animationEnd)
     {
-        animationEnd(); // Must Keep, Because Parent Already Set AnimCallback
+        animationEnd(); // Must call if animation end
     }
 
     protected override void HideAnimation(AnimationEnd animationEnd)
     {
-        animationEnd(); // Must Keep, Because Parent Already Set AnimCallback
+        animationEnd(); // Must call if animation end
     }
 
     protected override void OnClose()
