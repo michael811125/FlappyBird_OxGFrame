@@ -52,7 +52,7 @@ public class HCoreSystem : MonoSingleton<HCoreSystem>
     private void _InitLoggers()
     {
         Logging.CreateLogger<HLogger>();
-        LoggingLauncher.ReloadLoggerSetting();
+        LoggingLauncher.TryLoadLoggerSetting();
     }
 
     #region Score Controls
