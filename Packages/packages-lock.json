@@ -5,7 +5,14 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "67c487f521087a3887e6c8817dff3cd264aa4f20"
+      "hash": "2697eb5a90cc44f226cd4ca4ad7ea1259ab38f56"
+    },
+    "com.cysharp.unitask": {
+      "version": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "88ecfa2992d4f7247aaad0322921aa3fb929aeee"
     },
     "com.domybest.lwmybox": {
       "version": "https://github.com/michael811125/LWMyBox.git",
@@ -14,30 +21,30 @@
       "dependencies": {
         "com.unity.ugui": "1.0.0"
       },
-      "hash": "9816f6cb6b3475b762488ba716d6953caab611d5"
+      "hash": "42b343614ebe621cb9a3470f3c400eaaa8cf6f1b"
     },
     "com.michaelo.oxgframe": {
       "version": "https://github.com/michael811125/OxGFrame.git?path=Assets/OxGFrame",
       "depth": 0,
       "source": "git",
       "dependencies": {
-        "com.unity.scriptablebuildpipeline": "1.21.7"
+        "com.unity.scriptablebuildpipeline": "1.21.22"
       },
-      "hash": "7ab4562e7eebf82ea1b518d1f6400f4a983124e9"
+      "hash": "56c8c9169a6f251d07a1cf097fc0bf7c2ffd2daf"
     },
     "com.michaelo.oxgkit.loggingsystem": {
       "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/LoggingSystem/Scripts",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "8006ca9aa9cb31e53072fbcde95d276a64903bd8"
+      "hash": "13c7d96505f37369e3a36547c36b9021de65de83"
     },
     "com.michaelo.oxgkit.utilities": {
       "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/Utilities/Scripts",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "8006ca9aa9cb31e53072fbcde95d276a64903bd8"
+      "hash": "13c7d96505f37369e3a36547c36b9021de65de83"
     },
     "com.unity.2d.animation": {
       "version": "7.0.12",
@@ -244,7 +251,7 @@
       }
     },
     "com.unity.scriptablebuildpipeline": {
-      "version": "1.21.7",
+      "version": "1.21.22",
       "depth": 1,
       "source": "registry",
       "dependencies": {},
