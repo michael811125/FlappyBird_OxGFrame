@@ -21,7 +21,7 @@ public class StartupStage : GSIBase
         if (AssetPatcher.IsInitialized())
         {
             this.StopUpdate();
-            GSIManager.ChangeStage<LogoStage>();
+            MGSIManager.ChangeStage<LogoStage>();
         }
     }
 

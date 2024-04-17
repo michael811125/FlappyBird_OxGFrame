@@ -16,7 +16,7 @@ public class LogoStage : GSIBase
         // Show LogoUI (built-in)
         CoreFrames.UIFrame.Show(BuiltinPkg, LogoUI).Forget();
         // Do hotfix while logo showing
-        GSIManager.ChangeStage<HotfixStage>();
+        MGSIManager.ChangeStage<HotfixStage>();
     }
 
     public override void OnUpdate(float dt = 0.0f)
