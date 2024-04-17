@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 9622147}
   - component: {fileID: 9622148}
   m_Layer: 0
-  m_Name: CoreSystem
+  m_Name: MCoreSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
