@@ -24,7 +24,7 @@ public class CoreSystem : MonoSingleton<CoreSystem>
         // 30 for Mobile, 60 for Desktop
         Application.targetFrameRate = this.frameRate;
 
-        // 需動 GSIManager 的 Start
+        // 驅動 GSIManager 的 Start
         GSIManager.Start();
     }
 
