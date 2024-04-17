@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// Main CoreSystem
 /// </summary>
-public class CoreSystem : MonoBehaviour
+public class MCoreSystem : MonoBehaviour
 {
     private void Awake()
     {
@@ -22,13 +22,13 @@ public class CoreSystem : MonoBehaviour
     private void Start()
     {
         // Run first stage on GSI start
-        GSIManager.Start();
+        MGSIManager.Start();
     }
 
     private void Update()
     {
         // Update GSI 
-        GSIManager.Update(Time.deltaTime);
+        MGSIManager.Update(Time.deltaTime);
     }
 
     private void _InitLoggers()

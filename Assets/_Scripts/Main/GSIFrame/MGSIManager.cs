@@ -1,11 +1,11 @@
 ﻿using OxGFrame.GSIFrame;
 
-public class GSIManager : GSIManagerBase<GSIManager>
+public class MGSIManager : GSIManagerBase<MGSIManager>
 {
     /// <summary>
     /// Main GSIManager
     /// </summary>
-    public GSIManager()
+    public MGSIManager()
     {
         // 1. Game Startup Stage
         this.AddGameStage<StartupStage>();
