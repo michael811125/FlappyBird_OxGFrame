@@ -5,14 +5,14 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "2697eb5a90cc44f226cd4ca4ad7ea1259ab38f56"
+      "hash": "b176d63d93a6b8fd1a873769af7f7fa4c43a4288"
     },
     "com.cysharp.unitask": {
       "version": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "88ecfa2992d4f7247aaad0322921aa3fb929aeee"
+      "hash": "b0d01ca75fc890b76e81202d655d17c1f4214a18"
     },
     "com.domybest.lwmybox": {
       "version": "https://github.com/michael811125/LWMyBox.git",
@@ -28,23 +28,23 @@
       "depth": 0,
       "source": "git",
       "dependencies": {
-        "com.unity.scriptablebuildpipeline": "1.21.22"
+        "com.unity.scriptablebuildpipeline": "2.1.3"
       },
-      "hash": "89b3598accaacf4724186da5c6efdd5b5ae8a20c"
+      "hash": "8728f4e082ee15c5157ae4d4fb2402679d16d1d8"
     },
     "com.michaelo.oxgkit.loggingsystem": {
       "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/LoggingSystem/Scripts",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "6393fa11868519145d69d2875a049e69fdc6a2c9"
+      "hash": "bafd4f4b546533c8beac1eba7b2d4cd593b89081"
     },
     "com.michaelo.oxgkit.utilities": {
       "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/Utilities/Scripts",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "13c7d96505f37369e3a36547c36b9021de65de83"
+      "hash": "bafd4f4b546533c8beac1eba7b2d4cd593b89081"
     },
     "com.unity.2d.animation": {
       "version": "7.0.12",
@@ -63,8 +63,8 @@
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.2d.sprite": "1.0.0",
         "com.unity.2d.common": "6.0.6",
+        "com.unity.2d.sprite": "1.0.0",
         "com.unity.mathematics": "1.2.6",
         "com.unity.modules.animation": "1.0.0"
       },
@@ -75,10 +75,10 @@
       "depth": 2,
       "source": "registry",
       "dependencies": {
+        "com.unity.burst": "1.5.1",
         "com.unity.2d.sprite": "1.0.0",
         "com.unity.mathematics": "1.1.0",
-        "com.unity.modules.uielements": "1.0.0",
-        "com.unity.burst": "1.5.1"
+        "com.unity.modules.uielements": "1.0.0"
       },
       "url": "https://packages.unity.com"
     },
@@ -101,9 +101,9 @@
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.2d.animation": "7.0.9",
         "com.unity.2d.common": "6.0.6",
-        "com.unity.2d.sprite": "1.0.0"
+        "com.unity.2d.sprite": "1.0.0",
+        "com.unity.2d.animation": "7.0.9"
       },
       "url": "https://packages.unity.com"
     },
@@ -118,9 +118,9 @@
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.mathematics": "1.1.0",
-        "com.unity.2d.common": "6.0.6",
         "com.unity.2d.path": "5.0.2",
+        "com.unity.2d.common": "6.0.6",
+        "com.unity.mathematics": "1.1.0",
         "com.unity.modules.physics2d": "1.0.0"
       },
       "url": "https://packages.unity.com"
@@ -136,9 +136,9 @@
       "depth": 1,
       "source": "registry",
       "dependencies": {
-        "com.unity.modules.tilemap": "1.0.0",
-        "com.unity.2d.tilemap": "1.0.0",
         "com.unity.ugui": "1.0.0",
+        "com.unity.2d.tilemap": "1.0.0",
+        "com.unity.modules.tilemap": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0"
       },
       "url": "https://packages.unity.com"
@@ -251,7 +251,7 @@
       }
     },
     "com.unity.scriptablebuildpipeline": {
-      "version": "1.21.22",
+      "version": "2.1.3",
       "depth": 1,
       "source": "registry",
       "dependencies": {},
@@ -314,9 +314,9 @@
       "depth": 0,
       "source": "registry",
       "dependencies": {
+        "com.unity.modules.audio": "1.0.0",
         "com.unity.modules.director": "1.0.0",
         "com.unity.modules.animation": "1.0.0",
-        "com.unity.modules.audio": "1.0.0",
         "com.unity.modules.particlesystem": "1.0.0"
       },
       "url": "https://packages.unity.com"
