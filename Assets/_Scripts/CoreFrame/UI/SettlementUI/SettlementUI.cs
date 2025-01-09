@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using UnityEngine;
 using OxGFrame.CoreFrame.UIFrame;
 using Cysharp.Threading.Tasks;
@@ -72,12 +72,12 @@ public class SettlementUI : UIBase
          */
     }
 
-    protected override void ShowAnimation(AnimationEnd animationEnd)
+    protected override void OnShowAnimation(AnimationEnd animationEnd)
     {
         animationEnd(); // Must call if animation end
     }
 
-    protected override void HideAnimation(AnimationEnd animationEnd)
+    protected override void OnCloseAnimation(AnimationEnd animationEnd)
     {
         animationEnd(); // Must call if animation end
     }
