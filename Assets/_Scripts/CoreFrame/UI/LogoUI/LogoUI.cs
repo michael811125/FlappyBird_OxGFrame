@@ -1,4 +1,4 @@
-﻿using Cysharp.Threading.Tasks;
+using Cysharp.Threading.Tasks;
 using OxGFrame.CoreFrame.UIFrame;
 
 public class LogoUI : UIBase
@@ -64,12 +64,12 @@ public class LogoUI : UIBase
          */
     }
 
-    protected override void ShowAnimation(AnimationEnd animationEnd)
+    protected override void OnShowAnimation(AnimationEnd animationEnd)
     {
         this._transitionEasyAnim.Play("Intro", () => { animationEnd(); });
     }
 
-    protected override void HideAnimation(AnimationEnd animationEnd)
+    protected override void OnCloseAnimation(AnimationEnd animationEnd)
     {
         this._transitionEasyAnim.Play("Outro", () => { animationEnd(); });
     }
