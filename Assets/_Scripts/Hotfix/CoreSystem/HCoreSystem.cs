@@ -1,6 +1,5 @@
 ﻿using Cysharp.Threading.Tasks;
 using OxGFrame.MediaFrame;
-using OxGKit.LoggingSystem;
 using OxGKit.Utilities.Singleton;
 using UnityEngine;
 
@@ -17,7 +16,7 @@ public class HCoreSystem : MonoSingleton<HCoreSystem>
     protected override void OnCreate()
     {
         // Init loggers
-        this._InitLoggers();
+        Loggers.InitLoggers();
 
         // Init instance first
         GetInstance();
@@ -47,12 +46,6 @@ public class HCoreSystem : MonoSingleton<HCoreSystem>
     protected override void OnRelease()
     {
 
-    }
-
-    private void _InitLoggers()
-    {
-        Logging.CreateLogger<HLogger>();
-        LoggingLauncher.TryLoadLoggerSetting();
     }
 
     #region Score Controls
