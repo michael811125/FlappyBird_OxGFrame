@@ -1,5 +1,4 @@
-﻿using OxGKit.LoggingSystem;
-using OxGKit.Utilities.Timer;
+﻿using OxGKit.Utilities.Timer;
 using UnityEngine;
 
 /// <summary>
@@ -10,7 +9,7 @@ public class MCoreSystem : MonoBehaviour
     private void Awake()
     {
         // Init loggers
-        this._InitLoggers();
+        Loggers.InitLoggers();
 
         // Instance AOT Generic
         RefTypes refTypes = new RefTypes();
@@ -29,18 +28,5 @@ public class MCoreSystem : MonoBehaviour
     {
         // Update GSI 
         MGSIManager.Update(Time.deltaTime);
-    }
-
-    private void _InitLoggers()
-    {
-        Logging.CreateLogger<OxGFrame.Hotfixer.Logger>();
-        Logging.CreateLogger<OxGFrame.AssetLoader.Logger>();
-        Logging.CreateLogger<OxGFrame.CoreFrame.Logger>();
-        Logging.CreateLogger<OxGFrame.MediaFrame.Logger>();
-        Logging.CreateLogger<OxGFrame.GSIFrame.Logger>();
-        Logging.CreateLogger<OxGFrame.CenterFrame.Logger>();
-        Logging.CreateLogger<OxGKit.Utilities.Logger>();
-        Logging.CreateLogger<MLogger>();
-        LoggingLauncher.TryLoadLoggerSetting();
     }
 }

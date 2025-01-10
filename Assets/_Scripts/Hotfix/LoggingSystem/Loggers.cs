@@ -5,3 +5,12 @@ public class HLogger : Logging
 {
     public HLogger() { }
 }
+
+public static class Loggers
+{
+    public static void InitLoggers()
+    {
+        Logging.CreateLogger<HLogger>();
+        LoggingLauncher.TryLoadLoggerSetting();
+    }
+}
