@@ -1,55 +1,53 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PointGizmo : MonoBehaviour
 {
     enum DrawType
     {
-        SOLID,
-        WIRE
+        Solid,
+        Wire
     }
 
     enum ColorSet
     {
-        RED,
-        YELLOW,
-        GREEN,
-        CYAN,
-        BLUE
+        Red,
+        Yellow,
+        Green,
+        Cyan,
+        Blue
     }
 
-    [SerializeReference] private ColorSet _colorSet = ColorSet.RED;
-    [SerializeField] private DrawType _drawType = DrawType.SOLID;
+    [SerializeReference] private ColorSet _colorSet = ColorSet.Red;
+    [SerializeField] private DrawType _drawType = DrawType.Solid;
     public float radius = 0.15f;
 
     private void OnDrawGizmos()
     {
         switch (this._colorSet)
         {
-            case ColorSet.RED:
+            case ColorSet.Red:
                 Gizmos.color = Color.red;
                 break;
-            case ColorSet.YELLOW:
+            case ColorSet.Yellow:
                 Gizmos.color = Color.yellow;
                 break;
-            case ColorSet.GREEN:
+            case ColorSet.Green:
                 Gizmos.color = Color.green;
                 break;
-            case ColorSet.CYAN:
+            case ColorSet.Cyan:
                 Gizmos.color = Color.cyan;
                 break;
-            case ColorSet.BLUE:
+            case ColorSet.Blue:
                 Gizmos.color = Color.blue;
                 break;
         }
 
         switch (this._drawType)
         {
-            case DrawType.SOLID:
+            case DrawType.Solid:
                 Gizmos.DrawSphere(this.transform.position, this.radius);
                 break;
-            case DrawType.WIRE:
+            case DrawType.Wire:
                 Gizmos.DrawWireSphere(this.transform.position, this.radius);
                 break;
         }
