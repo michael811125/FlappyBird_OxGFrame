@@ -1,13 +1,39 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <linker>
-  <assembly fullname="OxGFrame.Hoxfixer.Runtime" preserve="all" />
-  <assembly fullname="OxGFrame.AssetLoader.Runtime" preserve="all" />
-  <assembly fullname="OxGFrame.CoreFrame.Runtime" preserve="all" />
-  <assembly fullname="OxGFrame.MediaFrame.Runtime" preserve="all" />
-  <assembly fullname="OxGFrame.CenterFrame.Runtime" preserve="all" />
-  <assembly fullname="OxGFrame.GSIFrame.Runtime" preserve="all" />
-  <assembly fullname="OxGKit.Utilities.Runtime" preserve="all" />
-  <assembly fullname="UniFramework.Event" preserve="all" />
-  <assembly fullname="UniFramework.Machine" preserve="all" />
-  <assembly fullname="YooAsset" preserve="all" />
+	<!-- OxGFrame -->
+	<assembly fullname="OxGFrame.Hoxfixer.Runtime" preserve="all" />
+	<assembly fullname="OxGFrame.AssetLoader.Runtime" preserve="all" />
+	<assembly fullname="OxGFrame.CoreFrame.Runtime" preserve="all" />
+	<assembly fullname="OxGFrame.MediaFrame.Runtime" preserve="all" />
+	<assembly fullname="OxGFrame.CenterFrame.Runtime" preserve="all" />
+	<assembly fullname="OxGFrame.GSIFrame.Runtime" preserve="all" />
+
+	<!-- OxGKit -->
+	<assembly fullname="OxGKit.LoggingSystem.Runtime" preserve="all" />
+	<assembly fullname="OxGKit.InputSystem.Runtime" preserve="all" />
+	<assembly fullname="OxGKit.ActionSystem.Runtime" preserve="all" />
+	<assembly fullname="OxGKit.TweenSystem.Runtime" preserve="all" />
+	<assembly fullname="OxGKit.InfiniteScrollView.Runtime" preserve="all" />
+	<assembly fullname="OxGKit.NoticeSystem.Runtime" preserve="all" />
+	<assembly fullname="OxGKit.Utilities.Runtime" preserve="all" />
+
+	<!-- UniFramework -->
+	<assembly fullname="UniFramework.Event" preserve="all" />
+	<assembly fullname="UniFramework.Machine" preserve="all" />
+
+	<!-- YooAsset -->
+	<assembly fullname="YooAsset" preserve="all" />
+
+	<!-- Unity Engine -->
+	<assembly fullname="UnityEngine" preserve="all" />
+	<assembly fullname="UnityEngine.CoreModule" preserve="all" />
+	<assembly fullname="UnityEngine.AnimationModule" preserve="all" />
+
+	<!-- Unity Packages -->
+	<assembly fullname="Unity.InputSystem" preserve="all" />
+	<assembly fullname="Unity.Timeline" preserve="all" />
+	<assembly fullname="Cinemachine" preserve="all" />
+	<assembly fullname="Unity.LiveCapture" preserve="all" />
+	<assembly fullname="Unity.LiveCapture.CompanionApp" preserve="all" />
+	<assembly fullname="Unity.LiveCapture.VirtualCamera" preserve="all" />
 </linker>
