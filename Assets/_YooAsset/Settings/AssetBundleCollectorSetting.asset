@@ -21,8 +21,8 @@ MonoBehaviour:
     EnableAddressable: 1
     LocationToLower: 0
     IncludeAssetGUID: 0
-    IgnoreDefaultType: 1
     AutoCollectShaders: 1
+    IgnoreRuleName: NormalIgnoreRule
     Groups:
     - GroupName: Builtin
       GroupDesc: In StreamingAssets
@@ -30,7 +30,7 @@ MonoBehaviour:
       ActiveRuleName: EnableGroup
       Collectors:
       - CollectPath: Assets/_Bundles/CoreFrame/UI/AwaitingUI
-        CollectorGUID: f59f27082cf1b644f804099d9117cbeb
+        CollectorGUID: 
         CollectorType: 0
         AddressRuleName: AddressByFileName
         PackRuleName: PackSeparately
@@ -38,7 +38,7 @@ MonoBehaviour:
         AssetTags: 
         UserData: 
       - CollectPath: Assets/_Bundles/CoreFrame/UI/LogoUI
-        CollectorGUID: fc4881401ff1af440b51111907307af2
+        CollectorGUID: 
         CollectorType: 0
         AddressRuleName: AddressByFileName
         PackRuleName: PackSeparately
@@ -46,7 +46,7 @@ MonoBehaviour:
         AssetTags: 
         UserData: 
       - CollectPath: Assets/_Bundles/CoreFrame/UI/PatchUI
-        CollectorGUID: 59e406d5a43292d4e8d8309e4aebf414
+        CollectorGUID: 
         CollectorType: 0
         AddressRuleName: AddressByFileName
         PackRuleName: PackSeparately
@@ -58,8 +58,8 @@ MonoBehaviour:
     EnableAddressable: 1
     LocationToLower: 0
     IncludeAssetGUID: 0
-    IgnoreDefaultType: 1
     AutoCollectShaders: 1
+    IgnoreRuleName: NormalIgnoreRule
     Groups:
     - GroupName: Patch
       GroupDesc: Update
@@ -67,7 +67,7 @@ MonoBehaviour:
       ActiveRuleName: EnableGroup
       Collectors:
       - CollectPath: Assets/_Bundles/CoreFrame
-        CollectorGUID: 492fd654cdb69d84489315d9d7ca1d55
+        CollectorGUID: 
         CollectorType: 0
         AddressRuleName: AddressByFileName
         PackRuleName: PackSeparately
@@ -87,8 +87,8 @@ MonoBehaviour:
     EnableAddressable: 1
     LocationToLower: 0
     IncludeAssetGUID: 0
-    IgnoreDefaultType: 1
     AutoCollectShaders: 1
+    IgnoreRuleName: NormalIgnoreRule
     Groups:
     - GroupName: Scene
       GroupDesc: Hotfix Main
