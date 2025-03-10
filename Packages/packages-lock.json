@@ -28,23 +28,23 @@
       "depth": 0,
       "source": "git",
       "dependencies": {
-        "com.unity.scriptablebuildpipeline": "2.1.3"
+        "com.unity.scriptablebuildpipeline": "2.2.11"
       },
-      "hash": "146d32228da97477ffe83f10ff8ceaaa2a7e954d"
+      "hash": "18faa72c687f57c491e7d13a14adc05762bf09ea"
     },
     "com.michaelo.oxgkit.loggingsystem": {
       "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/LoggingSystem/Scripts",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "673a3bf4ed6bc7aab3deefc209119a67ab8926e7"
+      "hash": "7da9086d5035c4ce4fe66d62306fdaf41cab29ff"
     },
     "com.michaelo.oxgkit.utilities": {
       "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/Utilities/Scripts",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "673a3bf4ed6bc7aab3deefc209119a67ab8926e7"
+      "hash": "7da9086d5035c4ce4fe66d62306fdaf41cab29ff"
     },
     "com.unity.2d.animation": {
       "version": "9.1.3",
@@ -177,8 +177,8 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ext.nunit": {
-      "version": "1.0.6",
-      "depth": 1,
+      "version": "2.0.3",
+      "depth": 3,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
@@ -278,10 +278,13 @@
       }
     },
     "com.unity.scriptablebuildpipeline": {
-      "version": "2.1.3",
+      "version": "2.2.11",
       "depth": 1,
       "source": "registry",
-      "dependencies": {},
+      "dependencies": {
+        "com.unity.test-framework": "1.4.5",
+        "com.unity.modules.assetbundle": "1.0.0"
+      },
       "url": "https://packages.unity.com"
     },
     "com.unity.searcher": {
@@ -317,11 +320,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.test-framework": {
-      "version": "1.1.33",
-      "depth": 0,
+      "version": "1.4.5",
+      "depth": 2,
       "source": "registry",
       "dependencies": {
-        "com.unity.ext.nunit": "1.0.6",
+        "com.unity.ext.nunit": "2.0.3",
         "com.unity.modules.imgui": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0"
       },
