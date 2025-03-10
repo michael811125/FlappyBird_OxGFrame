@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <linker>
   <assembly fullname="FlappyBird.Main.Runtime">
+    <type fullname="MLogger" preserve="all" />
     <type fullname="MainExtensions" preserve="all" />
   </assembly>
   <assembly fullname="OxGFrame.AssetLoader.Runtime">
@@ -8,6 +9,7 @@
     <type fullname="OxGFrame.AssetLoader.Bundle.GroupInfo" preserve="all" />
     <type fullname="OxGFrame.AssetLoader.PatchEvent.PatchEvents" preserve="all" />
     <type fullname="OxGFrame.AssetLoader.PatchEvent.PatchEvents/PatchAppVersionUpdateFailed" preserve="all" />
+    <type fullname="OxGFrame.AssetLoader.PatchEvent.PatchEvents/PatchCheckDiskNotEnoughSpace" preserve="all" />
     <type fullname="OxGFrame.AssetLoader.PatchEvent.PatchEvents/PatchCreateDownloader" preserve="all" />
     <type fullname="OxGFrame.AssetLoader.PatchEvent.PatchEvents/PatchDownloadCanceled" preserve="all" />
     <type fullname="OxGFrame.AssetLoader.PatchEvent.PatchEvents/PatchDownloadFailed" preserve="all" />
@@ -52,7 +54,7 @@
     <type fullname="OxGFrame.CoreFrame.FrameBase" preserve="all" />
     <type fullname="OxGFrame.CoreFrame.FrameBase/Collector" preserve="all" />
     <type fullname="OxGFrame.CoreFrame.SRFrame.SRBase" preserve="all" />
-    <type fullname="OxGFrame.CoreFrame.UIFrame.AnimEndCb" preserve="all" />
+    <type fullname="OxGFrame.CoreFrame.UIFrame.AnimationEnd" preserve="all" />
     <type fullname="OxGFrame.CoreFrame.UIFrame.UIBase" preserve="all" />
   </assembly>
   <assembly fullname="OxGFrame.GSIFrame.Runtime">
@@ -75,6 +77,11 @@
     <type fullname="OxGKit.Utilities.TextureAnim.TextureAnimation" preserve="all" />
     <type fullname="OxGKit.Utilities.Timer.RTUpdater" preserve="all" />
     <type fullname="OxGKit.Utilities.Timer.RTUpdater/RealTimeUpdate" preserve="all" />
+  </assembly>
+  <assembly fullname="System">
+    <type fullname="System.CodeDom.Compiler.GeneratedCodeAttribute" preserve="all" />
+    <type fullname="System.ComponentModel.EditorBrowsableAttribute" preserve="all" />
+    <type fullname="System.ComponentModel.EditorBrowsableState" preserve="all" />
   </assembly>
   <assembly fullname="UniFramework.Event">
     <type fullname="UniFramework.Event.EventGroup" preserve="all" />
@@ -143,12 +150,12 @@
     <type fullname="UnityEngine.UI.LayoutRebuilder" preserve="all" />
     <type fullname="UnityEngine.UI.Slider" preserve="all" />
     <type fullname="UnityEngine.UI.Text" preserve="all" />
-    <type fullname="UnityEngine.UI.VerticalLayoutGroup" preserve="all" />
   </assembly>
   <assembly fullname="mscorlib">
     <type fullname="System.Action" preserve="all" />
     <type fullname="System.Action`1" preserve="all" />
     <type fullname="System.Array" preserve="all" />
+    <type fullname="System.Byte" preserve="all" />
     <type fullname="System.Collections.Generic.List`1" preserve="all" />
     <type fullname="System.Collections.IEnumerator" preserve="all" />
     <type fullname="System.Diagnostics.DebuggableAttribute" preserve="all" />
@@ -165,6 +172,8 @@
     <type fullname="System.Runtime.CompilerServices.CompilerGeneratedAttribute" preserve="all" />
     <type fullname="System.Runtime.CompilerServices.IAsyncStateMachine" preserve="all" />
     <type fullname="System.Runtime.CompilerServices.RuntimeCompatibilityAttribute" preserve="all" />
+    <type fullname="System.Runtime.CompilerServices.RuntimeHelpers" preserve="all" />
+    <type fullname="System.RuntimeFieldHandle" preserve="all" />
     <type fullname="System.Single" preserve="all" />
     <type fullname="System.String" preserve="all" />
     <type fullname="System.TimeSpan" preserve="all" />
