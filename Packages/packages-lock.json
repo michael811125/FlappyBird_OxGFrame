@@ -28,9 +28,9 @@
       "depth": 0,
       "source": "git",
       "dependencies": {
-        "com.unity.scriptablebuildpipeline": "2.2.11"
+        "com.unity.scriptablebuildpipeline": "1.21.25"
       },
-      "hash": "18faa72c687f57c491e7d13a14adc05762bf09ea"
+      "hash": "6e94108d20b14c709c37bf2f6bedb6faad665f42"
     },
     "com.michaelo.oxgkit.loggingsystem": {
       "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/LoggingSystem/Scripts",
@@ -177,8 +177,8 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.ext.nunit": {
-      "version": "2.0.3",
-      "depth": 3,
+      "version": "1.0.6",
+      "depth": 1,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.com"
@@ -278,13 +278,10 @@
       }
     },
     "com.unity.scriptablebuildpipeline": {
-      "version": "2.2.11",
-      "depth": 1,
+      "version": "1.21.25",
+      "depth": 0,
       "source": "registry",
-      "dependencies": {
-        "com.unity.test-framework": "1.4.5",
-        "com.unity.modules.assetbundle": "1.0.0"
-      },
+      "dependencies": {},
       "url": "https://packages.unity.com"
     },
     "com.unity.searcher": {
@@ -320,11 +317,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.test-framework": {
-      "version": "1.4.5",
-      "depth": 2,
+      "version": "1.1.33",
+      "depth": 0,
       "source": "registry",
       "dependencies": {
-        "com.unity.ext.nunit": "2.0.3",
+        "com.unity.ext.nunit": "1.0.6",
         "com.unity.modules.imgui": "1.0.0",
         "com.unity.modules.jsonserialize": "1.0.0"
       },
