@@ -25,7 +25,7 @@ public class CoreSystem : MonoSingleton<CoreSystem>
         Application.targetFrameRate = this.frameRate;
 
         // 驅動 GSIManager 的 Start
-        GSIManager.Start();
+        GSIManager.DriveStart();
     }
 
     private void Update()
@@ -34,7 +34,7 @@ public class CoreSystem : MonoSingleton<CoreSystem>
         deltaTime = Time.deltaTime;
 
         // 驅動 GSIManager 的 Update
-        GSIManager.Update(deltaTime);
+        GSIManager.DriveUpdate(deltaTime);
 
         // 每 60 幀刷新檢查 FrameRate 設置
         if (Time.frameCount % 60 == 0) Application.targetFrameRate = this.frameRate;
