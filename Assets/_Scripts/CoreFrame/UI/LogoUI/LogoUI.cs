@@ -1,5 +1,6 @@
 using Cysharp.Threading.Tasks;
 using OxGFrame.CoreFrame.UIFrame;
+using OxGKit.Utilities.EasyAnim;
 
 public class LogoUI : UIBase
 {
