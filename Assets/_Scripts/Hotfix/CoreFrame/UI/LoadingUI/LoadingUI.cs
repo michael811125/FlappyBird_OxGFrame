@@ -3,102 +3,105 @@ using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LoadingUI : UIBase
+namespace FlappyBird.Hotfix.Runtime
 {
-    // Use _Node@XXX to Bind
-
-    #region Binding Components
-    protected GameObject _bird;
-    protected GameObject _progressGroup;
-    protected Slider _progressSld;
-
-    /// <summary>
-    /// Auto Binding Section
-    /// </summary>
-    protected override void OnAutoBind()
+    public class LoadingUI : UIBase
     {
-        base.OnAutoBind();
-        this._bird = this.collector.GetNode("Bird");
-        this._progressGroup = this.collector.GetNode("ProgressGroup");
-        this._progressSld = this.collector.GetNodeComponent<Slider>("Progress*Sld");
-    }
-    #endregion
+        // Use _Node@XXX to Bind
 
-    public override void OnCreate()
-    {
-        /**
-         * Do Somethings Init Once In Here
-         */
-    }
+        #region Binding Components
+        protected GameObject _bird;
+        protected GameObject _progressGroup;
+        protected Slider _progressSld;
 
-    protected override async UniTask OnPreShow()
-    {
-        /**
-         * Open Sub With Async
-         */
-    }
+        /// <summary>
+        /// Auto Binding Section
+        /// </summary>
+        protected override void OnAutoBind()
+        {
+            base.OnAutoBind();
+            this._bird = this.collector.GetNode("Bird");
+            this._progressGroup = this.collector.GetNode("ProgressGroup");
+            this._progressSld = this.collector.GetNodeComponent<Slider>("Progress*Sld");
+        }
+        #endregion
 
-    protected override void OnPreClose()
-    {
-        /**
-         * Close Sub
-         */
-    }
+        public override void OnCreate()
+        {
+            /**
+             * Do Somethings Init Once In Here
+             */
+        }
 
-    protected override void OnBind()
-    {
-    }
+        protected override async UniTask OnPreShow()
+        {
+            /**
+             * Open Sub With Async
+             */
+        }
 
-    protected override void OnShow(object obj)
-    {
-        this._BasicDisplay();
-    }
+        protected override void OnPreClose()
+        {
+            /**
+             * Close Sub
+             */
+        }
 
-    protected override void OnUpdate(float dt)
-    {
-        /**
-         * Do Update Per FrameRate
-         */
-    }
+        protected override void OnBind()
+        {
+        }
 
-    public override void OnReceiveAndRefresh(object obj = null)
-    {
-        /**
-         * Do Refresh Once After Data Receive
-         */
-    }
+        protected override void OnShow(object obj)
+        {
+            this._BasicDisplay();
+        }
 
-    protected override void OnShowAnimation(AnimationEnd animationEnd)
-    {
-        animationEnd(); // Must call if animation end
-    }
+        protected override void OnUpdate(float dt)
+        {
+            /**
+             * Do Update Per FrameRate
+             */
+        }
 
-    protected override void OnCloseAnimation(AnimationEnd animationEnd)
-    {
-        animationEnd(); // Must call if animation end
-    }
+        public override void OnReceiveAndRefresh(object obj = null)
+        {
+            /**
+             * Do Refresh Once After Data Receive
+             */
+        }
 
-    protected override void OnClose()
-    {
-        /**
-         * Do Somethings on close (Close)
-         */
-    }
+        protected override void OnShowAnimation(AnimationEnd animationEnd)
+        {
+            animationEnd(); // Must call if animation end
+        }
 
-    public override void OnRelease()
-    {
-        /**
-         * Do Somethings on release (CloseAndDestroy)
-         */
-    }
+        protected override void OnCloseAnimation(AnimationEnd animationEnd)
+        {
+            animationEnd(); // Must call if animation end
+        }
 
-    private void _BasicDisplay()
-    {
-        this.DrawProgressView(0, 0, 0);
-    }
+        protected override void OnClose()
+        {
+            /**
+             * Do Somethings on close (Close)
+             */
+        }
 
-    public void DrawProgressView(float progress, float currentCount, float totalCount)
-    {
-        this._progressSld.value = progress;
+        public override void OnRelease()
+        {
+            /**
+             * Do Somethings on release (CloseAndDestroy)
+             */
+        }
+
+        private void _BasicDisplay()
+        {
+            this.DrawProgressView(0, 0, 0);
+        }
+
+        public void DrawProgressView(float progress, float currentCount, float totalCount)
+        {
+            this._progressSld.value = progress;
+        }
     }
 }

@@ -2,31 +2,34 @@
 using OxGFrame.AssetLoader;
 using OxGFrame.GSIFrame;
 
-public class StartupStage : GSIBase
+namespace FlappyBird.Main.Runtime
 {
-    // Execution Order: OnInit (Once) > OnEnter (Every Change) > OnUpdate
-
-    public async override UniTask OnCreate()
+    public class StartupStage : GSIBase
     {
-        /* Do Somethings OnCreate once in here */
-    }
+        // Execution Order: OnInit (Once) > OnEnter (Every Change) > OnUpdate
 
-    public async override UniTask OnEnter()
-    {
-    }
-
-    public override void OnUpdate(float dt = 0.0f)
-    {
-        // Wait until PatchLauncher is initialized
-        if (AssetPatcher.IsInitialized())
+        public async override UniTask OnCreate()
         {
-            this.StopUpdate();
-            MGSIManager.ChangeStage<LogoStage>();
+            /* Do Somethings OnCreate once in here */
         }
-    }
 
-    public override void OnExit()
-    {
-        /* Do Somethings OnExit in here */
+        public async override UniTask OnEnter()
+        {
+        }
+
+        public override void OnUpdate(float dt = 0.0f)
+        {
+            // Wait until PatchLauncher is initialized
+            if (AssetPatcher.IsInitialized())
+            {
+                this.StopUpdate();
+                MGSIManager.ChangeStage<LogoStage>();
+            }
+        }
+
+        public override void OnExit()
+        {
+            /* Do Somethings OnExit in here */
+        }
     }
 }

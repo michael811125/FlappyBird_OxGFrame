@@ -1,11 +1,14 @@
 ﻿using OxGFrame.CenterFrame;
 using OxGFrame.CenterFrame.EventCenter;
 
-public class UIEventCenter : CenterBase<UIEventCenter, EventBase>
+namespace FlappyBird.Hotfix.Runtime
 {
-    public UIEventCenter()
+    public class UIEventCenter : CenterBase<UIEventCenter, EventBase>
     {
-        this.Register<EDescriptionUI>();
-        this.Register<EDoubleCheckUI>();
+        public UIEventCenter()
+        {
+            this.Register<EDescriptionUI>();
+            this.Register<EDoubleCheckUI>();
+        }
     }
 }

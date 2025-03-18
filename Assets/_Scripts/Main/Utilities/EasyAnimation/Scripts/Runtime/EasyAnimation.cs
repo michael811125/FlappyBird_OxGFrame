@@ -1,37 +1,40 @@
 ﻿using System;
 using UnityEngine;
 
-public class EasyAnimation : EasyAnim
+namespace FlappyBird.Main.Runtime
 {
-    [SerializeField]
-    protected Animation _animation = null;
-
-    private void Awake()
+    public class EasyAnimation : EasyAnim
     {
-        if (this._animation == null) this._animation = this.GetComponent<Animation>();
-    }
+        [SerializeField]
+        protected Animation _animation = null;
 
-    public Animation GetAnimation()
-    {
-        return this._animation;
-    }
-
-    public override void Play(string animName, Action animEnd)
-    {
-        // Set anim end callback
-        this.SetAnimEnd(animEnd);
-
-        if (this.HasAnim(animName))
+        private void Awake()
         {
-            // Play animation by anim name
-            this._animation?.Play(animName);
+            if (this._animation == null) this._animation = this.GetComponent<Animation>();
         }
-        // If cannot found anim name just call end back directly
-        else this.AnimEnd();
-    }
 
-    public override bool HasAnim(string animName)
-    {
-        return this._animation.GetClip(animName) != null;
+        public Animation GetAnimation()
+        {
+            return this._animation;
+        }
+
+        public override void Play(string animName, Action animEnd)
+        {
+            // Set anim end callback
+            this.SetAnimEnd(animEnd);
+
+            if (this.HasAnim(animName))
+            {
+                // Play animation by anim name
+                this._animation?.Play(animName);
+            }
+            // If cannot found anim name just call end back directly
+            else this.AnimEnd();
+        }
+
+        public override bool HasAnim(string animName)
+        {
+            return this._animation.GetClip(animName) != null;
+        }
     }
 }

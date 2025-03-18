@@ -5,120 +5,123 @@ using UnityEngine;
 using System;
 using TMPro;
 
-public class DescriptionUI : UIBase
+namespace FlappyBird.Hotfix.Runtime
 {
-    // Use _Node@XXX to Bind
-
-    #region Binding Components
-    protected GameObject _layout;
-    protected TMP_Text _descTmpTxt;
-
-    /// <summary>
-    /// Auto Binding Section
-    /// </summary>
-    protected override void OnAutoBind()
+    public class DescriptionUI : UIBase
     {
-        base.OnAutoBind();
-        this._layout = this.collector.GetNode("Layout");
-        this._descTmpTxt = this.collector.GetNodeComponent<TMP_Text>("Desc*TmpTxt");
-    }
-    #endregion
+        // Use _Node@XXX to Bind
 
-    public override void OnCreate()
-    {
-        /**
-         * Do Somethings Init Once In Here
-         */
-    }
+        #region Binding Components
+        protected GameObject _layout;
+        protected TMP_Text _descTmpTxt;
 
-    protected override async UniTask OnPreShow()
-    {
-        /**
-         * Open Sub With Async
-         */
-    }
+        /// <summary>
+        /// Auto Binding Section
+        /// </summary>
+        protected override void OnAutoBind()
+        {
+            base.OnAutoBind();
+            this._layout = this.collector.GetNode("Layout");
+            this._descTmpTxt = this.collector.GetNodeComponent<TMP_Text>("Desc*TmpTxt");
+        }
+        #endregion
 
-    protected override void OnPreClose()
-    {
-        /**
-         * Close Sub
-         */
-    }
+        public override void OnCreate()
+        {
+            /**
+             * Do Somethings Init Once In Here
+             */
+        }
 
-    protected override void OnBind()
-    {
-    }
+        protected override async UniTask OnPreShow()
+        {
+            /**
+             * Open Sub With Async
+             */
+        }
 
-    protected override void OnShow(object obj)
-    {
-        this._BasicDisplay(obj);
-    }
+        protected override void OnPreClose()
+        {
+            /**
+             * Close Sub
+             */
+        }
 
-    protected override void OnUpdate(float dt)
-    {
-        /**
-         * Do Update Per FrameRate
-         */
-    }
+        protected override void OnBind()
+        {
+        }
 
-    public override void OnReceiveAndRefresh(object obj = null)
-    {
-        /**
-         * Do Refresh Once After Data Receive
-         */
-    }
+        protected override void OnShow(object obj)
+        {
+            this._BasicDisplay(obj);
+        }
 
-    protected override void OnShowAnimation(AnimationEnd animationEnd)
-    {
-        animationEnd(); // Must call if animation end
-    }
+        protected override void OnUpdate(float dt)
+        {
+            /**
+             * Do Update Per FrameRate
+             */
+        }
 
-    protected override void OnCloseAnimation(AnimationEnd animationEnd)
-    {
-        animationEnd(); // Must call if animation end
-    }
+        public override void OnReceiveAndRefresh(object obj = null)
+        {
+            /**
+             * Do Refresh Once After Data Receive
+             */
+        }
 
-    protected override void OnClose()
-    {
-        /**
-         * Do Somethings on close (Close)
-         */
-    }
+        protected override void OnShowAnimation(AnimationEnd animationEnd)
+        {
+            animationEnd(); // Must call if animation end
+        }
 
-    public override void OnRelease()
-    {
-        /**
-         * Do Somethings on release (CloseAndDestroy)
-         */
-    }
+        protected override void OnCloseAnimation(AnimationEnd animationEnd)
+        {
+            animationEnd(); // Must call if animation end
+        }
 
-    protected override void MaskEvent()
-    {
-        this._closeAction?.Invoke();
-        this._closeAction = null;
-        this.CloseSelf();
-    }
+        protected override void OnClose()
+        {
+            /**
+             * Do Somethings on close (Close)
+             */
+        }
 
-    // Data
-    private Action _closeAction;
+        public override void OnRelease()
+        {
+            /**
+             * Do Somethings on release (CloseAndDestroy)
+             */
+        }
 
-    private void _BasicDisplay(object obj)
-    {
-        object[] args = obj as object[];
+        protected override void MaskEvent()
+        {
+            this._closeAction?.Invoke();
+            this._closeAction = null;
+            this.CloseSelf();
+        }
 
-        if (args == null) return;
+        // Data
+        private Action _closeAction;
 
-        string msg = args?[0].ToString();
-        this._closeAction = args?[1] as Action;
+        private void _BasicDisplay(object obj)
+        {
+            object[] args = obj as object[];
 
-        this._DrawDescTextView(msg);
-    }
+            if (args == null) return;
 
-    private void _DrawDescTextView(string msg)
-    {
-        this._descTmpTxt.text = msg;
+            string msg = args?[0].ToString();
+            this._closeAction = args?[1] as Action;
 
-        // After set text must rebuild layout, because background image must be adapter with text size
-        LayoutRebuilder.ForceRebuildLayoutImmediate(this._layout.transform as RectTransform);
+            this._DrawDescTextView(msg);
+        }
+
+        private void _DrawDescTextView(string msg)
+        {
+            this._descTmpTxt.text = msg;
+
+            // After set text must rebuild layout, because background image must be adapter with text size
+            LayoutRebuilder.ForceRebuildLayoutImmediate(this._layout.transform as RectTransform);
+        }
     }
 }

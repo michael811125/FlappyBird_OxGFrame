@@ -1,7 +1,10 @@
-public class RefTypes
+namespace FlappyBird.Main.Runtime
 {
-    public RefTypes()
+    public class RefTypes
     {
+        public RefTypes()
+        {
 
+        }
     }
 }

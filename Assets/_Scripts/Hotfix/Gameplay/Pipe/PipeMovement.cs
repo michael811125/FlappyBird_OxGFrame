@@ -1,17 +1,20 @@
 ﻿using UnityEngine;
 
-public class PipeMovement : MonoBehaviour
+namespace FlappyBird.Hotfix.Runtime
 {
-    public float moveSpeed = 3f;
-
-    private void Update()
+    public class PipeMovement : MonoBehaviour
     {
-        if (HCoreSystem.IsGameStart())
-        {
-            float dt = HCoreSystem.deltaTime;
+        public float moveSpeed = 3f;
 
-            // Continuosly move the obstacles to the left if the game hasn't ended
-            this.transform.position = new Vector2(this.transform.position.x - dt * moveSpeed, this.transform.position.y);
+        private void Update()
+        {
+            if (HCoreSystem.IsGameStart())
+            {
+                float dt = HCoreSystem.deltaTime;
+
+                // Continuosly move the obstacles to the left if the game hasn't ended
+                this.transform.position = new Vector2(this.transform.position.x - dt * moveSpeed, this.transform.position.y);
+            }
         }
     }
 }
