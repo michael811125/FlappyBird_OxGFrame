@@ -1,40 +1,47 @@
 ﻿using System;
 using UnityEngine;
 
-public class EasyAnimator : EasyAnim
+namespace FlappyBird.Main.Runtime
 {
-    [SerializeField]
-    protected Animator _animator = null;
-
-    private void Awake()
+    public class EasyAnimator : EasyAnim
     {
-        if (this._animator == null) this._animator = this.GetComponent<Animator>();
-    }
+        [SerializeField]
+        protected Animator _animator = null;
 
-    public Animator GetAnimation()
-    {
-        return this._animator;
-    }
-
-    public override void Play(string paramName, Action animEnd)
-    {
-        // Set anim end callback
-        this.SetAnimEnd(animEnd);
-
-        if (this.HasAnim(paramName))
+        private void Awake()
         {
-            // Reset first to make sure is clear param set
-            this._animator.ResetTrigger(paramName);
-
-            // Play animation by param name
-            this._animator?.SetTrigger(paramName);
+            if (this._animator == null) this._animator = this.GetComponent<Animator>();
         }
-        // If cannot found param name just call end back directly
-        else this.AnimEnd();
-    }
 
-    public override bool HasAnim(string paramName)
-    {
-        return this._animator.ContainsParam(paramName);
+        public Animator GetAnimation()
+        {
+            return this._animator;
+        }
+
+        public override void Play(string paramName, Action animEnd)
+        {
+            // Set anim end callback
+            this.SetAnimEnd(animEnd);
+
+            if (this.HasAnim(paramName))
+            {
+                // Reset first to make sure is clear param set
+                this._animator.ResetTrigger(paramName);
+
+                // Play animation by param name
+                this._animator?.SetTrigger(paramName);
+            }
+            // If cannot found param name just call end back directly
+            else this.AnimEnd();
+        }
+
+        public override bool HasAnim(string paramName)
+        {
+            foreach (AnimatorControllerParameter param in this._animator.parameters)
+            {
+                if (param.name == paramName) return true;
+            }
+            return false;
+        }
     }
 }

@@ -1,14 +1,17 @@
 ﻿using UnityEngine;
 
-[DisallowMultipleComponent]
-public class DontDestroy : MonoBehaviour
+namespace FlappyBird.Main.Runtime
 {
-    [SerializeField]
-    private string _runtimeName = nameof(DontDestroy);
-
-    private void Awake()
+    [DisallowMultipleComponent]
+    public class DontDestroy : MonoBehaviour
     {
-        this.gameObject.name = $"{this._runtimeName}";
-        DontDestroyOnLoad(this);
+        [SerializeField]
+        private string _runtimeName = nameof(DontDestroy);
+
+        private void Awake()
+        {
+            this.gameObject.name = $"{this._runtimeName}";
+            DontDestroyOnLoad(this);
+        }
     }
 }

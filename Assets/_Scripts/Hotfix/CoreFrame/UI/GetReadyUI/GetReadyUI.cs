@@ -1,71 +1,74 @@
 using OxGFrame.CoreFrame.UIFrame;
 using Cysharp.Threading.Tasks;
 
-public class GetReadyUI : UIBase
+namespace FlappyBird.Hotfix.Runtime
 {
-    protected override void MaskEvent()
+    public class GetReadyUI : UIBase
     {
-        HCoreSystem.StartGame();
-        this.CloseSelf();
-    }
+        protected override void MaskEvent()
+        {
+            HCoreSystem.StartGame();
+            this.CloseSelf();
+        }
 
-    public override void OnCreate()
-    {
-        /**
-         * Do Somethings Init Once In Here
-         */
-    }
+        public override void OnCreate()
+        {
+            /**
+             * Do Somethings Init Once In Here
+             */
+        }
 
-    protected override async UniTask OnPreShow()
-    {
-        /**
-        * Open Sub With Async
-        */
-    }
+        protected override async UniTask OnPreShow()
+        {
+            /**
+            * Open Sub With Async
+            */
+        }
 
-    protected override void OnPreClose()
-    {
-        /**
-        * Close Sub
-        */
-    }
+        protected override void OnPreClose()
+        {
+            /**
+            * Close Sub
+            */
+        }
 
-    protected override void OnBind()
-    {
+        protected override void OnBind()
+        {
 
-    }
+        }
 
-    protected override void OnShow(object obj)
-    {
-        /**
-         * Do Somethings Init With Every Showing In Here
-         */
-    }
+        protected override void OnShow(object obj)
+        {
+            /**
+             * Do Somethings Init With Every Showing In Here
+             */
+        }
 
-    protected override void OnUpdate(float dt)
-    {
-        /**
-         * Do Update Per FrameRate
-         */
-    }
+        protected override void OnUpdate(float dt)
+        {
+            /**
+             * Do Update Per FrameRate
+             */
+        }
 
-    protected override void OnShowAnimation(AnimationEnd animationEnd)
-    {
-        animationEnd(); // Must call if animation end
-    }
+        protected override void OnShowAnimation(AnimationEnd animationEnd)
+        {
+            animationEnd(); // Must call if animation end
+        }
 
-    protected override void OnCloseAnimation(AnimationEnd animationEnd)
-    {
-        animationEnd(); // Must call if animation end
-    }
+        protected override void OnCloseAnimation(AnimationEnd animationEnd)
+        {
+            animationEnd(); // Must call if animation end
+        }
 
-    protected override void OnClose()
-    {
+        protected override void OnClose()
+        {
 
-    }
+        }
 
-    public override void OnRelease()
-    {
+        public override void OnRelease()
+        {
 
+        }
     }
 }

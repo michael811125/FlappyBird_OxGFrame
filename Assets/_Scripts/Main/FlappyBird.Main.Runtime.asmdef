@@ -1,6 +1,6 @@
 {
     "name": "FlappyBird.Main.Runtime",
-    "rootNamespace": "",
+    "rootNamespace": "FlappyBird.Main.Runtime",
     "references": [
         "GUID:e34a5702dd353724aa315fb8011f08c3",
         "GUID:f51ebe6a0ceec4240a699833d6309b23",

@@ -1,6 +1,6 @@
 {
     "name": "FlappyBird.Hotfix.Runtime",
-    "rootNamespace": "",
+    "rootNamespace": "FlappyBird.Hotfix.Runtime",
     "references": [
         "GUID:2da4c02832e957e4590832fad335bcb4",
         "GUID:f51ebe6a0ceec4240a699833d6309b23",

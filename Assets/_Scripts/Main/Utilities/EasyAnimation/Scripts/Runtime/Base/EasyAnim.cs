@@ -1,27 +1,30 @@
 ﻿using System;
 using UnityEngine;
 
-public abstract class EasyAnim : MonoBehaviour
+namespace FlappyBird.Main.Runtime
 {
-    protected Action _animEnd = null;
-
-    public abstract void Play(string name, Action animEnd);
-
-    public abstract bool HasAnim(string name);
-
-    protected void SetAnimEnd(Action animEnd)
+    public abstract class EasyAnim : MonoBehaviour
     {
-        this._animEnd = animEnd;
-    }
+        protected Action _animEnd = null;
 
-    /// <summary>
-    /// Anim event name (Set anim event on clip called AnimEnd)
-    /// </summary>
-    protected virtual void AnimEnd()
-    {
-        this._animEnd?.Invoke();
-        this._animEnd = null;
+        public abstract void Play(string name, Action animEnd);
 
-        Debug.Log($"<color=#b6ff75>[EasyAnim] Root: {this.transform.root.name} trigger AnimEnd event function</color>");
+        public abstract bool HasAnim(string name);
+
+        protected void SetAnimEnd(Action animEnd)
+        {
+            this._animEnd = animEnd;
+        }
+
+        /// <summary>
+        /// Anim event name (Set anim event on clip called AnimEnd)
+        /// </summary>
+        protected virtual void AnimEnd()
+        {
+            this._animEnd?.Invoke();
+            this._animEnd = null;
+
+            Debug.Log($"<color=#b6ff75>[EasyAnim] Root: {this.transform.root.name} trigger AnimEnd event function</color>");
+        }
     }
 }

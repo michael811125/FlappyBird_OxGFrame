@@ -1,18 +1,21 @@
 ﻿using UnityEngine;
 
-public class PipeDestroyer : MonoBehaviour
+namespace FlappyBird.Hotfix.Runtime
 {
-    void OnTriggerEnter2D(Collider2D collider)
+    public class PipeDestroyer : MonoBehaviour
     {
-        Debug.Log($"PipeController Hit: {collider.gameObject.name}");
+        void OnTriggerEnter2D(Collider2D collider)
+        {
+            Debug.Log($"PipeController Hit: {collider.gameObject.name}");
 
-        if (collider.gameObject.transform.parent != null)
-        {
-            Destroy(collider.gameObject.transform.parent.gameObject);
-        }
-        else
-        {
-            Destroy(collider.gameObject);
+            if (collider.gameObject.transform.parent != null)
+            {
+                Destroy(collider.gameObject.transform.parent.gameObject);
+            }
+            else
+            {
+                Destroy(collider.gameObject);
+            }
         }
     }
 }
