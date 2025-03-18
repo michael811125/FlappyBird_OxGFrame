@@ -35,6 +35,10 @@ public class EasyAnimator : EasyAnim
 
     public override bool HasAnim(string paramName)
     {
-        return this._animator.ContainsParam(paramName);
+        foreach (AnimatorControllerParameter param in this._animator.parameters)
+        {
+            if (param.name == paramName) return true;
+        }
+        return false;
     }
 }
