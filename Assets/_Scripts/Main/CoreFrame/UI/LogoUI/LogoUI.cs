@@ -1,5 +1,6 @@
 using Cysharp.Threading.Tasks;
 using OxGFrame.CoreFrame.UIFrame;
+using OxGKit.Utilities.EasyAnim;
 
 namespace FlappyBird.Main.Runtime
 {
