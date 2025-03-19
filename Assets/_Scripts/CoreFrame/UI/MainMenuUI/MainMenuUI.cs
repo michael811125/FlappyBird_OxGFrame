@@ -1,10 +1,9 @@
-using UnityEngine;
-using OxGFrame.CoreFrame.UIFrame;
 using Cysharp.Threading.Tasks;
-using UnityEngine.UI;
+using OxGFrame.CoreFrame.UIFrame;
 using OxGFrame.MediaFrame;
-using OxGKit.Utilities.Timer;
-using OxGKit.Utilities.Button;
+using OxGKit.ButtonSystem;
+using OxGKit.TimeSystem;
+using UnityEngine;
 
 public class MainMenuUI : UIBase
 {
