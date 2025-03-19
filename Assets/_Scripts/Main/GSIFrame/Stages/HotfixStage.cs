@@ -68,6 +68,8 @@ namespace FlappyBird.Main.Runtime
                             "mscorlib.dll",
                             "System.Core.dll",
                             "Newtonsoft.Json.dll",
+                            "OxGKit.Utilities.Runtime.dll",
+                            "OxGKit.SingletonSystem.Runtime.dll",
                             "OxGFrame.CenterFrame.Runtime.dll"
                         },
                         new string[]

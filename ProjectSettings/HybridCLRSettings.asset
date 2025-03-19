@@ -28,8 +28,12 @@ MonoBehaviour:
   - mscorlib
   - System.Core
   - Newtonsoft.Json
+  - OxGKit.Utilities.Runtime
+  - OxGKit.SingletonSystem.Runtime
   - OxGFrame.CenterFrame.Runtime
   outputLinkFile: HybridCLRGenerate/link.xml
   outputAOTGenericReferenceFile: HybridCLRGenerate/AOTGenericReferences.cs
   maxGenericReferenceIteration: 10
   maxMethodBridgeGenericIteration: 10
+  enableProfilerInReleaseBuild: 0
+  enableStraceTraceInWebGLReleaseBuild: 0
