@@ -1,7 +1,7 @@
 ﻿using Cysharp.Threading.Tasks;
 using OxGFrame.CoreFrame;
 using OxGFrame.GSIFrame;
-using OxGKit.Utilities.Timer;
+using OxGKit.TimeSystem;
 
 public class LogoStage : GSIBase
 {
