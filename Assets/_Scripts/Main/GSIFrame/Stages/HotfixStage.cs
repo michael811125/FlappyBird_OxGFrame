@@ -5,7 +5,7 @@ using OxGFrame.Hotfixer;
 using OxGFrame.Hotfixer.HotfixEvent;
 using OxGFrame.Hotfixer.HotfixFsm;
 using OxGKit.LoggingSystem;
-using OxGKit.Utilities.Timer;
+using OxGKit.TimeSystem;
 using UniFramework.Event;
 
 namespace FlappyBird.Main.Runtime

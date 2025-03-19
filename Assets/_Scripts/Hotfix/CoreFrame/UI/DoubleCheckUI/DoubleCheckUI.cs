@@ -1,6 +1,6 @@
 using OxGFrame.CoreFrame.UIFrame;
 using Cysharp.Threading.Tasks;
-using OxGKit.Utilities.Button;
+using OxGKit.ButtonSystem;
 using TMPro;
 using System;
 

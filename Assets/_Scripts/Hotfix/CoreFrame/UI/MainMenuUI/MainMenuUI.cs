@@ -1,8 +1,8 @@
 using Cysharp.Threading.Tasks;
 using OxGFrame.CoreFrame.UIFrame;
 using OxGFrame.MediaFrame;
-using OxGKit.Utilities.Button;
-using OxGKit.Utilities.Timer;
+using OxGKit.ButtonSystem;
+using OxGKit.TimeSystem;
 using UnityEngine;
 
 namespace FlappyBird.Hotfix.Runtime

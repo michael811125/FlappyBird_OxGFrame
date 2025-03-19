@@ -28,9 +28,22 @@
       "depth": 0,
       "source": "git",
       "dependencies": {
-        "com.unity.scriptablebuildpipeline": "1.21.25"
+        "com.unity.scriptablebuildpipeline": "1.21.25",
+        "com.code-philosophy.hybridclr": "git+https://github.com/focus-creative-games/hybridclr_unity.git",
+        "com.cysharp.unitask": "git+https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
+        "com.domybest.lwmybox": "git+https://github.com/michael811125/LWMyBox.git",
+        "com.michaelo.oxgkit.loggingsystem": "git+https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/LoggingSystem/Scripts",
+        "com.michaelo.oxgkit.timesystem": "git+https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/TimeSystem/Scripts",
+        "com.michaelo.oxgkit.utilities": "git+https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/Utilities/Scripts"
       },
-      "hash": "e903a7f9968dc21134be6328f8cf58f888051482"
+      "hash": "a5a6f290d61c1d9b5c1585352ec11f191904280d"
+    },
+    "com.michaelo.oxgkit.buttonsystem": {
+      "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/ButtonSystem/Scripts",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "f0fcce81c66ea00d426f529ba2383b7903924c87"
     },
     "com.michaelo.oxgkit.loggingsystem": {
       "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/LoggingSystem/Scripts",
@@ -39,12 +52,33 @@
       "dependencies": {},
       "hash": "7da9086d5035c4ce4fe66d62306fdaf41cab29ff"
     },
+    "com.michaelo.oxgkit.singletonsystem": {
+      "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/SingletonSystem/Scripts",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "f0fcce81c66ea00d426f529ba2383b7903924c87"
+    },
+    "com.michaelo.oxgkit.timesystem": {
+      "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/TimeSystem/Scripts",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {
+        "com.michaelo.oxgkit.loggingsystem": "git+https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/LoggingSystem/Scripts",
+        "com.cysharp.unitask": "git+https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask"
+      },
+      "hash": "f0fcce81c66ea00d426f529ba2383b7903924c87"
+    },
     "com.michaelo.oxgkit.utilities": {
       "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/Utilities/Scripts",
       "depth": 0,
       "source": "git",
-      "dependencies": {},
-      "hash": "b701d3cccc0071279415ec3dfd68417ad025726c"
+      "dependencies": {
+        "com.domybest.lwmybox": "git+https://github.com/michael811125/LWMyBox.git",
+        "com.michaelo.oxgkit.loggingsystem": "git+https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/LoggingSystem/Scripts",
+        "com.cysharp.unitask": "git+https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask"
+      },
+      "hash": "f0fcce81c66ea00d426f529ba2383b7903924c87"
     },
     "com.unity.2d.animation": {
       "version": "9.1.3",

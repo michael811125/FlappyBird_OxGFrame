@@ -5,7 +5,7 @@ using OxGFrame.AssetLoader.PatchFsm;
 using OxGFrame.AssetLoader.Utility;
 using OxGFrame.CoreFrame.UIFrame;
 using OxGKit.LoggingSystem;
-using OxGKit.Utilities.Button;
+using OxGKit.ButtonSystem;
 using System;
 using TMPro;
 using UniFramework.Event;
