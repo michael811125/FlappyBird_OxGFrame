@@ -6,7 +6,7 @@ using OxGFrame.AssetLoader.Utility;
 using OxGFrame.AssetLoader;
 using UniFramework.Event;
 using UnityEngine.UI;
-using OxGKit.Utilities.Button;
+using OxGKit.ButtonSystem;
 using UnityEngine;
 using System;
 using TMPro;
