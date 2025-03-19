@@ -34,5 +34,7 @@ MonoBehaviour:
     logActive: 1
   - loggerName: FlappyBird.Hotfix.Logger
     logActive: 1
+  - loggerName: OxGKit.TimeSystem.Logger
+    logActive: 1
   loadLoggers: 0
   resetLoggers: 0
