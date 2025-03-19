@@ -4,7 +4,7 @@ using OxGFrame.CoreFrame.UIFrame;
 using Cysharp.Threading.Tasks;
 using UnityEngine.UI;
 using OxGFrame.MediaFrame;
-using OxGKit.Utilities.Button;
+using OxGKit.ButtonSystem;
 
 namespace FlappyBird.Hotfix.Runtime
 {

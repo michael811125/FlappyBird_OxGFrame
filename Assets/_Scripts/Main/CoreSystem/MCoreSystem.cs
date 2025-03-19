@@ -1,4 +1,4 @@
-﻿using OxGKit.Utilities.Timer;
+﻿using OxGKit.TimeSystem;
 using UnityEngine;
 
 namespace FlappyBird.Main.Runtime
