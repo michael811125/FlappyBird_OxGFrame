@@ -12,8 +12,8 @@ namespace FlappyBird.Hotfix.Runtime
     {
         public static void InitLoggers()
         {
-            Logging.CreateLogger<HLogger>();
-            LoggingLauncher.TryLoadLoggerSetting();
+            LoggingLauncher.CreateLogger<HLogger>();
+            LoggingLauncher.TryLoadLoggers();
         }
     }
 }

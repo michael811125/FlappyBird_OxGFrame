@@ -36,7 +36,7 @@
         "com.michaelo.oxgkit.timesystem": "git+https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/TimeSystem/Scripts",
         "com.michaelo.oxgkit.utilities": "git+https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/Utilities/Scripts"
       },
-      "hash": "a5a6f290d61c1d9b5c1585352ec11f191904280d"
+      "hash": "b8d72024f61eb64fa9705aaf9af095ea115abbed"
     },
     "com.michaelo.oxgkit.buttonsystem": {
       "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/ButtonSystem/Scripts",
@@ -49,8 +49,10 @@
       "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/LoggingSystem/Scripts",
       "depth": 0,
       "source": "git",
-      "dependencies": {},
-      "hash": "7da9086d5035c4ce4fe66d62306fdaf41cab29ff"
+      "dependencies": {
+        "com.domybest.lwmybox": "git+https://github.com/michael811125/LWMyBox.git"
+      },
+      "hash": "a53a3227b8da4f580a0525cc4b2b35efdebc8ebb"
     },
     "com.michaelo.oxgkit.singletonsystem": {
       "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/SingletonSystem/Scripts",
@@ -78,7 +80,7 @@
         "com.michaelo.oxgkit.loggingsystem": "git+https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/LoggingSystem/Scripts",
         "com.cysharp.unitask": "git+https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask"
       },
-      "hash": "f0fcce81c66ea00d426f529ba2383b7903924c87"
+      "hash": "a53a3227b8da4f580a0525cc4b2b35efdebc8ebb"
     },
     "com.unity.2d.animation": {
       "version": "9.1.3",

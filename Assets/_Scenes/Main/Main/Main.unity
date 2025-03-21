@@ -321,6 +321,146 @@ PrefabInstance:
       propertyPath: loggerSetting
       value: 
       objectReference: {fileID: 11400000, guid: 93b24a0fd39ec54429351598aa75f6f7, type: 2}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: initLoggersOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: loggersConfig.loggerSettings.Array.size
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: loggersConfig.loggerSettings.Array.data[0].logLevel
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: loggersConfig.loggerSettings.Array.data[1].logLevel
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: loggersConfig.loggerSettings.Array.data[2].logLevel
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: loggersConfig.loggerSettings.Array.data[3].logLevel
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: loggersConfig.loggerSettings.Array.data[4].logLevel
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: loggersConfig.loggerSettings.Array.data[5].logLevel
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: loggersConfig.loggerSettings.Array.data[6].logLevel
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: loggersConfig.loggerSettings.Array.data[7].logLevel
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: loggersConfig.loggerSettings.Array.data[8].logLevel
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: loggersConfig.loggerSettings.Array.data[9].logLevel
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: loggersConfig.loggerSettings.Array.data[0].logActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: loggersConfig.loggerSettings.Array.data[10].logLevel
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: loggersConfig.loggerSettings.Array.data[1].logActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: loggersConfig.loggerSettings.Array.data[2].logActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: loggersConfig.loggerSettings.Array.data[3].logActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: loggersConfig.loggerSettings.Array.data[4].logActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: loggersConfig.loggerSettings.Array.data[5].logActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: loggersConfig.loggerSettings.Array.data[6].logActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: loggersConfig.loggerSettings.Array.data[7].logActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: loggersConfig.loggerSettings.Array.data[8].logActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: loggersConfig.loggerSettings.Array.data[9].logActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: loggersConfig.loggerSettings.Array.data[0].loggerName
+      value: FlappyBird.Hotfix.Logger
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: loggersConfig.loggerSettings.Array.data[10].logActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: loggersConfig.loggerSettings.Array.data[1].loggerName
+      value: OxGFrame.CoreFrame.Logger
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: loggersConfig.loggerSettings.Array.data[2].loggerName
+      value: FlappyBird.Main.Logger
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: loggersConfig.loggerSettings.Array.data[3].loggerName
+      value: OxGFrame.Hotfixer.Logger
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: loggersConfig.loggerSettings.Array.data[4].loggerName
+      value: OxGFrame.AssetLoader.Logger
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: loggersConfig.loggerSettings.Array.data[5].loggerName
+      value: OxGKit.TimeSystem.Logger
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: loggersConfig.loggerSettings.Array.data[6].loggerName
+      value: OxGFrame.CenterFrame.Logger
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: loggersConfig.loggerSettings.Array.data[7].loggerName
+      value: OxGFrame.NetFrame.Logger
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: loggersConfig.loggerSettings.Array.data[8].loggerName
+      value: OxGFrame.GSIFrame.Logger
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: loggersConfig.loggerSettings.Array.data[9].loggerName
+      value: OxGFrame.MediaFrame.Logger
+      objectReference: {fileID: 0}
+    - target: {fileID: 3415422755630365937, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
+      propertyPath: loggersConfig.loggerSettings.Array.data[10].loggerName
+      value: OxGKit.Utilities.Logger
+      objectReference: {fileID: 0}
     - target: {fileID: 3415422755630365950, guid: 39c1e8f8b6463b041be46441ad8ef6b1, type: 3}
       propertyPath: m_RootOrder
       value: 0
