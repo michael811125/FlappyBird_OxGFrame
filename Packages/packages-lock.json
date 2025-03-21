@@ -36,7 +36,7 @@
         "com.michaelo.oxgkit.timesystem": "git+https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/TimeSystem/Scripts",
         "com.michaelo.oxgkit.utilities": "git+https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/Utilities/Scripts"
       },
-      "hash": "b8d72024f61eb64fa9705aaf9af095ea115abbed"
+      "hash": "72e2de1b19193b6704b8edc8fd67e75ba04cbb5a"
     },
     "com.michaelo.oxgkit.buttonsystem": {
       "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/ButtonSystem/Scripts",
@@ -80,7 +80,7 @@
         "com.michaelo.oxgkit.loggingsystem": "git+https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/LoggingSystem/Scripts",
         "com.cysharp.unitask": "git+https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask"
       },
-      "hash": "a53a3227b8da4f580a0525cc4b2b35efdebc8ebb"
+      "hash": "6c349fb268e62fb420f0ca6c04cf2fce71bb60a7"
     },
     "com.unity.2d.animation": {
       "version": "9.1.3",
