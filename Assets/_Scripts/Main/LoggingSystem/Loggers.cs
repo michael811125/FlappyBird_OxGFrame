@@ -12,15 +12,15 @@ namespace FlappyBird.Main.Runtime
     {
         public static void InitLoggers()
         {
-            Logging.CreateLogger<OxGFrame.Hotfixer.Logger>();
-            Logging.CreateLogger<OxGFrame.AssetLoader.Logger>();
-            Logging.CreateLogger<OxGFrame.CoreFrame.Logger>();
-            Logging.CreateLogger<OxGFrame.MediaFrame.Logger>();
-            Logging.CreateLogger<OxGFrame.GSIFrame.Logger>();
-            Logging.CreateLogger<OxGFrame.CenterFrame.Logger>();
-            Logging.CreateLogger<OxGKit.Utilities.Logger>();
-            Logging.CreateLogger<MLogger>();
-            LoggingLauncher.TryLoadLoggerSetting();
+            LoggingLauncher.CreateLogger<OxGFrame.Hotfixer.Logger>();
+            LoggingLauncher.CreateLogger<OxGFrame.AssetLoader.Logger>();
+            LoggingLauncher.CreateLogger<OxGFrame.CoreFrame.Logger>();
+            LoggingLauncher.CreateLogger<OxGFrame.MediaFrame.Logger>();
+            LoggingLauncher.CreateLogger<OxGFrame.GSIFrame.Logger>();
+            LoggingLauncher.CreateLogger<OxGFrame.CenterFrame.Logger>();
+            LoggingLauncher.CreateLogger<OxGKit.Utilities.Logger>();
+            LoggingLauncher.CreateLogger<MLogger>();
+            LoggingLauncher.TryLoadLoggers();
         }
     }
 }
