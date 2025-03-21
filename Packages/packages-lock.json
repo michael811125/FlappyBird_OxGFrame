@@ -52,7 +52,7 @@
       "dependencies": {
         "com.domybest.lwmybox": "git+https://github.com/michael811125/LWMyBox.git"
       },
-      "hash": "a53a3227b8da4f580a0525cc4b2b35efdebc8ebb"
+      "hash": "0a482d1342b23713f1dacf66d54b80a2cc62b93c"
     },
     "com.michaelo.oxgkit.singletonsystem": {
       "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/SingletonSystem/Scripts",
