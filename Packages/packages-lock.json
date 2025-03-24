@@ -29,14 +29,14 @@
       "source": "git",
       "dependencies": {
         "com.unity.scriptablebuildpipeline": "1.21.25",
-        "com.code-philosophy.hybridclr": "git+https://github.com/focus-creative-games/hybridclr_unity.git",
-        "com.cysharp.unitask": "git+https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
-        "com.domybest.lwmybox": "git+https://github.com/michael811125/LWMyBox.git",
-        "com.michaelo.oxgkit.loggingsystem": "git+https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/LoggingSystem/Scripts",
-        "com.michaelo.oxgkit.timesystem": "git+https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/TimeSystem/Scripts",
-        "com.michaelo.oxgkit.utilities": "git+https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/Utilities/Scripts"
+        "com.code-philosophy.hybridclr": "https://github.com/focus-creative-games/hybridclr_unity.git",
+        "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
+        "com.domybest.lwmybox": "https://github.com/michael811125/LWMyBox.git",
+        "com.michaelo.oxgkit.loggingsystem": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/LoggingSystem/Scripts",
+        "com.michaelo.oxgkit.timesystem": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/TimeSystem/Scripts",
+        "com.michaelo.oxgkit.utilities": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/Utilities/Scripts"
       },
-      "hash": "72e2de1b19193b6704b8edc8fd67e75ba04cbb5a"
+      "hash": "b4fd808aaaaed260534bcc50c8f8c5ea7787e825"
     },
     "com.michaelo.oxgkit.buttonsystem": {
       "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/ButtonSystem/Scripts",
@@ -50,9 +50,9 @@
       "depth": 0,
       "source": "git",
       "dependencies": {
-        "com.domybest.lwmybox": "git+https://github.com/michael811125/LWMyBox.git"
+        "com.domybest.lwmybox": "https://github.com/michael811125/LWMyBox.git"
       },
-      "hash": "cbc3a07bd300dd218ad3bebb0874ba2e31389e88"
+      "hash": "5bd99b834eebbcc18f33de26121ea9b6fae8e452"
     },
     "com.michaelo.oxgkit.singletonsystem": {
       "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/SingletonSystem/Scripts",
