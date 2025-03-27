@@ -43,7 +43,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "f0fcce81c66ea00d426f529ba2383b7903924c87"
+      "hash": "d767e27c883767a5e42885b85382f2766767d5b7"
     },
     "com.michaelo.oxgkit.loggingsystem": {
       "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/LoggingSystem/Scripts",
