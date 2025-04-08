@@ -100,7 +100,7 @@ public class SettlementUI : UIBase
         this._replayBtnPlus.onClick.AddListener(() =>
         {
             // 播放轉場音效
-            MediaFrames.AudioFrame.Play(Audios.SwooshingSfx).Forget();
+            MediaFrames.AudioFrame.Play(Pkgs.PatchPkg, Audios.SwooshingSfx).Forget();
 
             // 重新遊玩
             CoreSystem.Replay();
@@ -113,7 +113,7 @@ public class SettlementUI : UIBase
         this._menuBtnPlus.onClick.AddListener(() =>
         {
             // 播放轉場音效
-            MediaFrames.AudioFrame.Play(Audios.SwooshingSfx).Forget();
+            MediaFrames.AudioFrame.Play(Pkgs.PatchPkg, Audios.SwooshingSfx).Forget();
 
             // 前往主選單
             CoreSystem.GoToMenu();
