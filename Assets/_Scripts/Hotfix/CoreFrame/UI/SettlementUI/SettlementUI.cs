@@ -102,7 +102,7 @@ namespace FlappyBird.Hotfix.Runtime
             this._replayBtnPlus.onClick.AddListener(() =>
             {
                 // 播放轉場音效
-                MediaFrames.AudioFrame.Play(Audios.SwooshingSfx).Forget();
+                MediaFrames.AudioFrame.Play(Pkgs.PatchPkg, Audios.SwooshingSfx).Forget();
 
                 // 重新遊玩
                 HCoreSystem.Replay();
@@ -115,7 +115,7 @@ namespace FlappyBird.Hotfix.Runtime
             this._menuBtnPlus.onClick.AddListener(() =>
             {
                 // 播放轉場音效
-                MediaFrames.AudioFrame.Play(Audios.SwooshingSfx).Forget();
+                MediaFrames.AudioFrame.Play(Pkgs.PatchPkg, Audios.SwooshingSfx).Forget();
 
                 // 前往主選單
                 HCoreSystem.GoToMenu();
