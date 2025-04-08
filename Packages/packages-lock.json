@@ -5,7 +5,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "756b906a215feb6eed414fb56c0f5758220096ae"
+      "hash": "3fe41a8cbae3c5b9ae88724d60ffe3cf2e9b2881"
     },
     "com.cysharp.unitask": {
       "version": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
@@ -59,7 +59,7 @@
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "f0fcce81c66ea00d426f529ba2383b7903924c87"
+      "hash": "6e62add53b21f7d81873924ede0cf050cc534e79"
     },
     "com.michaelo.oxgkit.timesystem": {
       "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/TimeSystem/Scripts",
