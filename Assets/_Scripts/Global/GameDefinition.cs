@@ -11,8 +11,8 @@ public static class SRs
 #if BUNDLE_TYPE
     private static string _path = "";
 #else
-    private const string prefix = "res#";
-    private static string _path = $"{prefix}CoreFrame/SR/";
+    private const string _PREFIX = "res#";
+    private static string _path = $"{_PREFIX}CoreFrame/SR/";
 #endif
 
     // 場景   
@@ -25,8 +25,8 @@ public static class UIs
 #if BUNDLE_TYPE
     private static string _path = "";
 #else
-    private const string prefix = "res#";
-    private static string _path = $"{prefix}CoreFrame/UI/";
+    private const string _PREFIX = "res#";
+    private static string _path = $"{_PREFIX}CoreFrame/UI/";
 #endif
 
     // 介面
@@ -47,8 +47,8 @@ public static class Audios
 #if BUNDLE_TYPE
     private static string _path = "";
 #else
-    private const string prefix = "res#";
-    private static string _path = $"{prefix}MediaFrame/Audio/";
+    private const string _PREFIX = "res#";
+    private static string _path = $"{_PREFIX}MediaFrame/Audio/";
 #endif
 
     // 背景音樂 BGM
