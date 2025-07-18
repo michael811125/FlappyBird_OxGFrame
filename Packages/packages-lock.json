@@ -53,7 +53,7 @@
       "dependencies": {
         "com.domybest.lwmybox": "https://github.com/michael811125/LWMyBox.git"
       },
-      "hash": "8d7693d293baa3f6b3400acbba92c4b383085470"
+      "hash": "709eb4ab7314299c513f2c310766c147c076b5b9"
     },
     "com.michaelo.oxgkit.saversystem": {
       "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/SaverSystem/Scripts",
