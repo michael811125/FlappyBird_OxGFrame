@@ -88,7 +88,7 @@
         "com.domybest.lwmybox": "https://github.com/michael811125/LWMyBox.git",
         "com.michaelo.oxgkit.loggingsystem": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/LoggingSystem/Scripts"
       },
-      "hash": "8d7693d293baa3f6b3400acbba92c4b383085470"
+      "hash": "2baf27c412c1a603752489dab554db352c39bd37"
     },
     "com.unity.2d.animation": {
       "version": "9.1.3",
