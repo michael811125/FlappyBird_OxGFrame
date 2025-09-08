@@ -88,7 +88,7 @@ namespace FlappyBird.Main.Runtime
                     if (Hotfixers.IsDone())
                     {
                         this._step = HotfixStep.WAITING_FOR_BUFFER_TIME;
-                        Logging.Print<MLogger>("<color=#7bff9e>Hotfix finished.</color>");
+                        Logging.PrintInfo<MLogger>("Hotfix finished.");
                     }
                     break;
 
