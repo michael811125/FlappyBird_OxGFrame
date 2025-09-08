@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using OxGKit.LoggingSystem;
+using UnityEngine;
 
 namespace FlappyBird.Hotfix.Runtime
 {
@@ -6,7 +7,7 @@ namespace FlappyBird.Hotfix.Runtime
     {
         void OnTriggerEnter2D(Collider2D collider)
         {
-            Debug.Log($"PipeController Hit: {collider.gameObject.name}");
+            Logging.Print<HLogger>($"PipeController Hit: {collider.gameObject.name}");
 
             if (collider.gameObject.transform.parent != null)
             {
