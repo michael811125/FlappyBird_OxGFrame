@@ -1,9 +1,11 @@
 using System.IO;
 using YooAsset.Editor;
 
-[DisplayName("收集 MP4 檔案")]
+[DisplayName("收集 MP4 文件")]
 public class CollectMP4 : IFilterRule
 {
+    public string FindAssetType => null;
+
     public bool IsCollectAsset(FilterRuleData data)
     {
         return Path.GetExtension(data.AssetPath) == ".mp4";
