@@ -37,7 +37,7 @@
         "com.michaelo.oxgkit.timesystem": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/TimeSystem/Scripts",
         "com.michaelo.oxgkit.utilities": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/Utilities/Scripts"
       },
-      "hash": "cc8ad8c8de4539e587e1628c71b938b570a5fb8c"
+      "hash": "c35ade3e74e27135f2e2e02eeec5157434c53bd0"
     },
     "com.michaelo.oxgkit.buttonsystem": {
       "version": "https://github.com/michael811125/OxGKit.git?path=Assets/OxGKit/ButtonSystem/Scripts",
@@ -322,7 +322,7 @@
       }
     },
     "com.unity.scriptablebuildpipeline": {
-      "version": "1.21.25",
+      "version": "2.1.5",
       "depth": 0,
       "source": "registry",
       "dependencies": {},

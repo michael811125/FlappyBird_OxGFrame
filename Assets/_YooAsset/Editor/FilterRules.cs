@@ -4,7 +4,7 @@ using YooAsset.Editor;
 [DisplayName("收集 MP4 文件")]
 public class CollectMP4 : IFilterRule
 {
-    public string FindAssetType => null;
+    public string FindAssetType => "t:VideoClip";
 
     public bool IsCollectAsset(FilterRuleData data)
     {
