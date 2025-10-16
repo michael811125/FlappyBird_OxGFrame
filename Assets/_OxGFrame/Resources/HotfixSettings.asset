@@ -9,14 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dddbfe034d2543d4b8d3c4ab0d2f77f1, type: 3}
-  m_Name: CryptogramSetting
+  m_Script: {fileID: 11500000, guid: a63c3735c807ebb429fa22e71f915b2e, type: 3}
+  m_Name: HotfixSettings
   m_EditorClassIdentifier: 
-  randomSeed: 1
-  dummySize: 1
-  xorKey: 1
-  hXorKey: 1
-  tXorKey: 1
-  jXorKey: 1
-  aesKey: aes_key
-  aesIv: aes_iv
+  cipher: 109
+  hotfixDllCfgName: hotfixdllconfig
