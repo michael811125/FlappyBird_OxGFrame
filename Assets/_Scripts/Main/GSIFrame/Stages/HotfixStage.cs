@@ -144,12 +144,16 @@ namespace FlappyBird.Main.Runtime
             // 0. HotfixFsmState
             // 1. HotfixInitFailed
             // 2. HotfixUpdateFailed
-            // 3. HotfixDownloadFailed
+            // 3. HotfixCreateDownloader
+            // 4. HotfixDownloadProgression
+            // 5. HotfixDownloadFailed
 
             #region Add HotfixEvents Handle
             this._hotfixEvents.AddListener<HotfixEvents.HotfixFsmState>(this._OnHandleEventMessage);
             this._hotfixEvents.AddListener<HotfixEvents.HotfixInitFailed>(this._OnHandleEventMessage);
             this._hotfixEvents.AddListener<HotfixEvents.HotfixUpdateFailed>(this._OnHandleEventMessage);
+            this._hotfixEvents.AddListener<HotfixEvents.HotfixCreateDownloader>(this._OnHandleEventMessage);
+            this._hotfixEvents.AddListener<HotfixEvents.HotfixDownloadProgression>(this._OnHandleEventMessage);
             this._hotfixEvents.AddListener<HotfixEvents.HotfixDownloadFailed>(this._OnHandleEventMessage);
             #endregion
         }
@@ -191,6 +195,13 @@ namespace FlappyBird.Main.Runtime
             else if (message is HotfixEvents.HotfixUpdateFailed)
             {
                 HotfixUserEvents.UserTryUpdateHotfix.SendEventMessage();
+            }
+            else if (message is HotfixEvents.HotfixCreateDownloader)
+            {
+                HotfixUserEvents.UserBeginDownload.SendEventMessage();
+            }
+            else if (message is HotfixEvents.HotfixDownloadProgression)
+            {
             }
             else if (message is HotfixEvents.HotfixDownloadFailed)
             {
