@@ -1,0 +1,14 @@
+{
+    "aotDlls": [
+        "UniTask.dll",
+        "mscorlib.dll",
+        "System.Core.dll",
+        "Newtonsoft.Json.dll",
+        "OxGKit.Utilities.Runtime.dll",
+        "OxGKit.SingletonSystem.Runtime.dll",
+        "OxGFrame.CenterFrame.Runtime.dll"
+    ],
+    "hotfixDlls": [
+        "FlappyBird.Hotfix.Runtime.dll"
+    ]
+}
