@@ -1,5 +1,49 @@
 ## FlappyBird
 
+[English](#english) | [中文](#中文)
+
+---
+
+# English
+
+### Resource Method
+
+Developed with the Resources approach.
+
+### About
+
+A reinterpretation of the FlappyBird mini-game built on OxGFrame. Everything is developed within a single scene, which keeps the logic and the game phases distinct and easy to follow.
+
+### Framework
+
+[OxGFrame](https://github.com/michael811125/OxGFrame)
+
+### How It Works
+
+The core of the main program is CoreSystem. Everything is driven by CoreSystem, which in turn drives GSIManager through the MonoBehaviour characteristics of CoreSystem.
+
+**This demo is a mini-game that does not involve much control (apart from fetching leaderboard data over the network), so it is fairly simple to structure. Scoring is therefore handed directly to CoreSystem to mediate. In a larger commercial game, each controller would be split out so that CoreSystem stays clean and acts only as the core driver and mediator.**
+
+### Setup
+
+Set the Game view to W: 1080 * H: 1920, then open the Main.unity scene and hit Play.
+
+---
+
+### Unity Version
+
+Unity 2022.3.59f1 (LTS) or higher is recommended - [Unity Download](https://unity3d.com/get-unity/download/archive)
+
+---
+
+### Reference
+
+[LordZed400/Flappy-Bird-Unity](https://github.com/LordZed400/Flappy-Bird-Unity)
+
+---
+
+# 中文
+
 ### 資源方式
 
 使用 Resources 方式進行開發。
