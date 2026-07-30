@@ -2,6 +2,12 @@ using UnityEngine;
 
 namespace FlappyBird.Main.Runtime
 {
+    /// <summary>
+    /// Editor gizmo that draws a point as a solid or wire sphere.
+    /// <para>
+    /// 編輯器 Gizmo, 以實心或線框球體繪製一個點。
+    /// </para>
+    /// </summary>
     public class PointGizmo : MonoBehaviour
     {
         enum DrawType

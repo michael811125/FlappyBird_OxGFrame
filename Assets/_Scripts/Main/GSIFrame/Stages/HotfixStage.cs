@@ -10,6 +10,16 @@ using UniFramework.Event;
 
 namespace FlappyBird.Main.Runtime
 {
+    /// <summary>
+    /// [Main.Assembly] Hotfix stage. Runs the HybridCLR hotfix check while the logo is
+    /// showing, then loads the hotfix main scene, which is where Hotfix.Assembly takes
+    /// over. This is the hand-over point between the two assemblies.
+    /// <para>
+    /// [主工程] 熱更階段。在顯示商標的同時執行 HybridCLR 熱更檢查,
+    /// 完成後載入熱更主場景, 由 Hotfix.Assembly 接手。
+    /// 此處即為兩個 Assembly 的交接點。
+    /// </para>
+    /// </summary>
     public class HotfixStage : GSIBase
     {
         private enum HotfixStep
@@ -29,36 +39,53 @@ namespace FlappyBird.Main.Runtime
         private HotfixStep _step = HotfixStep.NONE;
         private RealTimer _realTimer;
 
+        /// <summary>
+        /// Called once when the game stage is created.
+        /// <para>遊戲階段建立時呼叫一次。</para>
+        /// </summary>
         public async override UniTask OnCreate()
         {
-            // Init Hotfix Events
+            // Init the hotfix events
+            // 初始化熱更事件
             this._InitHotfixEvents();
 
             this._realTimer = new RealTimer();
         }
 
+        /// <summary>
+        /// Called every time this game stage is entered.
+        /// <para>每次進入此遊戲階段時呼叫。</para>
+        /// </summary>
         public async override UniTask OnEnter()
         {
             this._step = HotfixStep.INIT_TIMER;
         }
 
+        /// <summary>
+        /// Called per frame while this game stage is running.
+        /// <para>此遊戲階段運行期間每幀呼叫。</para>
+        /// </summary>
         public override void OnUpdate(float dt = 0.0f)
         {
             switch (this._step)
             {
                 case HotfixStep.INIT_TIMER:
-                    // Set buffer timer (doing background)
+                    // Set the buffer timer (runs in the background)
+                    // 設定緩衝計時器 (於背景進行)
                     this._realTimer.Reset();
                     this._realTimer.Play();
                     this._realTimer.SetTimer(3f);
 
-                    // Change next step immediately
+                    // Change to the next step immediately
+                    // 立即切換下一步
                     this._step = HotfixStep.START_CHECK_HOTFIX;
                     break;
 
-                // Start check hotfix while logo showing (doing background)
+                // Start checking the hotfix while the logo is showing (runs in the background)
+                // 顯示商標的同時開始檢查熱更 (於背景進行)
                 case HotfixStep.START_CHECK_HOTFIX:
-                    // Do hotfix check, also can read hotfixconfig.conf from StreamingAssets
+                    // Do the hotfix check, it can also read hotfixconfig.conf from StreamingAssets
+                    // 進行熱更檢查, 亦可從 StreamingAssets 讀取 hotfixconfig.conf
                     Hotfixers.CheckHotfix
                     (
                         HotfixPkg,
@@ -78,13 +105,16 @@ namespace FlappyBird.Main.Runtime
                         }
                     );
 
-                    // Change next step immediately
+                    // Change to the next step immediately
+                    // 立即切換下一步
                     this._step = HotfixStep.WAITING_FOR_HOTFIX;
                     break;
 
-                // Waiting for hotfix are all done
+                // Wait until the hotfix is completely done
+                // 等待熱更全部完成
                 case HotfixStep.WAITING_FOR_HOTFIX:
-                    // Check hotfix are all done per frame rate
+                    // Check per frame whether the hotfix is done
+                    // 依幀率檢查熱更是否全部完成
                     if (Hotfixers.IsDone())
                     {
                         this._step = HotfixStep.WAITING_FOR_BUFFER_TIME;
@@ -93,23 +123,29 @@ namespace FlappyBird.Main.Runtime
                     break;
 
                 case HotfixStep.WAITING_FOR_BUFFER_TIME:
-                    // If buffer timeout
+                    // If the buffer timed out
+                    // 若緩衝時間已到
                     if (this._realTimer.IsTimerTimeout())
                     {
-                        // Set timer for outro anim
+                        // Set the timer for the outro animation
+                        // 設定結束動畫的計時器
                         this._realTimer.SetTimer(1f);
 
                         // Close LogoUI
+                        // 關閉 LogoUI
                         CoreFrames.UIFrame.Close(LogoStage.LogoUI);
 
-                        // If after hotfix loaded and buffer timeout, will change next step
+                        // Once the hotfix is loaded and the buffer times out, change to the next step
+                        // 熱更載入完成且緩衝時間已到後, 切換下一步
                         this._step = HotfixStep.LOAD_HOTFIX_MAIN_SCENE;
                     }
                     break;
 
-                // Load hotfix main scene
+                // Load the hotfix main scene
+                // 載入熱更主場景
                 case HotfixStep.LOAD_HOTFIX_MAIN_SCENE:
-                    // If outro buffer timeout
+                    // If the outro buffer timed out
+                    // 若結束動畫的緩衝時間已到
                     if (this._realTimer.IsTimerTimeout())
                     {
                         this._LoadHotfixMainScene().Forget();
@@ -117,11 +153,16 @@ namespace FlappyBird.Main.Runtime
                     break;
 
                 // Nothing to do
+                // 無須處理
                 case HotfixStep.DONE:
                     break;
             }
         }
 
+        /// <summary>
+        /// Called when leaving this game stage.
+        /// <para>離開此遊戲階段時呼叫。</para>
+        /// </summary>
         public override void OnExit()
         {
         }
@@ -130,10 +171,12 @@ namespace FlappyBird.Main.Runtime
         {
             this.StopUpdate();
 
-            // Start load single scene from HotfixPackage
+            // Start loading the single scene from HotfixPackage
+            // 開始從 HotfixPackage 載入單一場景
             await CoreFrames.USFrame.LoadSingleSceneAsync(HotfixPkg, HMain);
 
             // Hotfix done
+            // 熱更完成
             this._step = HotfixStep.DONE;
         }
 
@@ -141,12 +184,20 @@ namespace FlappyBird.Main.Runtime
         private EventGroup _hotfixEvents = new EventGroup();
         private void _InitHotfixEvents()
         {
+            // Hotfix events handled below:
             // 0. HotfixFsmState
             // 1. HotfixInitFailed
             // 2. HotfixUpdateFailed
             // 3. HotfixCreateDownloader
             // 4. HotfixDownloadProgression
             // 5. HotfixDownloadFailed
+            // 以下處理的熱更事件:
+            // 0. 熱更狀態機狀態
+            // 1. 熱更初始化失敗
+            // 2. 熱更更新失敗
+            // 3. 建立熱更下載器
+            // 4. 熱更下載進度
+            // 5. 熱更下載失敗
 
             #region Add HotfixEvents Handle
             this._hotfixEvents.AddListener<HotfixEvents.HotfixFsmState>(this._OnHandleEventMessage);

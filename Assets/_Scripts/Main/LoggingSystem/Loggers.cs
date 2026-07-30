@@ -8,6 +8,12 @@ namespace FlappyBird.Main.Runtime
         public MLogger() { }
     }
 
+    /// <summary>
+    /// Logger registration helper for the hotfix project.
+    /// <para>
+    /// 熱更工程的 Logger 註冊輔助類別。
+    /// </para>
+    /// </summary>
     public static class Loggers
     {
         public static void InitLoggers()

@@ -14,6 +14,12 @@ using UnityEngine.UI;
 
 namespace FlappyBird.Hotfix.Runtime
 {
+    /// <summary>
+    /// Extension methods available to the hotfix assembly.
+    /// <para>
+    /// 提供給熱更程序集使用的擴充方法。
+    /// </para>
+    /// </summary>
     public static class HotfixExtensions
     {
         public delegate void ItemAndIndex<in T>(T item, int idx);
@@ -30,7 +36,8 @@ namespace FlappyBird.Hotfix.Runtime
 
         #region List 擴充
         /// <summary>
-        /// Return last of list element with remove
+        /// Return the last element of the list and remove it
+        /// <para>取出並移除列表的最後一個元素</para>
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="list"></param>
@@ -48,7 +55,8 @@ namespace FlappyBird.Hotfix.Runtime
         }
 
         /// <summary>
-        /// Return fist of list element with remove
+        /// Return the first element of the list and remove it
+        /// <para>取出並移除列表的第一個元素</para>
         /// </summary>
         /// <typeparam name="T"></typeparam>
         /// <param name="list"></param>
@@ -84,6 +92,7 @@ namespace FlappyBird.Hotfix.Runtime
 
             list.RemoveAt(oldIndex);
             // the actual index could have shifted due to the removal
+            // 移除後實際索引可能已經位移
             if (newIndex > oldIndex) newIndex--;
             list.Insert(newIndex, item);
         }
@@ -97,6 +106,7 @@ namespace FlappyBird.Hotfix.Runtime
                 {
                     list.RemoveAt(oldIndex);
                     // the actual index could have shifted due to the removal
+                    // 移除後實際索引可能已經位移
                     if (newIndex > oldIndex) newIndex--;
                     list.Insert(newIndex, item);
                 }
@@ -152,6 +162,7 @@ namespace FlappyBird.Hotfix.Runtime
         #region Transform 擴充
         /// <summary>
         /// Destroy all children
+        /// <para>銷毀所有子物件</para>
         /// </summary>
         /// <param name="trans"></param>
         public static void DestroyAllChildren(this Transform parent)
@@ -164,7 +175,8 @@ namespace FlappyBird.Hotfix.Runtime
         }
 
         /// <summary>
-        /// Destroy all children Async
+        /// Destroy all children async
+        /// <para>以非同步銷毀所有子物件</para>
         /// </summary>
         /// <param name="trans"></param>
         /// <returns></returns>
@@ -204,17 +216,17 @@ namespace FlappyBird.Hotfix.Runtime
 
         #region string 擴充
         /// <summary>
-        /// Get the string slice between the two indexes.
-        /// Inclusive for start index, exclusive for end index.
+        /// Get the string slice between the two indexes. Inclusive for start index, exclusive for end index.
+        /// <para>取得兩個索引之間的字串片段, 起始索引包含, 結束索引不包含。</para>
         /// </summary>
         public static string Slice(this string source, int start, int end)
         {
-            if (end < 0) // Keep this for negative end support
+            if (end < 0) // Keep this for negative end support | 保留此判斷以支援負數結束索引
             {
                 end = source.Length + end;
             }
-            int len = end - start;               // Calculate length
-            return source.Substring(start, len); // Return Substring of length
+            int len = end - start;               // Calculate length | 計算長度
+            return source.Substring(start, len); // Return Substring of length | 回傳該長度的子字串
         }
 
         public static byte ToByte(this string str)
@@ -224,6 +236,7 @@ namespace FlappyBird.Hotfix.Runtime
 
         /// <summary>
         /// 2 bytes
+        /// <para>2 位元組</para>
         /// </summary>
         /// <param name="str"></param>
         /// <returns></returns>
@@ -234,6 +247,7 @@ namespace FlappyBird.Hotfix.Runtime
 
         /// <summary>
         /// 4 bytes
+        /// <para>4 位元組</para>
         /// </summary>
         /// <param name="str"></param>
         /// <returns></returns>
@@ -244,6 +258,7 @@ namespace FlappyBird.Hotfix.Runtime
 
         /// <summary>
         /// 8 bytes
+        /// <para>8 位元組</para>
         /// </summary>
         /// <param name="str"></param>
         /// <returns></returns>
@@ -260,7 +275,8 @@ namespace FlappyBird.Hotfix.Runtime
         }
 
         /// <summary>
-        /// HexRGB To Color
+        /// Convert a hex RGB string to a Color
+        /// <para>將 16 進制 RGB 字串轉為 Color</para>
         /// </summary>
         /// <param name="hexColor">16 進制的 color #FFFFFF</param>
         /// <returns></returns>
@@ -298,6 +314,7 @@ namespace FlappyBird.Hotfix.Runtime
 
         /// <summary>
         /// 2 bytes
+        /// <para>2 位元組</para>
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
@@ -308,6 +325,7 @@ namespace FlappyBird.Hotfix.Runtime
 
         /// <summary>
         /// 4 bytes
+        /// <para>4 位元組</para>
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
@@ -318,6 +336,7 @@ namespace FlappyBird.Hotfix.Runtime
 
         /// <summary>
         /// 8 bytes
+        /// <para>8 位元組</para>
         /// </summary>
         /// <param name="obj"></param>
         /// <returns></returns>
@@ -350,6 +369,7 @@ namespace FlappyBird.Hotfix.Runtime
 
         /// <summary>
         /// 2 bytes
+        /// <para>2 位元組</para>
         /// </summary>
         /// <param name="int"></param>
         /// <returns></returns>
@@ -363,13 +383,15 @@ namespace FlappyBird.Hotfix.Runtime
         #region UI Element 擴充
 
         /// <summary>
-        /// ButtonPlus 事件註冊, 單擊事件
+        /// Register a ButtonPlus click event
+        /// <para>ButtonPlus 事件註冊, 單擊事件</para>
         /// </summary>
         /// <param name="btn"></param>
         /// <param name="clickEvent"></param>
         /// <param name="soundAction"></param>
         public static void On(this ButtonPlus btn, UnityAction clickEvent, Action soundAction = null)
         {
+            // Add the click event
             // 加入單點事件
             btn.onClick?.RemoveAllListeners();
             btn.onClick?.AddListener(clickEvent);
@@ -377,7 +399,8 @@ namespace FlappyBird.Hotfix.Runtime
         }
 
         /// <summary>
-        /// ButtonPlus 事件註冊, 單擊事件, 長按事件
+        /// Register ButtonPlus click and long-click events
+        /// <para>ButtonPlus 事件註冊, 單擊事件, 長按事件</para>
         /// </summary>
         /// <param name="btn"></param>
         /// <param name="clickEvent"></param>
@@ -395,15 +418,18 @@ namespace FlappyBird.Hotfix.Runtime
             float triggerTime = 1f,
             float intervalTime = 0.1f)
         {
+            // Configure the long-click settings
             // 配置長按設定
             btn.intervalTime = intervalTime;
             btn.triggerTime = triggerTime;
 
+            // Add the click event
             // 加入單點事件
             btn.onClick?.RemoveAllListeners();
             btn.onClick?.AddListener(clickEvent);
             btn.onClick?.AddListener(() => soundAction?.Invoke());
 
+            // Add the long-click events
             // 加入長按事件
             btn.onLongClickPressed?.RemoveAllListeners();
             btn.onLongClickPressed?.AddListener(longClickPressedEvent);
@@ -413,13 +439,15 @@ namespace FlappyBird.Hotfix.Runtime
         }
 
         /// <summary>
-        /// Button 事件註冊, 單擊事件
+        /// Register a Button click event
+        /// <para>Button 事件註冊, 單擊事件</para>
         /// </summary>
         /// <param name="btn"></param>
         /// <param name="clickEvent"></param>
         /// <param name="soundAction"></param>
         public static void On(this Button btn, UnityAction clickEvent, Action soundAction = null)
         {
+            // Add the click event
             // 加入單點事件
             btn.onClick?.RemoveAllListeners();
             btn.onClick?.AddListener(clickEvent);
@@ -427,7 +455,8 @@ namespace FlappyBird.Hotfix.Runtime
         }
 
         /// <summary>
-        /// Toggle 事件註冊
+        /// Register a Toggle event
+        /// <para>Toggle 事件註冊</para>
         /// </summary>
         /// <param name="toggle"></param>
         /// <param name="toggleEvent"></param>
@@ -440,7 +469,8 @@ namespace FlappyBird.Hotfix.Runtime
         }
 
         /// <summary>
-        /// ScrollRect 事件註冊
+        /// Register a ScrollRect event
+        /// <para>ScrollRect 事件註冊</para>
         /// </summary>
         /// <param name="scrollRect"></param>
         /// <param name="scrollEvent"></param>
@@ -451,7 +481,8 @@ namespace FlappyBird.Hotfix.Runtime
         }
 
         /// <summary>
-        /// Slider 事件註冊
+        /// Register a Slider event
+        /// <para>Slider 事件註冊</para>
         /// </summary>
         /// <param name="slider"></param>
         /// <param name="sliderEvent"></param>
@@ -489,6 +520,7 @@ namespace FlappyBird.Hotfix.Runtime
         {
             if (scrollRect.content.anchoredPosition.y <= 0 + topOffset)
             {
+                // Scroll the ScrollView to the top
                 // ScrollView 捲動到最上方
                 return true;
             }
@@ -500,6 +532,7 @@ namespace FlappyBird.Hotfix.Runtime
         {
             if (scrollRect.content.anchoredPosition.y + scrollRect.viewport.rect.height >= scrollRect.content.rect.height - bottomOffset)
             {
+                // Scroll the ScrollView to the bottom
                 // ScrollView 捲動到最下方
                 return true;
             }
@@ -508,7 +541,8 @@ namespace FlappyBird.Hotfix.Runtime
         }
 
         /// <summary>
-        /// Dropdown 事件註冊
+        /// Register a Dropdown event
+        /// <para>Dropdown 事件註冊</para>
         /// </summary>
         /// <param name="dropdown"></param>
         /// <param name="dropdownEvent"></param>
@@ -522,7 +556,8 @@ namespace FlappyBird.Hotfix.Runtime
         #region JObject 擴充
         public static T SelectToken<T>(this JObject jObject, params object[] keys)
         {
-            // 路徑不能有空格                
+            // The path must not contain spaces
+            // 路徑不能有空格
 
             string path = "";
             for (int i = 0; i < keys.Length; i++)
@@ -546,7 +581,8 @@ namespace FlappyBird.Hotfix.Runtime
         }
 
         /// <summary>
-        /// 透過 LayerName 指定 Layer (遞迴)
+        /// Assign a layer by name (recursive)
+        /// <para>透過 LayerName 指定 Layer (遞迴)</para>
         /// </summary>
         /// <param name="go"></param>
         /// <param name="layerName"></param>
@@ -563,7 +599,8 @@ namespace FlappyBird.Hotfix.Runtime
         }
 
         /// <summary>
-        /// 設置 Tag
+        /// Set the tag
+        /// <para>設置 Tag</para>
         /// </summary>
         /// <param name="tagName"></param>
         public static void SetTag(this GameObject go, string tagName)
@@ -573,15 +610,20 @@ namespace FlappyBird.Hotfix.Runtime
 
         /// <summary>
         /// Checks if a GameObject has been destroyed.
+        /// <para>檢查 GameObject 是否已被銷毀。</para>
         /// </summary>
         /// <param name="gameObject">GameObject reference to check for destructiveness</param>
         /// <returns>If the game object has been marked as destroyed by UnityEngine</returns>
         public static bool IsDestroyed(this GameObject gameObject)
         {
             // UnityEngine overloads the == operator for the GameObject type
-            // and returns null when the object has been destroyed, but 
+            // and returns null when the object has been destroyed, but
             // actually the object is still there but has not been cleaned up yet
             // if we test both we can determine if the object has been destroyed.
+            // UnityEngine 對 GameObject 型別多載了 == 運算子,
+            // 物件被銷毀後比較結果會是 null, 但實際上物件仍在,
+            // 只是尚未被清理掉;
+            // 同時比較兩者就能判斷物件是否已被銷毀。
             return gameObject == null && !ReferenceEquals(gameObject, null);
         }
         #endregion
@@ -691,7 +733,8 @@ namespace FlappyBird.Hotfix.Runtime
 
         #region Texture2D 擴充
         /// <summary>
-        /// Create new sprite out of Texture
+        /// Create a new sprite out of a texture
+        /// <para>由 Texture 建立新的 Sprite</para>
         /// </summary>
         public static Sprite AsSprite(this Texture2D texture, Vector2 pivot = default, float pixelPerUnit = 100, uint extrude = 0, SpriteMeshType meshType = SpriteMeshType.FullRect)
         {
@@ -704,7 +747,8 @@ namespace FlappyBird.Hotfix.Runtime
         #region EventSystem 擴充
         public static void On(this EventTrigger trigger, EventTriggerType eventType, System.Action<PointerEventData> listener)
         {
-            // Register events
+            // Register the events
+            // 註冊事件
             EventTrigger.Entry entry = new EventTrigger.Entry();
             entry.eventID = eventType;
             entry.callback.AddListener(data => listener.Invoke((PointerEventData)data));
@@ -712,7 +756,8 @@ namespace FlappyBird.Hotfix.Runtime
         }
         public static void RemoveAll(this EventTrigger trigger)
         {
-            // RemoveAllListener
+            // Remove all listeners
+            // 移除所有監聽
             for (int i = 0; i < trigger.triggers.Count; i++)
                 trigger.triggers[i].callback.RemoveAllListeners();
             trigger.triggers.Clear();

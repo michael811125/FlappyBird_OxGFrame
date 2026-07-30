@@ -14,9 +14,18 @@ using UnityEngine.UI;
 
 namespace FlappyBird.Hotfix.Runtime
 {
+    /// <summary>
+    /// Patch UI. Subscribes to the whole PackageEvents set and renders download size,
+    /// speed and progress, plus the retry flows for every failure case.
+    /// <para>
+    /// 補丁更新介面。訂閱完整的 PackageEvents, 呈現下載容量、速度與進度,
+    /// 並處理各種失敗情境的重試流程。
+    /// </para>
+    /// </summary>
     public class PatchUI : UIBase
     {
-        // Use _Node@XXX to Bind
+        // Use _Node@XXX on the prefab to bind nodes
+        // 於 Prefab 上使用 _Node@XXX 命名進行節點綁定
 
         #region Binding Components
         protected GameObject _progressGroup;
@@ -27,7 +36,8 @@ namespace FlappyBird.Hotfix.Runtime
         protected ButtonPlus _repairBtnPlus;
 
         /// <summary>
-        /// Auto Binding Section
+        /// Auto binding section
+        /// <para>自動綁定區塊</para>
         /// </summary>
         protected override void OnAutoBind()
         {
@@ -41,71 +51,126 @@ namespace FlappyBird.Hotfix.Runtime
         }
         #endregion
 
+        /// <summary>
+        /// Called once when the instance is created.
+        /// <para>實例建立時呼叫一次。</para>
+        /// </summary>
         public override void OnCreate()
         {
             /**
-             * Do Somethings Init Once In Here
+             * Do somethings init once in here
+             * 在此處進行僅一次的初始化
              */
         }
 
+        /// <summary>
+        /// Called before showing, open sub objects here with async.
+        /// <para>顯示前呼叫, 可在此以非同步開啟子物件。</para>
+        /// </summary>
         protected override async UniTask OnPreShow()
         {
             /**
-             * On Pre-Show With Async
+             * On pre-show with async
+             * 以非同步進行顯示前處理
              */
         }
 
+        /// <summary>
+        /// Called before closing, close sub objects here.
+        /// <para>關閉前呼叫, 可在此關閉子物件。</para>
+        /// </summary>
         protected override void OnPreClose()
         {
             /**
-             * On Pre-Close
+             * On pre-close
+             * 進行關閉前處理
              */
         }
 
+        /// <summary>
+        /// Bind component events here.
+        /// <para>在此處綁定元件事件。</para>
+        /// </summary>
         protected override void OnBind()
         {
             this._InitEvents();
             this._InitPatchEvents();
         }
 
+        /// <summary>
+        /// Called on every show.
+        /// <para>每次顯示時呼叫。</para>
+        /// </summary>
         protected override void OnShow(object obj)
         {
             /**
-             * Do Somethings Init With Every Showing In Here
+             * Do somethings init with every showing in here
+             * 在此處進行每次顯示都會執行的初始化
              */
         }
 
+        /// <summary>
+        /// Called per frame while showing.
+        /// <para>顯示期間每幀呼叫。</para>
+        /// </summary>
         protected override void OnUpdate(float dt)
         {
             /**
-             * Do Update Per FrameRate
+             * Do update per frame rate
+             * 依幀率進行更新
              */
         }
 
+        /// <summary>
+        /// Called once after data is received, refresh the view here.
+        /// <para>收到資料後呼叫一次, 在此刷新畫面。</para>
+        /// </summary>
         public override void OnReceiveAndRefresh(object obj = null)
         {
             /**
-             * Do Refresh Once After Data Receive
+             * Do refresh once after data receive
+             * 收到資料後刷新一次
              */
         }
 
+        /// <summary>
+        /// Show animation, animationEnd must be invoked when it finishes.
+        /// <para>顯示動畫, 結束時必須呼叫 animationEnd。</para>
+        /// </summary>
         protected override void OnShowAnimation(AnimationEnd animationEnd)
         {
-            animationEnd(); // Must call if animation end
+            // Must be called when the animation ends
+            // 動畫結束時必須呼叫
+            animationEnd();
         }
 
+        /// <summary>
+        /// Close animation, animationEnd must be invoked when it finishes.
+        /// <para>關閉動畫, 結束時必須呼叫 animationEnd。</para>
+        /// </summary>
         protected override void OnCloseAnimation(AnimationEnd animationEnd)
         {
-            animationEnd(); // Must call if animation end
+            // Must be called when the animation ends
+            // 動畫結束時必須呼叫
+            animationEnd();
         }
 
+        /// <summary>
+        /// Called on close.
+        /// <para>關閉時呼叫。</para>
+        /// </summary>
         protected override void OnClose()
         {
             /**
-             * Do Somethings on close (Close)
+             * Do somethings on close (Close)
+             * 關閉時執行 (Close)
              */
         }
 
+        /// <summary>
+        /// Called on release (CloseAndDestroy).
+        /// <para>釋放時呼叫 (CloseAndDestroy)。</para>
+        /// </summary>
         public override void OnRelease()
         {
             this._patchEvents.RemoveAllListener();
@@ -129,6 +194,7 @@ namespace FlappyBird.Hotfix.Runtime
         #region Patch Event
         private void _InitPatchEvents()
         {
+            // Patch events handled below:
             // 0. PatchRepairFailed
             // 1. PatchFsmState
             // 2. PatchGoToAppStore
@@ -141,6 +207,19 @@ namespace FlappyBird.Hotfix.Runtime
             // 9. PatchDownloadProgression
             // 10. PatchDownloadFailed
             // 11. PatchDownloadCanceled
+            // 以下處理的補丁事件:
+            // 0. 補丁修復失敗
+            // 1. 補丁狀態機狀態
+            // 2. 前往應用商店
+            // 3. App 版本更新失敗
+            // 4. 補丁模式初始化失敗
+            // 5. 補丁版本更新失敗
+            // 6. 補丁清單更新失敗
+            // 7. 建立下載器
+            // 8. 檢查磁碟空間不足
+            // 9. 補丁下載進度
+            // 10. 補丁下載失敗
+            // 11. 補丁下載取消
 
             #region Add PatchEvents Handle
             this._patchEvents.AddListener<PatchEvents.PatchRepairFailed>(this._OnHandleEventMessage);
@@ -162,12 +241,14 @@ namespace FlappyBird.Hotfix.Runtime
         {
             if (message is PatchEvents.PatchRepairFailed)
             {
-                // Show Patch Failed Retry UI
+                // Show the patch failed retry UI
+                // 顯示補丁失敗重試 UI
                 this._ShowRetryEvent(0);
             }
             else if (message is PatchEvents.PatchFsmState)
             {
-                // Display Patch State Msg
+                // Display the patch state message
+                // 顯示補丁狀態訊息
                 #region PatchFsmState
                 PatchEvents.PatchFsmState msgData = message as PatchEvents.PatchFsmState;
 
@@ -215,34 +296,41 @@ namespace FlappyBird.Hotfix.Runtime
             }
             else if (message is PatchEvents.PatchGoToAppStore)
             {
-                // Show Go To App Store Confirm UI (add below event on confirm button)
+                // Show the go-to-app-store confirm UI (hook the event below onto the confirm button)
+                // 顯示前往應用商店的確認 UI (將下方事件掛到確認按鈕)
                 AssetPatcher.GoToAppStore();
             }
             else if (message is PatchEvents.PatchAppVersionUpdateFailed)
             {
-                // Show App Version Update Failed Retry UI
+                // Show the app version update failed retry UI
+                // 顯示 App 版本更新失敗重試 UI
                 this._ShowRetryEvent(1);
             }
             else if (message is PatchEvents.PatchInitPatchModeFailed)
             {
-                // Show Patch Init Patch Failed Retry UI
+                // Show the patch init failed retry UI
+                // 顯示補丁初始化失敗重試 UI
                 this._ShowRetryEvent(2);
             }
             else if (message is PatchEvents.PatchVersionUpdateFailed)
             {
-                // Show Patch Version Update Failed Retry UI
+                // Show the patch version update failed retry UI
+                // 顯示補丁版本更新失敗重試 UI
                 this._ShowRetryEvent(3);
             }
             else if (message is PatchEvents.PatchManifestUpdateFailed)
             {
-                // Show Patch Manifest Update Failed Retry UI
+                // Show the patch manifest update failed retry UI
+                // 顯示補丁清單更新失敗重試 UI
                 this._ShowRetryEvent(4);
             }
             else if (message is PatchEvents.PatchCreateDownloader)
             {
-                // Show GroupInfos UI for user to choose which one they want to download
+                // Show the GroupInfos UI so the user can choose what to download
+                // 顯示 GroupInfos UI 讓使用者選擇要下載的內容
 
-                // Node: Recommend foreach GroupInfos to find max size and check user disk space
+                // Note: iterating GroupInfos to find the max size and check the user's disk space is recommended
+                // 注意: 建議遍歷 GroupInfos 找出最大容量並檢查使用者磁碟空間
 
                 #region Show GroupInfos
                 var msgData = message as PatchEvents.PatchCreateDownloader;
@@ -263,17 +351,21 @@ namespace FlappyBird.Hotfix.Runtime
             }
             else if (message is PatchEvents.PatchCheckDiskNotEnoughSpace)
             {
-                // Show Disk Not Enough Space Retry UI
+                // Show the disk-not-enough-space retry UI
+                // 顯示磁碟空間不足重試 UI
 
-                // Note: You can retry create downloader again (unless, user frees up space) or submit Application.Quit event!!!
+                // Note: you can retry creating the downloader (once the user frees up space) or fire an Application.Quit event
+                // 注意: 可以重新建立下載器 (需使用者先釋放空間), 或送出 Application.Quit 事件
 
-                // Here use action type is 6 (Application.Quit)
+                // The action type used here is 6 (Application.Quit)
+                // 此處使用的 action type 為 6 (Application.Quit)
                 this._ShowRetryEvent(6, message);
             }
             else if (message is PatchEvents.PatchDownloadProgression)
             {
                 #region Download Progression
-                // Receive Progression
+                // Receive the download progression
+                // 接收下載進度
                 var downloadInfo = message as PatchEvents.PatchDownloadProgression;
                 Logging.Print<HLogger>
                 (
@@ -298,12 +390,14 @@ namespace FlappyBird.Hotfix.Runtime
             }
             else if (message is PatchEvents.PatchDownloadFailed)
             {
-                // Show Patch Download Files Failed Retry UI
+                // Show the download files failed retry UI
+                // 顯示檔案下載失敗重試 UI
                 this._ShowRetryEvent(5);
             }
             else if (message is PatchEvents.PatchDownloadCanceled)
             {
-                // Show Patch Download Canceled Retry UI
+                // Show the download canceled retry UI
+                // 顯示下載取消重試 UI
                 this._ShowRetryEvent(5);
             }
             else
@@ -319,12 +413,14 @@ namespace FlappyBird.Hotfix.Runtime
             if (this._dlInfoTmpTxt == null || this._dlSpeedTmpTxt == null) return;
 
             // Download size info
+            // 下載容量資訊
             string totalSize = BundleUtility.GetBytesToString((ulong)totalBytes);
             string dlSize = BundleUtility.GetBytesToString((ulong)dlBytes);
             string percentage = (progress * 100).ToString("f1");
             this._dlInfoTmpTxt.text = $"Downloading: {percentage}%({dlSize}/{totalSize})";
 
             // Download speed info
+            // 下載速度資訊
             long patchBytes = (long)totalBytes;
             long remainingSeconds = (patchBytes - dlBytes) / ((dlSpeedBytes <= 0) ? 1 : dlSpeedBytes);
             TimeSpan result = TimeSpan.FromSeconds(remainingSeconds);
@@ -332,7 +428,8 @@ namespace FlappyBird.Hotfix.Runtime
             string dlSpeedSize = BundleUtility.GetSpeedBytesToString((ulong)dlSpeedBytes);
             this._dlSpeedTmpTxt.text = $"Remaining: {remainingTime}({dlSpeedSize})";
 
-            // Progression Slider
+            // Progression slider
+            // 進度條
             this._progressSld.value = progress;
         }
         #endregion
@@ -388,6 +485,7 @@ namespace FlappyBird.Hotfix.Runtime
                     Action quit = () =>
                     {
                         // Application quit
+                        // 結束應用程式
 #if UNITY_EDITOR
                         UnityEditor.EditorApplication.isPlaying = false;
 #else

@@ -4,6 +4,12 @@ using UnityEngine.Rendering.Universal;
 
 namespace FlappyBird.Main.Runtime
 {
+    /// <summary>
+    /// General purpose extension methods used across the demo.
+    /// <para>
+    /// 本 Demo 共用的通用擴充方法。
+    /// </para>
+    /// </summary>
     public static class MainExtensions
     {
         #region Camera 擴充
@@ -39,7 +45,8 @@ namespace FlappyBird.Main.Runtime
         #region JObject 擴充
         public static T SelectToken<T>(this JObject jObject, params object[] keys)
         {
-            // 路徑不能有空格                
+            // The path must not contain spaces
+            // 路徑不能有空格
 
             string path = "";
             for (int i = 0; i < keys.Length; i++)

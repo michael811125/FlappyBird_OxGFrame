@@ -14,7 +14,8 @@ namespace FlappyBird.Hotfix.Runtime
 
 
     /// <summary>
-    /// Show DescriptionUI Event (Common)
+    /// Show DescriptionUI event (common)
+    /// <para>顯示 DescriptionUI 的事件 (通用)</para>
     /// </summary>
     public class EDescriptionUI : EventBase
     {
@@ -46,7 +47,8 @@ namespace FlappyBird.Hotfix.Runtime
     }
 
     /// <summary>
-    /// Show DoubleCheckUI Event (Common)
+    /// Show DoubleCheckUI event (common)
+    /// <para>顯示 DoubleCheckUI 的事件 (通用)</para>
     /// </summary>
     public class EDoubleCheckUI : EventBase
     {
