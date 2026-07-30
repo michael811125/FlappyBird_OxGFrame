@@ -79,7 +79,7 @@ namespace FlappyBird.Hotfix.Runtime
 
                     // This code checks the first tap. After first tap the tutorial image is removed and game starts
                     // 初次點擊後移除教學圖並正式開始遊戲
-                    this._rigid.velocity = Vector2.zero;
+                    this._rigid.linearVelocity = Vector2.zero;
                     // Initial gravity scale
                     // 初始重力比率
                     this._rigid.gravityScale = 1f;
@@ -98,7 +98,7 @@ namespace FlappyBird.Hotfix.Runtime
                     this.transform.rotation = this._upRotation;
                     // Reset the velocity
                     // 速率歸零
-                    this._rigid.velocity = Vector2.zero;
+                    this._rigid.linearVelocity = Vector2.zero;
                     // Push the player upwards
                     // 給予向上的推力
                     this._rigid.AddForce(Vector2.up * thrust);
@@ -111,7 +111,7 @@ namespace FlappyBird.Hotfix.Runtime
 
             // Falling under gravity
             // 重力下降
-            if (this._rigid.velocity.y < -1f)
+            if (this._rigid.linearVelocity.y < -1f)
             {
                 // Increase gravity so that downward motion is faster than upward motion
                 // 加大重力讓下墜比上升更快
@@ -196,7 +196,7 @@ namespace FlappyBird.Hotfix.Runtime
 
             // Reset the velocity
             // 歸零速率
-            this._rigid.velocity = Vector2.zero;
+            this._rigid.linearVelocity = Vector2.zero;
 
             // Stop the animation (an Animator based sequence would work too)
             // 動畫停止 (也可以使用 Animator 製作序列動畫)
