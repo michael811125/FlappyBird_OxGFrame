@@ -1,5 +1,39 @@
 ## FlappyBird
 
+[English](#english) | [中文](#中文)
+
+---
+
+# English
+
+### Demo Branches
+
+- [Developed with Resources](https://github.com/michael811125/FlappyBird_OxGFrame/tree/resources)
+- [Developed with AssetBundle](https://github.com/michael811125/FlappyBird_OxGFrame/tree/assetbundle)
+- [Developed with AssetBundle + CLR](https://github.com/michael811125/FlappyBird_OxGFrame/tree/assetbundle_clr)
+
+### About
+
+A reinterpretation of the FlappyBird mini-game built on OxGFrame. Everything is developed within a single scene, which keeps the logic and the game phases distinct and easy to follow.
+
+### Framework
+
+[OxGFrame](https://github.com/michael811125/OxGFrame)
+
+### Unity Version
+
+Unity 2021.3.32f1 (LTS) or higher is recommended - [Unity Download](https://unity3d.com/get-unity/download/archive)
+
+---
+
+### Reference
+
+[LordZed400/Flappy-Bird-Unity](https://github.com/LordZed400/Flappy-Bird-Unity)
+
+---
+
+# 中文
+
 ### Demo 分支選項
 - [使用 Resources 開發](https://github.com/michael811125/FlappyBird_OxGFrame/tree/resources)
 - [使用 AssetBundle 開發 ](https://github.com/michael811125/FlappyBird_OxGFrame/tree/assetbundle)
