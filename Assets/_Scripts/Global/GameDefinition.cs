@@ -1,5 +1,13 @@
 ﻿//#define BUNDLE_TYPE
 
+/// <summary>
+/// Scene resource names. The res# prefix tells OxGFrame to load from Resources;
+/// the AssetBundle branches use a package name instead.
+/// <para>
+/// 場景資源名稱。res# 前綴代表由 OxGFrame 從 Resources 載入；
+/// AssetBundle 分支則改用 Package 名稱。
+/// </para>
+/// </summary>
 public static class SRs
 {
 #if BUNDLE_TYPE
@@ -9,11 +17,18 @@ public static class SRs
     private static string _path = $"{_PREFIX}CoreFrame/SR/";
 #endif
 
-    // 場景   
-    public readonly static string MainMenuSR = $"{_path}MainMenuSR";       // 主選單場景
-    public readonly static string GameplaySR = $"{_path}GameplaySR";       // 遊戲場景
+    // Scenes
+    // 場景
+    public readonly static string MainMenuSR = $"{_path}MainMenuSR";       // Main menu scene | 主選單場景
+    public readonly static string GameplaySR = $"{_path}GameplaySR";       // Gameplay scene | 遊戲場景
 }
 
+/// <summary>
+/// UI asset names, resolved the same way as SRs.
+/// <para>
+/// UI 資源名稱, 解析方式與 SRs 相同。
+/// </para>
+/// </summary>
 public static class UIs
 {
 #if BUNDLE_TYPE
@@ -23,18 +38,25 @@ public static class UIs
     private static string _path = $"{_PREFIX}CoreFrame/UI/";
 #endif
 
+    // UIs
     // 介面
-    public readonly static string AwaitingUI = $"{_path}AwaitingUI";       // 等待介面 (Common)
-    public readonly static string DescriptionUI = $"{_path}DescriptionUI"; // 說明介面 (Common)
-    public readonly static string DoubleCheckUI = $"{_path}DoubleCheckUI"; // 重複確認介面 (Common)
-    public readonly static string LoadingUI = $"{_path}LoadingUI";         // 加載介面 (Common)
-    public readonly static string LogoUI = $"{_path}LogoUI";               // 商標介面
-    public readonly static string MainMenuUI = $"{_path}MainMenuUI";       // 主選單介面
-    public readonly static string GetReadyUI = $"{_path}GetReadyUI";       // 準備介面
-    public readonly static string ScoreUI = $"{_path}ScoreUI";             // 分數介面
-    public readonly static string SettlementUI = $"{_path}SettlementUI";   // 結算介面
+    public readonly static string AwaitingUI = $"{_path}AwaitingUI";       // Awaiting UI (common) | 等待介面 (Common)
+    public readonly static string DescriptionUI = $"{_path}DescriptionUI"; // Description UI (common) | 說明介面 (Common)
+    public readonly static string DoubleCheckUI = $"{_path}DoubleCheckUI"; // Double check UI (common) | 重複確認介面 (Common)
+    public readonly static string LoadingUI = $"{_path}LoadingUI";         // Loading UI (common) | 加載介面 (Common)
+    public readonly static string LogoUI = $"{_path}LogoUI";               // Logo UI | 商標介面
+    public readonly static string MainMenuUI = $"{_path}MainMenuUI";       // Main menu UI | 主選單介面
+    public readonly static string GetReadyUI = $"{_path}GetReadyUI";       // Get ready UI | 準備介面
+    public readonly static string ScoreUI = $"{_path}ScoreUI";             // Score UI | 分數介面
+    public readonly static string SettlementUI = $"{_path}SettlementUI";   // Settlement UI | 結算介面
 }
 
+/// <summary>
+/// Audio asset names, resolved the same way as SRs.
+/// <para>
+/// 音訊資源名稱, 解析方式與 SRs 相同。
+/// </para>
+/// </summary>
 public static class Audios
 {
 #if BUNDLE_TYPE
@@ -44,14 +66,17 @@ public static class Audios
     private static string _path = $"{_PREFIX}MediaFrame/Audio/";
 #endif
 
+    // Background music (BGM)
     // 背景音樂 BGM
-    public readonly static string MenuBgm = $"{_path}_01_BGM/MenuBgm";               // 主選單背景音樂
+    public readonly static string MenuBgm = $"{_path}_01_BGM/MenuBgm";               // Main menu BGM | 主選單背景音樂
 
+    // General sound effects
     // 通用音效 General
-    public readonly static string SwooshingSfx = $"{_path}_02_General/SwooshingSfx"; // 轉場音效
+    public readonly static string SwooshingSfx = $"{_path}_02_General/SwooshingSfx"; // Transition SFX | 轉場音效
 
+    // Interaction sound effects
     // 互動音效 Interact
-    public readonly static string ScoreSfx = $"{_path}_03_Interact/ScoreSfx";        // 分數音效
-    public readonly static string HitSfx = $"{_path}_03_Interact/HitSfx";            // 撞擊音效
-    public readonly static string FlySfx = $"{_path}_03_Interact/FlySfx";            // 飛起音效
+    public readonly static string ScoreSfx = $"{_path}_03_Interact/ScoreSfx";        // Scoring SFX | 分數音效
+    public readonly static string HitSfx = $"{_path}_03_Interact/HitSfx";            // Hit SFX | 撞擊音效
+    public readonly static string FlySfx = $"{_path}_03_Interact/FlySfx";            // Flying SFX | 飛起音效
 }

@@ -9,6 +9,12 @@ using UnityEngine.Events;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
+/// <summary>
+/// General purpose extension methods used across the demo.
+/// <para>
+/// 本 Demo 共用的通用擴充方法。
+/// </para>
+/// </summary>
 public static class MainExtensions
 {
     public delegate void ItemAndIndex<in T>(T item, int idx);
@@ -25,7 +31,8 @@ public static class MainExtensions
 
     #region List 擴充
     /// <summary>
-    /// Return last of list element with remove
+    /// Return the last element of the list and remove it
+    /// <para>取出並移除列表的最後一個元素</para>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <param name="list"></param>
@@ -43,7 +50,8 @@ public static class MainExtensions
     }
 
     /// <summary>
-    /// Return fist of list element with remove
+    /// Return the first element of the list and remove it
+    /// <para>取出並移除列表的第一個元素</para>
     /// </summary>
     /// <typeparam name="T"></typeparam>
     /// <param name="list"></param>
@@ -79,6 +87,7 @@ public static class MainExtensions
 
         list.RemoveAt(oldIndex);
         // the actual index could have shifted due to the removal
+        // 移除後實際索引可能已經位移
         if (newIndex > oldIndex) newIndex--;
         list.Insert(newIndex, item);
     }
@@ -92,6 +101,7 @@ public static class MainExtensions
             {
                 list.RemoveAt(oldIndex);
                 // the actual index could have shifted due to the removal
+                // 移除後實際索引可能已經位移
                 if (newIndex > oldIndex) newIndex--;
                 list.Insert(newIndex, item);
             }
@@ -110,6 +120,7 @@ public static class MainExtensions
     #region Transform 擴充
     /// <summary>
     /// Destroy all children
+    /// <para>銷毀所有子物件</para>
     /// </summary>
     /// <param name="trans"></param>
     public static void DestroyAllChildren(this Transform parent)
@@ -121,7 +132,8 @@ public static class MainExtensions
     }
 
     /// <summary>
-    /// Destroy all children Async
+    /// Destroy all children async
+    /// <para>以非同步銷毀所有子物件</para>
     /// </summary>
     /// <param name="trans"></param>
     /// <returns></returns>
@@ -157,17 +169,17 @@ public static class MainExtensions
 
     #region string 擴充
     /// <summary>
-    /// Get the string slice between the two indexes.
-    /// Inclusive for start index, exclusive for end index.
+    /// Get the string slice between the two indexes. Inclusive for start index, exclusive for end index.
+    /// <para>取得兩個索引之間的字串片段, 起始索引包含, 結束索引不包含。</para>
     /// </summary>
     public static string Slice(this string source, int start, int end)
     {
-        if (end < 0) // Keep this for negative end support
+        if (end < 0) // Keep this for negative end support | 保留此判斷以支援負數結束索引
         {
             end = source.Length + end;
         }
-        int len = end - start;               // Calculate length
-        return source.Substring(start, len); // Return Substring of length
+        int len = end - start;               // Calculate length | 計算長度
+        return source.Substring(start, len); // Return Substring of length | 回傳該長度的子字串
     }
 
     public static byte ToByte(this string str)
@@ -177,6 +189,7 @@ public static class MainExtensions
 
     /// <summary>
     /// 2 bytes
+    /// <para>2 位元組</para>
     /// </summary>
     /// <param name="str"></param>
     /// <returns></returns>
@@ -187,6 +200,7 @@ public static class MainExtensions
 
     /// <summary>
     /// 4 bytes
+    /// <para>4 位元組</para>
     /// </summary>
     /// <param name="str"></param>
     /// <returns></returns>
@@ -197,6 +211,7 @@ public static class MainExtensions
 
     /// <summary>
     /// 8 bytes
+    /// <para>8 位元組</para>
     /// </summary>
     /// <param name="str"></param>
     /// <returns></returns>
@@ -213,7 +228,8 @@ public static class MainExtensions
     }
 
     /// <summary>
-    /// HexRGB To Color
+    /// Convert a hex RGB string to a Color
+    /// <para>將 16 進制 RGB 字串轉為 Color</para>
     /// </summary>
     /// <param name="hexColor">16 進制的 color #FFFFFF</param>
     /// <returns></returns>
@@ -251,6 +267,7 @@ public static class MainExtensions
 
     /// <summary>
     /// 2 bytes
+    /// <para>2 位元組</para>
     /// </summary>
     /// <param name="obj"></param>
     /// <returns></returns>
@@ -261,6 +278,7 @@ public static class MainExtensions
 
     /// <summary>
     /// 4 bytes
+    /// <para>4 位元組</para>
     /// </summary>
     /// <param name="obj"></param>
     /// <returns></returns>
@@ -271,6 +289,7 @@ public static class MainExtensions
 
     /// <summary>
     /// 8 bytes
+    /// <para>8 位元組</para>
     /// </summary>
     /// <param name="obj"></param>
     /// <returns></returns>
@@ -293,6 +312,7 @@ public static class MainExtensions
 
     /// <summary>
     /// 2 bytes
+    /// <para>2 位元組</para>
     /// </summary>
     /// <param name="int"></param>
     /// <returns></returns>
@@ -306,13 +326,15 @@ public static class MainExtensions
     #region UI Element 擴充
 
     /// <summary>
-    /// ButtonPlus 事件註冊, 單擊事件
+    /// Register a ButtonPlus click event
+    /// <para>ButtonPlus 事件註冊, 單擊事件</para>
     /// </summary>
     /// <param name="btn"></param>
     /// <param name="clickEvent"></param>
     /// <param name="soundAction"></param>
     public static void On(this ButtonPlus btn, UnityAction clickEvent, Action soundAction = null)
     {
+        // Add the click event
         // 加入單點事件
         btn.onClick?.RemoveAllListeners();
         btn.onClick?.AddListener(clickEvent);
@@ -320,7 +342,8 @@ public static class MainExtensions
     }
 
     /// <summary>
-    /// ButtonPlus 事件註冊, 單擊事件, 長按事件
+    /// Register ButtonPlus click and long-click events
+    /// <para>ButtonPlus 事件註冊, 單擊事件, 長按事件</para>
     /// </summary>
     /// <param name="btn"></param>
     /// <param name="clickEvent"></param>
@@ -338,15 +361,18 @@ public static class MainExtensions
         float triggerTime = 1f,
         float intervalTime = 0.1f)
     {
+        // Configure the long-click settings
         // 配置長按設定
         btn.intervalTime = intervalTime;
         btn.triggerTime = triggerTime;
 
+        // Add the click event
         // 加入單點事件
         btn.onClick?.RemoveAllListeners();
         btn.onClick?.AddListener(clickEvent);
         btn.onClick?.AddListener(() => soundAction?.Invoke());
 
+        // Add the long-click events
         // 加入長按事件
         btn.onLongClickPressed?.RemoveAllListeners();
         btn.onLongClickPressed?.AddListener(longClickPressedEvent);
@@ -356,13 +382,15 @@ public static class MainExtensions
     }
 
     /// <summary>
-    /// Button 事件註冊, 單擊事件
+    /// Register a Button click event
+    /// <para>Button 事件註冊, 單擊事件</para>
     /// </summary>
     /// <param name="btn"></param>
     /// <param name="clickEvent"></param>
     /// <param name="soundAction"></param>
     public static void On(this Button btn, UnityAction clickEvent, Action soundAction = null)
     {
+        // Add the click event
         // 加入單點事件
         btn.onClick?.RemoveAllListeners();
         btn.onClick?.AddListener(clickEvent);
@@ -370,7 +398,8 @@ public static class MainExtensions
     }
 
     /// <summary>
-    /// Toggle 事件註冊
+    /// Register a Toggle event
+    /// <para>Toggle 事件註冊</para>
     /// </summary>
     /// <param name="toggle"></param>
     /// <param name="toggleEvent"></param>
@@ -383,7 +412,8 @@ public static class MainExtensions
     }
 
     /// <summary>
-    /// ScrollRect 事件註冊
+    /// Register a ScrollRect event
+    /// <para>ScrollRect 事件註冊</para>
     /// </summary>
     /// <param name="scrollRect"></param>
     /// <param name="scrollEvent"></param>
@@ -394,7 +424,8 @@ public static class MainExtensions
     }
 
     /// <summary>
-    /// Slider 事件註冊
+    /// Register a Slider event
+    /// <para>Slider 事件註冊</para>
     /// </summary>
     /// <param name="slider"></param>
     /// <param name="sliderEvent"></param>
@@ -429,7 +460,8 @@ public static class MainExtensions
     }
 
     /// <summary>
-    /// Dropdown 事件註冊
+    /// Register a Dropdown event
+    /// <para>Dropdown 事件註冊</para>
     /// </summary>
     /// <param name="dropdown"></param>
     /// <param name="dropdownEvent"></param>
@@ -473,7 +505,8 @@ public static class MainExtensions
     #region JObject 擴充
     public static T SelectToken<T>(this JObject jObject, params object[] keys)
     {
-        // 路徑不能有空格                
+        // The path must not contain spaces
+        // 路徑不能有空格
 
         string path = "";
         for (int i = 0; i < keys.Length; i++)
@@ -497,7 +530,8 @@ public static class MainExtensions
     }
 
     /// <summary>
-    /// 透過 LayerName 指定 Layer (遞迴)
+    /// Assign a layer by name (recursive)
+    /// <para>透過 LayerName 指定 Layer (遞迴)</para>
     /// </summary>
     /// <param name="go"></param>
     /// <param name="layerName"></param>
@@ -514,7 +548,8 @@ public static class MainExtensions
     }
 
     /// <summary>
-    /// 設置 Tag
+    /// Set the tag
+    /// <para>設置 Tag</para>
     /// </summary>
     /// <param name="tagName"></param>
     public static void SetTag(this GameObject go, string tagName)
@@ -612,7 +647,8 @@ public static class MainExtensions
 
     #region Texture2D 擴充
     /// <summary>
-    /// Create new sprite out of Texture
+    /// Create a new sprite out of a texture
+    /// <para>由 Texture 建立新的 Sprite</para>
     /// </summary>
     public static Sprite AsSprite(this Texture2D texture, Vector2 pivot = default, float pixelPerUnit = 100, uint extrude = 0, SpriteMeshType meshType = SpriteMeshType.FullRect)
     {
