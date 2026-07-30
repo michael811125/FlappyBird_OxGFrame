@@ -32,7 +32,9 @@ Set the Game view to W: 1080 * H: 1920, then open the Main.unity scene and hit P
 
 ### Unity Version
 
-Unity 2022.3.59f1 (LTS) or higher is recommended - [Unity Download](https://unity3d.com/get-unity/download/archive)
+Unity 6000.3.20f1 (LTS) or higher is recommended - [Unity Download](https://unity3d.com/get-unity/download/archive)
+
+Upgraded from Unity 2022.3 LTS to Unity 6.3 LTS. URP moved to 17.3.0, and TextMeshPro now ships inside `com.unity.ugui` 2.0.0, so the standalone `com.unity.textmeshpro` package was removed from the manifest.
 
 ---
 
@@ -70,7 +72,9 @@ Unity 2022.3.59f1 (LTS) or higher is recommended - [Unity Download](https://unit
 
 ### Unity 版本
 
-建議使用 Unity 2022.3.59f1(LTS) or higher 版本 - [Unity Download](https://unity3d.com/get-unity/download/archive)
+建議使用 Unity 6000.3.20f1 (LTS) or higher 版本 - [Unity Download](https://unity3d.com/get-unity/download/archive)
+
+已由 Unity 2022.3 LTS 升級至 Unity 6.3 LTS。URP 升級為 17.3.0，且 TextMeshPro 已併入 `com.unity.ugui` 2.0.0，因此 manifest 中獨立的 `com.unity.textmeshpro` 套件已移除。
 
 ---
 
