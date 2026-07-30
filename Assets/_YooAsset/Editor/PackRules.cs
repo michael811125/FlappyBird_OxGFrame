@@ -4,12 +4,12 @@ using YooAsset.Editor;
 /// 打包 MP4 原生文件
 /// </summary>
 [DisplayName("打包 MP4 原生文件")]
-public class PackMP4File : IPackRule
+public class PackMP4File : IBundlePackRule
 {
-    PackRuleResult IPackRule.GetPackRuleResult(PackRuleData data)
+    BundlePackRuleResult IBundlePackRule.GetPackRuleResult(BundlePackRuleData data)
     {
         string bundleName = data.AssetPath;
-        PackRuleResult result = new PackRuleResult(bundleName, "mp4");
+        BundlePackRuleResult result = new BundlePackRuleResult(bundleName, "mp4");
         return result;
     }
 }
