@@ -22,7 +22,7 @@ A reinterpretation of the FlappyBird mini-game built on OxGFrame. Everything is 
 
 ### Unity Version
 
-Unity 2021.3.32f1 (LTS) or higher is recommended - [Unity Download](https://unity3d.com/get-unity/download/archive)
+Unity 6000.3.20f1 (LTS) or higher is recommended - [Unity Download](https://unity3d.com/get-unity/download/archive)
 
 ---
 
@@ -49,7 +49,7 @@ Unity 2021.3.32f1 (LTS) or higher is recommended - [Unity Download](https://unit
 
 ### Unity 版本
 
-建議使用 Unity 2021.3.32f1(LTS) or higher 版本 - [Unity Download](https://unity3d.com/get-unity/download/archive)
+建議使用 Unity 6000.3.20f1 (LTS) or higher 版本 - [Unity Download](https://unity3d.com/get-unity/download/archive)
 
 ---
 
